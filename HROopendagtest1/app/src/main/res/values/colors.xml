@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="HRO_mainColorDark">#8A2A32</color>
+    <color name="HRO_mainColor">#BF4750</color>
+    <color name="HRO_subColor1">#E95662</color>
+    <color name="HRO_subColor2">#D9505B</color>
+    <color name="HRO_subColor3">#ED5864</color>
+    <color name="HRO_subColor4">#FF5E6B</color>
+
+    <!--Self added-->
+    <color name="HRO_subColor5">#FAE9E9</color>
+
+
+</resources>
