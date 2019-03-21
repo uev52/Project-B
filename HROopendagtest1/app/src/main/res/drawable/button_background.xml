@@ -8,8 +8,8 @@
         />
 
     <corners
-        android:radius="80dp"
-        android:topLeftRadius="0dp"/>
+        android:radius="50dp"
+        android:topLeftRadius="10dp"/>
 
     <stroke
         android:color="#000000"

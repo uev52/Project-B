@@ -9,59 +9,6 @@
     tools:showIn="@layout/app_bar_main"
     >
 
-    <RelativeLayout
-        android:id="@+id/btn1"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="53dp"
-        android:background="@drawable/button_background"
-        android:clickable="true"
-        android:focusable="true"
-        app:layout_constraintStart_toEndOf="@+id/txt_main1"
-        app:layout_constraintTop_toBottomOf="@+id/img_bg">
-
-        <TextView
-            android:id="@+id/btn1_txt1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:text="04"
-            android:textSize="30sp" />
-
-        <TextView
-            android:id="@+id/btn1_txt2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="27dp"
-            android:layout_toEndOf="@+id/btn1_txt1"
-            android:layout_toRightOf="@+id/btn1_txt1"
-            android:text="June" />
-
-        <TextView
-            android:id="@+id/btn1_txt3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn1_txt1"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginStart="25dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="1dp"
-            android:text="2019"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
-
     <ImageView
         android:id="@+id/img_bg"
         android:layout_width="match_parent"
@@ -139,9 +86,62 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_main1" />
 
     <RelativeLayout
+        android:id="@+id/btn1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="53dp"
+        android:background="@drawable/button_background"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintStart_toEndOf="@+id/txt_main1"
+        app:layout_constraintTop_toBottomOf="@+id/img_bg">
+
+        <TextView
+            android:id="@+id/btn1_txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text="04"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/btn1_txt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="40dp"
+            android:layout_toEndOf="@+id/btn1_txt1"
+            android:layout_toRightOf="@+id/btn1_txt1"
+            android:text="June" />
+
+        <TextView
+            android:id="@+id/btn1_txt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn1_txt1"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="1dp"
+            android:text="2019"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
         android:id="@+id/btn2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_marginStart="60dp"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="32dp"
@@ -152,15 +152,15 @@
         app:layout_constraintTop_toBottomOf="@+id/btn1">
 
         <TextView
-            android:id="@+id/btn1_txt2"
+            android:id="@+id/btn2_txt1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
             android:text="04"
             android:textSize="30sp" />
 
@@ -170,17 +170,17 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_marginStart="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="27dp"
-            android:layout_toEndOf="@+id/btn1_txt1"
-            android:layout_toRightOf="@+id/btn1_txt1"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="40dp"
+            android:layout_toEndOf="@+id/btn2_txt1"
+            android:layout_toRightOf="@+id/btn2_txt1"
             android:text="April" />
 
         <TextView
             android:id="@+id/btn2_txt3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/btn1_txt1"
+            android:layout_below="@+id/btn2_txt1"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_marginStart="25dp"
