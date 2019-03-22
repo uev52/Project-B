@@ -1,5 +1,6 @@
 package com.example.hroopendagtest1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -65,7 +66,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_floorPlans) {
 
         } else if (id == R.id.nav_settings) {
-
+            Intent i = new Intent(this, settings.class);
+            startActivity(i);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
