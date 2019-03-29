@@ -5,7 +5,19 @@
         <item name="colorPrimary">@color/HRO_mainColor</item>
     </style>
 
-    <style name="HRO_main">
+    <style name="HRO_main"></style>
+
+    <style name="HRO_switch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">#0000ff</item>
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">#00FF00
+        </item>
+
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">#FF00001f
+        </item>
     </style>
 
 
@@ -13,6 +25,7 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
