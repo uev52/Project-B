@@ -54,7 +54,8 @@ public class settings extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            // Handle the camera action
+            Intent i = new Intent(this, MainActivity.class);
+            startActivity(i);
         } else if (id == R.id.nav_openday) {
 
         } else if (id == R.id.nav_information) {
