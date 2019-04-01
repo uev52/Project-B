@@ -55,7 +55,8 @@ public class MainActivity extends AppCompatActivity
             Intent i = new Intent(this, MainActivity.class);
             startActivity(i);
         } else if (id == R.id.nav_openday) {
-
+            Intent i = new Intent(this, openday.class);
+            startActivity(i);
         } else if (id == R.id.nav_information) {
 
         } else if (id == R.id.nav_myEvents) {
