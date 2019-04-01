@@ -190,4 +190,57 @@
             android:textSize="20sp"
             android:textStyle="bold" />
     </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn3"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="79dp"
+        android:background="@drawable/button_background"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_main2">
+
+        <TextView
+            android:id="@+id/btn3_txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text="24"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/btn3_txt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="40dp"
+            android:layout_toEndOf="@+id/btn3_txt1"
+            android:layout_toRightOf="@+id/btn3_txt1"
+            android:text="April" />
+
+        <TextView
+            android:id="@+id/btn3_txt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn3_txt1"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="1dp"
+            android:text="2019"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
