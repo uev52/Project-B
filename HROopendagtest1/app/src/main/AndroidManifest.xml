@@ -9,15 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".study_program_screen_activity"
-            android:label="@string/title_activity_study_program_screen_activity"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.hroopendagtest1.MainActivity" />
-        </activity>
+
         <activity
             android:name=".openday"
             android:label="@string/title_activity_openday"
