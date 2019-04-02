@@ -78,17 +78,18 @@ public class floor_plan extends AppCompatActivity implements NavigationView.OnNa
             Intent i = new Intent(this, openday.class);
             startActivity(i);
         } else if (id == R.id.nav_information) {
-
-        } else if (id == R.id.nav_myEvents) {
-
+            Intent i = new Intent(this, MainActivity.class);
+            startActivity(i);
         } else if (id == R.id.nav_generalInformation) {
-
+            Intent i = new Intent(this, generalInformation.class);
+            startActivity(i);
         } else if (id == R.id.nav_contact) {
             Intent i = new Intent(this, contact_form.class);
             startActivity(i);
 
         } else if (id == R.id.nav_floorPlans) {
-
+            Intent i = new Intent(this, floor_plan.class);
+            startActivity(i);
         } else if (id == R.id.nav_settings) {
             Intent i = new Intent(this, settings.class);
             startActivity(i);
