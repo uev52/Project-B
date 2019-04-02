@@ -16,6 +16,10 @@
     <string name="my_events">My events</string>
     <string name="title_activity_settings">settings</string>
     <string name="title_activity_openday">openday</string>
+
+    <string name="title_activity_general_information">generalInformation</string>
+
     <string name="title_activity_contact_form">contact_form</string>
     <string name="title_activity_floor_plan">floor_plan</string>
+
 </resources>
