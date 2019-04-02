@@ -14,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class generalInformation extends AppCompatActivity
 
@@ -76,29 +77,38 @@ public class generalInformation extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_home) {
-            Intent i = new Intent(this, MainActivity.class);
-            startActivity(i);
-        } else if (id == R.id.nav_openday) {
-            Intent i = new Intent(this, openday.class);
-            startActivity(i);
-        } else if (id == R.id.nav_information) {
+        Intent i;
+        switch(id){
+            case R.id.nav_home:
+                i = new Intent(this, MainActivity.class);
+                break;
 
-        } else if (id == R.id.nav_myEvents) {
+            case R.id.nav_openday:
+                i = new Intent(this, openday.class);
+                break;
 
-        } else if (id == R.id.nav_generalInformation) {
-            Intent i = new Intent(this, generalInformation.class);
-            startActivity(i);
+            case R.id.nav_information:
+                i = new Intent(this, generalInformation.class);
+                break;
 
+            case R.id.nav_contact:
+                i = new Intent(this, contact_form.class);
+                break;
 
-        } else if (id == R.id.nav_contact) {
+            case R.id.nav_floorPlans:
+                i = new Intent(this, floor_plan.class);
+                break;
 
-        } else if (id == R.id.nav_floorPlans) {
+            case R.id.nav_settings:
+                i = new Intent(this, settings.class);
+                break;
 
-        } else if (id == R.id.nav_settings) {
-            Intent i = new Intent(this, settings.class);
-            startActivity(i);
+            default:
+                i = new Intent(this, MainActivity.class);
+                break;
         }
+
+        startActivity(i);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
