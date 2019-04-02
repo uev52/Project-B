@@ -62,6 +62,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_myEvents) {
 
         } else if (id == R.id.nav_generalInformation) {
+            Intent i = new Intent(this, generalInformation.class);
+            startActivity(i);
 
         } else if (id == R.id.nav_contact) {
 
