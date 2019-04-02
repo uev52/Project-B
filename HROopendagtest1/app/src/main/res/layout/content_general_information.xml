@@ -134,11 +134,10 @@
             android:layout_width="365dp"
             android:layout_height="90dp"
             android:lineSpacingExtra="12sp"
-            android:text=" "
+            android:text="Adress:  Wijnhaven 107,  105, 103 Phone Number:   010 - 794 4000 "
             android:textColor="@android:color/background_light"
             android:textSize="20sp"
-            android:textStyle="bold"
-            tools:text="Adress:  Wijnhaven 107,  105, 103 Phone Number:   010 - 794 4000 " />
+            android:textStyle="bold" />
 
     </android.support.v7.widget.CardView>
 
