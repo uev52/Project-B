@@ -9,32 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
-
-            android:name=".generalInformation"
-            android:label="@string/title_activity_general_information"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity
-            android:name=".floor_plan"
-            android:label="@string/title_activity_floor_plan"
+            android:name=".study_program_screen_activity"
+            android:label="@string/title_activity_study_program_screen_activity"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.hroopendagtest1.MainActivity" />
         </activity>
-        <activity
-            android:name=".contact_form"
-            android:label="@string/title_activity_contact_form"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.hroopendagtest1.MainActivity" />
-        </activity>
-
         <activity
             android:name=".openday"
             android:label="@string/title_activity_openday"
