@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.hroopendagtest1">
 
     <application
@@ -8,46 +9,35 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
 
-        <activity
-
-            android:name=".generalInformation"
-            android:label="@string/title_activity_general_information"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity
-            android:name=".floor_plan"
-            android:label="@string/title_activity_floor_plan"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.hroopendagtest1.MainActivity" />
-        </activity>
         <activity
             android:name=".contact_form"
-            android:label="@string/title_activity_contact_form"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.hroopendagtest1.MainActivity" />
-        </activity>
-
+            android:label="@string/title_activity_openday"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".floor_plan"
+            android:label="@string/floorplans"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".generalInformation"
+            android:label="@string/general_information"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".openday"
             android:label="@string/title_activity_openday"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".settings"
             android:label="@string/title_activity_settings"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.hroopendagtest1.MainActivity" />
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".study_program_screen"
+            android:label="@string/title_activity_study_program_screen"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
