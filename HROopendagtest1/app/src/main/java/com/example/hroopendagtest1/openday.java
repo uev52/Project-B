@@ -69,6 +69,10 @@ public class openday extends AppCompatActivity
                 i = new Intent(this, generalInformation.class);
                 break;
 
+            case R.id.nav_generalInformation:
+                i = new Intent(this, generalInformation.class);
+                break;
+
             case R.id.nav_contact:
                 i = new Intent(this, contact_form.class);
                 break;

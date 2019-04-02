@@ -11,6 +11,10 @@
         android:theme="@style/AppTheme">
 
         <activity
+            android:name=".popActivity"
+            android:label="@string/title_activity_popup"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".contact_form"
             android:label="@string/title_activity_openday"
             android:theme="@style/AppTheme.NoActionBar" />
