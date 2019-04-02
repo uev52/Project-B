@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".floor_plan"
+    tools:showIn="@layout/app_bar_floor_plan">
+
+    <TextView
+        android:id="@+id/floorName"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="#778899"
+        android:gravity="center"
+        android:text="First Floor"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buildingName" />
+
+    <Button
+        android:id="@+id/PreviousFloorButton"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:background="#2E75B6"
+        android:text="Previous Floor"
+        android:textColor="@android:color/background_light"
+        android:textColorLink="@color/design_default_color_primary"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PreviousBuildingButton" />
+
+    <Button
+        android:id="@+id/NextFloorButton"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#2E75B6"
+        android:text="Next Floor"
+        android:textColor="@android:color/background_light"
+        android:textColorLink="@color/design_default_color_primary"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NextBuildingButton" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="239dp"
+        android:layout_height="138dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floorName"
+        app:srcCompat="@mipmap/cmi1070" />
+
+    <Button
+        android:id="@+id/NextBuildingButton"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:background="#2E75B6"
+        android:text="Next Building"
+        android:textColor="@android:color/background_light"
+        android:textColorLink="@color/design_default_color_primary"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/PreviousBuildingButton"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:background="#2E75B6"
+        android:text="Previous Building"
+        android:textColor="@android:color/background_light"
+        android:textColorLink="@color/design_default_color_primary"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/buildingName"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="#778899"
+        android:gravity="center"
+        android:text="Wijnhaven 107"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
