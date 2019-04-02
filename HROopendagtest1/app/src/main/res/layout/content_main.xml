@@ -61,41 +61,29 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_title1" />
 
     <TextView
-        android:id="@+id/txt_main1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
-        android:layout_marginTop="40dp"
-        android:text="choose one"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_bg" />
-
-    <TextView
         android:id="@+id/txt_main2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="4dp"
-        android:text="Open day:"
-        android:textSize="30sp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="75dp"
+        android:text="Open days:"
+        android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_main1" />
+        app:layout_constraintTop_toBottomOf="@+id/img_bg" />
 
     <RelativeLayout
         android:id="@+id/btn1"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
         android:layout_marginTop="53dp"
         android:background="@drawable/button_background"
         android:clickable="true"
         android:focusable="true"
-        app:layout_constraintStart_toEndOf="@+id/txt_main1"
+        app:layout_constraintStart_toEndOf="@+id/txt_main2"
         app:layout_constraintTop_toBottomOf="@+id/img_bg">
 
         <TextView
@@ -142,13 +130,13 @@
         android:id="@+id/btn2"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginLeft="61dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/button_background"
         android:clickable="true"
         android:focusable="true"
-        app:layout_constraintStart_toEndOf="@+id/txt_main1"
+        app:layout_constraintStart_toEndOf="@+id/btn3"
         app:layout_constraintTop_toBottomOf="@+id/btn1">
 
         <TextView
@@ -195,9 +183,9 @@
         android:id="@+id/btn3"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginLeft="96dp"
-        android:layout_marginTop="79dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="76dp"
         android:background="@drawable/button_background"
         android:clickable="true"
         android:focusable="true"
