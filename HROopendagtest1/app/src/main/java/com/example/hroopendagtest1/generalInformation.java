@@ -13,9 +13,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 public class generalInformation extends AppCompatActivity
+
         implements NavigationView.OnNavigationItemSelectedListener {
+    private Button button1;
+    private Button button2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +27,6 @@ public class generalInformation extends AppCompatActivity
         setContentView(R.layout.activity_general_information);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -87,6 +90,7 @@ public class generalInformation extends AppCompatActivity
         } else if (id == R.id.nav_generalInformation) {
             Intent i = new Intent(this, generalInformation.class);
             startActivity(i);
+
 
         } else if (id == R.id.nav_contact) {
 

@@ -56,7 +56,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/contact"
         android:layout_width="191dp"
         android:layout_height="31dp"
         android:layout_marginStart="8dp"
@@ -82,7 +82,7 @@
         android:textColor="@color/HRO_subColor5"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/contact"
         app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <Button
@@ -96,7 +96,7 @@
         android:text="Informatica"
         android:textColor="@color/HRO_subColor5"
         app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/contact" />
 
     <Button
         android:id="@+id/add2"
@@ -112,7 +112,7 @@
         android:textColor="@color/HRO_subColor5"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/contact"
         app:layout_constraintTop_toBottomOf="@+id/add1" />
 
     <Button
@@ -172,7 +172,7 @@
         android:textColor="@color/HRO_subColor5"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/contact"
         app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <Button
@@ -204,7 +204,7 @@
         android:textColor="@color/HRO_subColor5"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/contact"
         app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <TextView
@@ -216,7 +216,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:text="Study programs"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/contact"
         app:layout_constraintStart_toStartOf="@+id/time_title"
         app:layout_constraintTop_toBottomOf="@+id/time_title" />
 
