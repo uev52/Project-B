@@ -21,6 +21,10 @@
 
     <string name="title_activity_contact_form">contact_form</string>
     <string name="title_activity_floor_plan">floor_plan</string>
+
     <string name="title_activity_popup"></string>
+
+    <string name="title_activity_study_program_screen">study_program_screen</string>
+
 
 </resources>

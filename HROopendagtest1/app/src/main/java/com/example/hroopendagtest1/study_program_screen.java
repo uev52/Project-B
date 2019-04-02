@@ -2,25 +2,29 @@ package com.example.hroopendagtest1;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.text.method.ScrollingMovementMethod;
+import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity
+public class study_program_screen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_study_program_screen);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -30,6 +34,13 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        TextView txt17 = findViewById(R.id.textView17);
+        txt17.setMovementMethod(new ScrollingMovementMethod());
+        TextView txt19 = findViewById(R.id.textView19);
+        txt19.setMovementMethod(new ScrollingMovementMethod());
+        TextView txt20 = findViewById(R.id.textView20);
+        txt20.setMovementMethod(new ScrollingMovementMethod());
     }
 
     @Override
@@ -41,6 +52,7 @@ public class MainActivity extends AppCompatActivity
             super.onBackPressed();
         }
     }
+
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -66,10 +78,6 @@ public class MainActivity extends AppCompatActivity
                 i = new Intent(this, generalInformation.class);
                 break;
 
-            case R.id.nav_generalInformation:
-                i = new Intent(this, generalInformation.class);
-                break;
-
             case R.id.nav_contact:
                 i = new Intent(this, contact_form.class);
                 break;
@@ -82,13 +90,12 @@ public class MainActivity extends AppCompatActivity
                 i = new Intent(this, settings.class);
                 break;
 
-                default:
-                    i = new Intent(this, MainActivity.class);
+            default:
+                i = new Intent(this, MainActivity.class);
                 break;
         }
 
         startActivity(i);
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
