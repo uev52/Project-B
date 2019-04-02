@@ -79,6 +79,7 @@ public class floor_plan extends AppCompatActivity implements NavigationView.OnNa
             default:
                 i = new Intent(this, MainActivity.class);
                 break;
+
         }
 
         startActivity(i);
