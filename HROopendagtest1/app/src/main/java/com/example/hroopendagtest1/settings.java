@@ -60,19 +60,23 @@ public class settings extends AppCompatActivity
             Intent i = new Intent(this, openday.class);
             startActivity(i);
         } else if (id == R.id.nav_information) {
-
-        } else if (id == R.id.nav_myEvents) {
-
+            Intent i = new Intent(this, MainActivity.class);
+            startActivity(i);
         } else if (id == R.id.nav_generalInformation) {
-
+            Intent i = new Intent(this, generalInformation.class);
+            startActivity(i);
         } else if (id == R.id.nav_contact) {
+            Intent i = new Intent(this, contact_form.class);
+            startActivity(i);
 
         } else if (id == R.id.nav_floorPlans) {
-
+            Intent i = new Intent(this, floor_plan.class);
+            startActivity(i);
         } else if (id == R.id.nav_settings) {
             Intent i = new Intent(this, settings.class);
             startActivity(i);
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
