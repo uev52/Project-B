@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".floor_plan"
+            android:label="@string/title_activity_floor_plan"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.hroopendagtest1.MainActivity" />
+        </activity>
+        <activity
             android:name=".contact_form"
             android:label="@string/title_activity_contact_form"
             android:parentActivityName=".MainActivity"
