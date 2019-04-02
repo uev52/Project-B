@@ -18,8 +18,7 @@ import android.widget.Button;
 public class generalInformation extends AppCompatActivity
 
         implements NavigationView.OnNavigationItemSelectedListener {
-    private Button button1;
-    private Button button2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
