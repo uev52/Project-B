@@ -13,7 +13,7 @@
 
             android:name=".generalInformation"
             android:label="@string/title_activity_general_information"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
 
             android:name=".floor_plan"
             android:label="@string/title_activity_floor_plan"
