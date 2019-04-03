@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/phonecalender_text"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -17,12 +18,12 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:alpha="0.6"
         android:background="#cacaca"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:alpha="0.6"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -216,6 +217,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:text="Study programs"
+        android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/contact"
         app:layout_constraintStart_toStartOf="@+id/time_title"
         app:layout_constraintTop_toBottomOf="@+id/time_title" />
@@ -300,10 +302,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout"
         android:layout_width="34dp"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="409dp"/>
+        tools:layout_editor_absoluteY="409dp" />
 
     <TextView
         android:id="@+id/textView9"
@@ -314,6 +317,32 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
         app:layout_constraintStart_toStartOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="add to calender"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/add1"
+        app:layout_constraintStart_toStartOf="@+id/add1"
+        app:layout_constraintTop_toBottomOf="@+id/time_title" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="information about the day"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
 
 
 </android.support.constraint.ConstraintLayout>
