@@ -1,15 +1,18 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
     <gradient
-        android:startColor="#FFFFFF"
+        android:startColor="@color/HRO_subColor5"
         android:centerColor="#FFE1E1"
-        android:endColor="#FFA0A0"
+        android:endColor="@color/HRO_subColor4"
         android:angle="45"
         />
 
+
+
     <corners
         android:radius="50dp"
-        android:topLeftRadius="10dp"/>
+        android:topLeftRadius="100dp"
+        android:topRightRadius="200dp"/>
 
     <stroke
         android:color="#000000"
