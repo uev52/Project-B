@@ -69,7 +69,7 @@ public class generalInformation extends AppCompatActivity
                 break;
 
             case R.id.nav_information:
-                i = new Intent(this, generalInformation.class);
+                i = new Intent(this, study_program_screen.class);
                 break;
 
             case R.id.nav_generalInformation:
