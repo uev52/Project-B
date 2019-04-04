@@ -33,19 +33,17 @@
         app:srcCompat="@mipmap/hro_icon_text" />
 
     <TextView
-        android:id="@+id/txt_title1"
+        android:id="@+id/txt_main2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="60dp"
-        android:text="Overtref"
-        android:textColor="@color/HRO_subColor1"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="32dp"
+        android:text="Open days:"
         android:textSize="40sp"
         android:textStyle="bold"
-        app:fontFamily="sans-serif"
-        app:layout_constraintStart_toEndOf="@+id/img_icon"
-        app:layout_constraintTop_toTopOf="@+id/img_bg" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_bg" />
 
     <TextView
         android:id="@+id/txt_title2"
@@ -61,174 +59,201 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_title1" />
 
     <TextView
-        android:id="@+id/txt_main2"
+        android:id="@+id/txt_title1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="75dp"
-        android:text="Open days:"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="60dp"
+        android:text="Overtref"
+        android:textColor="@color/HRO_subColor1"
         android:textSize="40sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_bg" />
+        app:fontFamily="sans-serif"
+        app:layout_constraintStart_toEndOf="@+id/img_icon"
+        app:layout_constraintTop_toTopOf="@+id/img_bg" />
 
-    <RelativeLayout
-        android:id="@+id/btn1"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginLeft="29dp"
-        android:layout_marginTop="53dp"
-        android:background="@drawable/button_background"
-        android:clickable="true"
-        android:focusable="true"
-        app:layout_constraintStart_toEndOf="@+id/txt_main2"
-        app:layout_constraintTop_toBottomOf="@+id/img_bg">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/bg_home_screen_scroll"
+        android:fadingEdgeLength="10dp"
+        android:requiresFadingEdge="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp">
 
-        <TextView
-            android:id="@+id/btn1_txt1"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="20dp"
-            android:text="04"
-            android:textSize="30sp" />
+            android:orientation="vertical"
+            android:requiresFadingEdge="vertical">
 
-        <TextView
-            android:id="@+id/btn1_txt2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="5dp"
-            android:layout_marginLeft="6dp"
-            android:layout_marginTop="40dp"
-            android:layout_toEndOf="@+id/btn1_txt1"
-            android:layout_toRightOf="@+id/btn1_txt1"
-            android:text="June" />
+            <RelativeLayout
+                android:id="@+id/btn1"
+                android:layout_width="270dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_background"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_main2">
 
-        <TextView
-            android:id="@+id/btn1_txt3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn1_txt1"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginStart="25dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="1dp"
-            android:text="2019"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/btn1_txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="13dp"
+                    android:text="04"
+                    android:textSize="30sp" />
 
-    <RelativeLayout
-        android:id="@+id/btn2"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="61dp"
-        android:layout_marginLeft="61dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/button_background"
-        android:clickable="true"
-        android:focusable="true"
-        app:layout_constraintStart_toEndOf="@+id/btn3"
-        app:layout_constraintTop_toBottomOf="@+id/btn1">
+                <TextView
+                    android:id="@+id/btn1_txt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="23dp"
+                    android:layout_toEndOf="@+id/btn1_txt1"
+                    android:layout_toRightOf="@+id/btn1_txt1"
+                    android:text="April"
+                    android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/btn2_txt1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="15dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="20dp"
-            android:text="04"
-            android:textSize="30sp" />
+                <TextView
+                    android:id="@+id/btn1_txt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="52dp"
+                    android:text="2019"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
 
-        <TextView
-            android:id="@+id/btn2_txt2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="5dp"
-            android:layout_marginLeft="6dp"
-            android:layout_marginTop="40dp"
-            android:layout_toEndOf="@+id/btn2_txt1"
-            android:layout_toRightOf="@+id/btn2_txt1"
-            android:text="April" />
+            <RelativeLayout
+                android:id="@+id/btn2"
+                android:layout_width="270dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="68dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_background"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn1">
 
-        <TextView
-            android:id="@+id/btn2_txt3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn2_txt1"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginStart="25dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="1dp"
-            android:text="2019"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/btn2_txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="13dp"
+                    android:text="24"
+                    android:textSize="30sp" />
 
-    <RelativeLayout
-        android:id="@+id/btn3"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginLeft="88dp"
-        android:layout_marginTop="76dp"
-        android:background="@drawable/button_background"
-        android:clickable="true"
-        android:focusable="true"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_main2">
+                <TextView
+                    android:id="@+id/btn2_txt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="23dp"
+                    android:layout_toEndOf="@+id/btn2_txt1"
+                    android:layout_toRightOf="@+id/btn2_txt1"
+                    android:text="April"
+                    android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/btn3_txt1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="20dp"
-            android:text="24"
-            android:textSize="30sp" />
+                <TextView
+                    android:id="@+id/btn2_txt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="52dp"
+                    android:text="2019"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
 
-        <TextView
-            android:id="@+id/btn3_txt2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="5dp"
-            android:layout_marginLeft="6dp"
-            android:layout_marginTop="40dp"
-            android:layout_toEndOf="@+id/btn3_txt1"
-            android:layout_toRightOf="@+id/btn3_txt1"
-            android:text="April" />
+            <RelativeLayout
+                android:id="@+id/btn3"
+                android:layout_width="270dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="68dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_background"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn2">
 
-        <TextView
-            android:id="@+id/btn3_txt3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn3_txt1"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginStart="25dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="1dp"
-            android:text="2019"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/btn3_txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="13dp"
+                    android:text="04"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/btn3_txt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="23dp"
+                    android:layout_toEndOf="@+id/btn3_txt1"
+                    android:layout_toRightOf="@+id/btn3_txt1"
+                    android:text="June"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/btn3_txt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="52dp"
+                    android:text="2019"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
 </android.support.constraint.ConstraintLayout>
