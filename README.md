@@ -9,6 +9,6 @@ Team Members:
 
 	Abdellati Soufyan, 		  0963595
 	Üzeyir Ethem Varol,		  0976915
-	Yasin Mir			          0946639
-	Sevven van der Vlist,		0957881
-	Aage Veerman.           0965086
+	Yasin Mir			  0946639
+	Sevven van der Vlist,		  0957881
+	Aage Veerman.           	  0965086
