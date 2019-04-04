@@ -10,6 +10,17 @@
     >
 
     <ImageView
+        android:id="@+id/img_bg"
+        android:layout_width="match_parent"
+        android:layout_height="215dp"
+        android:contentDescription="background"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/bg_home_screen" />
+
+    <ImageView
         android:id="@+id/img_icon"
         android:layout_width="118dp"
         android:layout_height="114dp"
@@ -61,17 +72,6 @@
         app:fontFamily="sans-serif"
         app:layout_constraintStart_toEndOf="@+id/img_icon"
         app:layout_constraintTop_toTopOf="@+id/img_bg" />
-
-    <ImageView
-        android:id="@+id/img_bg"
-        android:layout_width="match_parent"
-        android:layout_height="215dp"
-        android:contentDescription="background"
-        android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/bg_home_screen" />
 
     <ScrollView
         android:layout_width="match_parent"
