@@ -5,7 +5,19 @@
         <item name="colorPrimary">@color/HRO_mainColor</item>
     </style>
 
-    <style name="HRO_main"></style>
+
+
+    <!-- Specific Feed activity theme -->
+    <style name="LightTheme" parent="Theme.AppCompat.Light">
+        <item name="android:windowBackground">@color/HRO_white2</item>
+        <item name="android:textColor">#33343B</item>
+    </style>
+
+    <style name="DarkTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:windowBackground">@color/HRO_black2</item>
+    </style>
+
+
 
     <style name="HRO_switch" parent="Theme.AppCompat.Light">
         <!-- active thumb & track color (30% transparency) -->

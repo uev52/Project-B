@@ -13,7 +13,6 @@
         <item
             android:id="@+id/nav_information"
             android:title="@string/information" />
-
         <item
             android:id="@+id/nav_generalInformation"
             android:title="@string/general_information" />
@@ -28,18 +27,5 @@
             android:title="@string/settings" />
 
     </group>
-
-    <item android:title="Share">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
-        </menu>
-    </item>
 
 </menu>
