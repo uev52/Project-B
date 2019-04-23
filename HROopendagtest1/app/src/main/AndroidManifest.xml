@@ -12,10 +12,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity
-            android:name=".popActivity"
-            android:label="@string/title_activity_popup"
-            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".contact_form"
             android:label="@string/title_activity_openday"

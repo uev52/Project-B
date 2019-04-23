@@ -177,7 +177,7 @@ Contact us here:"
         app:layout_constraintTop_toBottomOf="@+id/button10" />
 
     <Button
-        android:id="@+id/contact"
+        android:id="@+id/btn_sp1"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="39dp"
@@ -218,7 +218,7 @@ Contact us here:"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contact" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_sp1" />
 
     <ScrollView
         android:layout_width="12dp"
