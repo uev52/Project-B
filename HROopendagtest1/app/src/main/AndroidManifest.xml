@@ -14,7 +14,7 @@
 
         <activity
             android:name=".contact_form"
-            android:label="@string/title_activity_openday"
+            android:label="@string/title_activity_contact_form"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".floor_plan"
