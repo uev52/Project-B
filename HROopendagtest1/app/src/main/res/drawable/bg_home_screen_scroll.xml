@@ -7,7 +7,7 @@
         android:endColor="@color/HRO_white"
         android:type="linear" />
 
-    <corners
-        android:radius="75dp"/>
+    <!--<corners-->
+        <!--android:radius="75dp"/>-->
 
 </shape>
