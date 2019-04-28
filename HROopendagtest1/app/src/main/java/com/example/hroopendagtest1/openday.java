@@ -1,6 +1,7 @@
 package com.example.hroopendagtest1;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,10 +15,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class openday extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    ImageView schedule;
     Button btn_sp1;
     Button btn_sp2;
     Button btn_sp3;
@@ -29,6 +32,9 @@ public class openday extends AppCompatActivity
     Button btn_sp3_info;
     Button btn_sp4_info;
     Button btn_sp5_info;
+    TextView title;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,16 +43,21 @@ public class openday extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        title=(TextView) findViewById(R.id.scheduleTitle);
+        schedule = (ImageView)findViewById(R.id.schedule);
         // Studyprogram button for Comunication (changes the day achedule)
         btn_sp1=(Button)findViewById(R.id.btn_sp1);
 
         btn_sp1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(i);
+                title.setText("Communicatie");
+                schedule.setImageResource(R.drawable.day_schedule);
+
             }
+
         });
+
 
         // Studyprogram button for Informatica (changes the day achedule)
         btn_sp2=(Button)findViewById(R.id.btn_sp2);
@@ -54,53 +65,49 @@ public class openday extends AppCompatActivity
         btn_sp2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(i);
+                title.setText("Informatica");
+                schedule.setImageResource(R.drawable.day_schedule_informatica);
+
             }
+
         });
 
-        // Studyprogram button for ? (changes the day achedule)
+        // Studyprogram button for Technisch informatica (changes the day achedule)
         btn_sp3=(Button)findViewById(R.id.btn_sp3);
 
         btn_sp3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(i);
-            }
-        });
+                title.setText("Technisch Informatica");
+                schedule.setImageResource(R.drawable.day_schedule);
 
-        // Studyprogram button for ? (changes the day achedule)
+            }
+
+        });
+        // Studyprogram button for Creative Design & Game Technology (changes the day achedule)
         btn_sp4=(Button)findViewById(R.id.btn_sp4);
 
         btn_sp4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(i);
+                title.setText("MD&GT");
+                schedule.setImageResource(R.drawable.day_schedule_informatica);
+
             }
+
         });
 
-        // Studyprogram button for ? (changes the day achedule)
+        // Studyprogram button for Ceative Media Design (changes the day achedule)
         btn_sp5=(Button)findViewById(R.id.btn_sp5);
 
         btn_sp5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(i);
-            }
-        });
+                title.setText("CMD");
+                schedule.setImageResource(R.drawable.day_schedule);
 
-        // Studyprogram button for ? (changes the day achedule)
-        btn_sp5=(Button)findViewById(R.id.btn_sp5);
-
-        btn_sp5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(i);
             }
+
         });
 
         // information button. by clicking the current screen will switch to the study program screen of Communication that provide more detailed information
@@ -229,5 +236,35 @@ public class openday extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+//the menu with the share button
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.openday_menu,menu);
+
+        return super.onCreateOptionsMenu(menu);
+    }
+// the sharing funtionaltiy
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()){
+// here we make an intent that gives an string/ contectext with the message
+            case R.id.share_button:
+                Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                shareIntent.setType("text/plain");
+                String messageBody = "your body here";
+                String messageSubject = "your subject";
+// the sharing text/ body is set here
+                shareIntent.putExtra(Intent.EXTRA_TEXT,messageBody);
+                shareIntent.putExtra(Intent.EXTRA_SUBJECT,messageSubject);
+// the sharing box/ sharing possibilities are set here
+                startActivity(Intent.createChooser(shareIntent,"Share with"));
+                break;
+
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
