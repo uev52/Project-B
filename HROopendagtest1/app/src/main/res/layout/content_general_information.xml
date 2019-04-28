@@ -179,7 +179,7 @@ Contact us here:"
         tools:layout_editor_absoluteY="265dp" />
 
     <Button
-        android:id="@+id/contact"
+        android:id="@+id/btn_sp1"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="39dp"
@@ -223,6 +223,7 @@ Contact us here:"
         app:layout_constraintHorizontal_bias="0.554"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/floorplans" />
+
 
     <ScrollView
         android:layout_width="12dp"
