@@ -1,5 +1,6 @@
 package com.example.hroopendagtest1;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -19,8 +20,10 @@ import android.widget.EditText;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class contact_form extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+import javax.security.auth.Subject;
 
+public class contact_form extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+    private Activity activity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,34 +50,45 @@ public class contact_form extends AppCompatActivity implements NavigationView.On
         final EditText editSubject     = (EditText) findViewById(R.id.editSubject);
         final EditText editContent     = (EditText) findViewById(R.id.editContent);
 
-        String Name      = editName.getText().toString();
-        String Email     = editYouremail.getText().toString();
-        String Subject   = editSubject.getText().toString();
-        String Content   = editContent.getText().toString();
 
+        Button email = (Button) findViewById(R.id.sendButton);
+        email.setOnClickListener(new View.OnClickListener() {
+            @Override
+            //public means that the method is visible and can be called from other objects of other types.
+            //void means that the method has no return value
+            public void onClick(View v) {
 
-        //start maling activity, everything next is sending data from one application to another
-        Intent Mailing = new Intent(android.content.Intent.ACTION_SEND);
+                String Name     = editName.getText().toString();
+                String Email    = editYouremail.getText().toString();
+                String Subject  = editSubject.getText().toString();
+                String Content  = editContent.getText().toString();
 
+                //start maling activity, everything next is sending data from one application to another
+                Intent Mailing = new Intent(android.content.Intent.ACTION_SEND);
 
-        //who is the mail being sended to
-        Mailing.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"0946639@hr.nl"});
+                Mailing.setType("plain text");
 
-        //what is the subject
-        Mailing.putExtra(android.content.Intent.EXTRA_SUBJECT, Subject);
+                //who is the mail being sended to
+                Mailing.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"0946639@hr.nl"});
 
-        //mail content and other information
-        Mailing.putExtra(android.content.Intent.EXTRA_TEXT, "Name:"+Name+'\n'+"Email adress:"+Email+'\n'+"Message:"+'\n'+Content);
+                //what is the subject
+                Mailing.putExtra(android.content.Intent.EXTRA_SUBJECT, Subject);
 
-        //sharingfunctionality of the button
-        startActivity(Intent.createChooser(Mailing, "Choose mail application"));
+                //mail content and other information
+                Mailing.putExtra(android.content.Intent.EXTRA_TEXT, "Name:" + Name + '\n' + "Email:" + Email + '\n' + "Content:" + '\n' + Content);
 
-        //http://androidmkab.com/2016/12/13/create-android-contact-form-beginne/
-        //https://www.youtube.com/watch?v=tZ2YEw6SoBU
-        //-----------------
+                //sharingfunctionality of the button
+                startActivity(Intent.createChooser(Mailing, "Choose mail application"));
 
+                //http://androidmkab.com/2016/12/13/create-android-contact-form-beginne/
+                //https://www.youtube.com/watch?v=tZ2YEw6SoBU
+                //-----------------
 
+            }
+        });
     }
+
+
 
 
 
