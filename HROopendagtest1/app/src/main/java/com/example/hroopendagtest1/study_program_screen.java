@@ -34,13 +34,6 @@ public class study_program_screen extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        TextView txt17 = findViewById(R.id.textView17);
-        txt17.setMovementMethod(new ScrollingMovementMethod());
-        TextView txt19 = findViewById(R.id.textView19);
-        txt19.setMovementMethod(new ScrollingMovementMethod());
-        TextView txt20 = findViewById(R.id.textView20);
-        txt20.setMovementMethod(new ScrollingMovementMethod());
     }
 
     @Override
