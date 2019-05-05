@@ -171,15 +171,15 @@ Contact us here:"
         android:id="@+id/textView10"
         android:layout_width="300dp"
         android:layout_height="43dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="252dp"
         android:text="Do you want to see the floor plans of CMI? Click below:"
         android:textColor="@color/design_default_color_primary_dark"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contact" />
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
 
     <Button
         android:id="@+id/btn_sp1"
