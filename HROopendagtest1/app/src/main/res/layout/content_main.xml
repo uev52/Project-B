@@ -8,6 +8,7 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/app_bar_main">
 
+
     <ImageView
         android:id="@+id/img_bg"
         android:layout_width="match_parent"
@@ -75,8 +76,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:background="@drawable/bg_home_screen_scroll"
-        android:fadingEdgeLength="10dp"
+        android:fadingEdgeLength="30dp"
         android:overScrollMode="never"
         android:requiresFadingEdge="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -109,10 +109,11 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginStart="13dp"
-                    android:layout_marginLeft="13dp"
-                    android:layout_marginTop="13dp"
+                    android:layout_marginStart="47dp"
+                    android:layout_marginLeft="47dp"
+                    android:layout_marginTop="9dp"
                     android:text="@string/hro_Home_btn1_txt_1"
+                    android:textColor="?android:textColorPrimary"
                     android:textSize="30sp" />
 
                 <TextView
@@ -126,7 +127,8 @@
                     android:layout_toEndOf="@+id/btn1_txt1"
                     android:layout_toRightOf="@+id/btn1_txt1"
                     android:text="@string/hro_Home_btn1_txt_2"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textColor="?android:textColorPrimary"/>
 
                 <TextView
                     android:id="@+id/btn1_txt3"
@@ -135,10 +137,11 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="52dp"
+                    android:layout_marginStart="128dp"
+                    android:layout_marginLeft="128dp"
+                    android:layout_marginTop="39dp"
                     android:text="@string/hro_Home_btn1_txt_3"
+                    android:textColor="?android:textColorPrimary"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </RelativeLayout>
@@ -164,10 +167,11 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginStart="13dp"
-                    android:layout_marginLeft="13dp"
-                    android:layout_marginTop="13dp"
+                    android:layout_marginStart="47dp"
+                    android:layout_marginLeft="47dp"
+                    android:layout_marginTop="8dp"
                     android:text="@string/hro_Home_btn2_txt_1"
+                    android:textColor="?android:textColorPrimary"
                     android:textSize="30sp" />
 
                 <TextView
@@ -181,7 +185,8 @@
                     android:layout_toEndOf="@+id/btn2_txt1"
                     android:layout_toRightOf="@+id/btn2_txt1"
                     android:text="@string/hro_Home_btn2_txt_2"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textColor="?android:textColorPrimary"/>
 
                 <TextView
                     android:id="@+id/btn2_txt3"
@@ -190,10 +195,11 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="52dp"
+                    android:layout_marginStart="128dp"
+                    android:layout_marginLeft="128dp"
+                    android:layout_marginTop="38dp"
                     android:text="@string/hro_Home_btn2_txt_3"
+                    android:textColor="?android:textColorPrimary"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </RelativeLayout>
@@ -219,10 +225,11 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginStart="13dp"
-                    android:layout_marginLeft="13dp"
-                    android:layout_marginTop="13dp"
+                    android:layout_marginStart="47dp"
+                    android:layout_marginLeft="47dp"
+                    android:layout_marginTop="8dp"
                     android:text="@string/hro_Home_btn3_txt_1"
+                    android:textColor="?android:textColorPrimary"
                     android:textSize="30sp" />
 
                 <TextView
@@ -236,7 +243,8 @@
                     android:layout_toEndOf="@+id/btn3_txt1"
                     android:layout_toRightOf="@+id/btn3_txt1"
                     android:text="@string/hro_Home_btn3_txt_2"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textColor="?android:textColorPrimary"/>
 
                 <TextView
                     android:id="@+id/btn3_txt3"
@@ -245,10 +253,11 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="52dp"
+                    android:layout_marginStart="128dp"
+                    android:layout_marginLeft="128dp"
+                    android:layout_marginTop="38dp"
                     android:text="@string/hro_Home_btn3_txt_3"
+                    android:textColor="?android:textColorPrimary"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </RelativeLayout>

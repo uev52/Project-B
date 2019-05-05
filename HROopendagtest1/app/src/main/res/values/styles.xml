@@ -6,13 +6,14 @@
     </style>
 
 
-    <style name="AppTheme.Dark" parent="Theme.AppCompat">
+    <style name="AppTheme_Dark" parent="Theme.AppCompat">
         <!-- Dark theme base colours -->
         <item name="colorPrimary">@color/HRO_mainColor</item>
         <item name="colorPrimaryDark">@color/HRO_mainColorDark</item>
         <item name="colorAccent">@color/HRO_subColor4</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        
     </style>
 
 
