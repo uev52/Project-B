@@ -105,9 +105,19 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
+    // go to openday screen 1 by onclick
     public void gotoOpenDay1(View v){
         Intent i = new Intent(this, openday.class);
+        startActivity(i);
+    }
+    // go to openday screen 1 by onclick
+    public void gotoOpenDay2(View v){
+        Intent i = new Intent(this, openday2.class);
+        startActivity(i);
+    }
+    // go to openday screen 1 by onclick
+    public void gotoOpenDay3(View v){
+        Intent i = new Intent(this, openday3.class);
         startActivity(i);
     }
 }
