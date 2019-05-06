@@ -14,11 +14,12 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
+import android.widget.Toast;
 
 import com.example.hroopendagtest1.R;
 
 public class settings extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+    implements NavigationView.OnNavigationItemSelectedListener {
     public Button btn_reset;
     public Switch swtch_nightmode;
 
@@ -68,8 +69,6 @@ public class settings extends AppCompatActivity
                 startActivity(i);
             }
         });
-
-
 
 
 
@@ -143,4 +142,11 @@ public class settings extends AppCompatActivity
         Intent i = getIntent();
         startActivity(i);
         finish();
-    }}
+    }
+
+
+    public void resetSettings(View v){
+        Toast.makeText(this, "The settings have been reset!", Toast.LENGTH_LONG).show();
+    }
+
+}

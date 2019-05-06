@@ -118,6 +118,7 @@
         android:layout_marginStart="168dp"
         android:layout_marginLeft="168dp"
         android:layout_marginTop="8dp"
+        android:onClick="resetSettings"
         android:text="RESET"
         android:textAllCaps="true"
         android:textAppearance="@style/TextAppearance.AppCompat"
