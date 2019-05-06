@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/phonecalender_text"
@@ -8,6 +8,10 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".openday"
     tools:showIn="@layout/app_bar_openday">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/time_title"
@@ -44,17 +48,15 @@
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="380dp"
-        android:layout_height="214dp"
+        android:layout_height="310dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
         android:background="#cacaca"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -121,7 +123,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:background="@color/HRO_subColor1"
-        android:text="Communicatie"
+        android:text="CM and GT"
         android:textColor="@color/HRO_subColor5"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/btn_sp3" />
@@ -148,7 +150,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:background="@color/HRO_subColor1"
-        android:text="Informatica"
+        android:text="Technisch informatica"
         android:textColor="@color/HRO_subColor5"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/btn_sp2" />
@@ -176,7 +178,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:background="@color/HRO_subColor1"
-        android:text="Communicatie"
+        android:text="CMD"
         android:textColor="@color/HRO_subColor5"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"
@@ -295,15 +297,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
-        android:id="@+id/textView9"
-        android:layout_width="300dp"
-        android:layout_height="190dp"
-        android:text="Class education Teachers and / or students provide brief information about the training in a room. The information session takes around 45 minutes.  4.45 p.m. 5.30 p.m. 6.15 p.m. 6.45 p.m.  Examples of projects Computer Science students have furnished the study landscape on the 4th floor with examples of their projects and are happy to tell you something about this.  4 pm - 8 pm continuously Workshops You can follow a workshop. You then experience for yourself what you learn during the course."
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="@+id/imageView3" />
-
-    <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -332,5 +325,28 @@
         app:layout_constraintStart_toStartOf="@+id/imageView3"
         app:layout_constraintTop_toBottomOf="@+id/btn_sp5" />
 
+    <ImageView
+        android:id="@+id/schedule"
+        android:layout_width="370dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:srcCompat="@drawable/default_schedule" />
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/scheduleTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="choose a studyprogram"
+        android:textColor="#FCFFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/schedule"
+        app:layout_constraintStart_toStartOf="@+id/schedule"
+        app:layout_constraintTop_toTopOf="@+id/schedule" />
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
