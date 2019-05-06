@@ -19,6 +19,8 @@ import android.widget.Toast;
 public class generalInformation extends AppCompatActivity
 
         implements NavigationView.OnNavigationItemSelectedListener {
+    Button contactBtn;
+    Button floorplanBtn;
 
 
     @Override
@@ -37,6 +39,24 @@ public class generalInformation extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        contactBtn = (Button)findViewById(R.id.contactBtn);
+        contactBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(), contact_form.class);
+                startActivity(i);
+            }
+        });
+        floorplanBtn = (Button)findViewById(R.id.floorplans);
+        floorplanBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(), floor_plan.class);
+                startActivity(i);
+            }
+        });
     }
 
     @Override
