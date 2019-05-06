@@ -47,7 +47,7 @@ tools:showIn="@layout/app_bar_study_program_screen">
             android:text="In het eerste jaar oriënteer je je op het informaticavakgebied en wordt de basis gelegd voor de rest van de studie. Elke onderwijsperiode bestaat uit 10 lesweken waarin je concepten en vaardigheden uit het vakgebiedkrijgt aangeleerd. Daarin zit een leerlijn Development waar je goed leert programmeren en de leerlijn Analyse waar je leert problemen op te lossen voordat je start met programmeren. Ook is er elke periode aandacht voor de ontwikkeling van communicatievaardigheden en werk je in het eerste jaar in groepsverband aan twee projecten van elk een half jaar. \n\n Nadat je vooral hebt kennis gemaakt met facetten van het vakgebied, ga je in de hoofdfase deze kennis verdiepen, zowel theoretisch als praktisch. Samen met studenten van andere opleidingen werk je aan innovatieve projecten, waarbij Rotterdamse bedrijven betrokken zijn.
 
         In de projecten werk je aan praktijkgesimuleerde omstandigheden in groepsverband en pas je theorie toe. Hierbij werk je binnen toenemende complexiteit toe naar een werkend product/oplossing, door middel van gerichte projectontwikkelmethodieken. In het derde jaar ga je twintig weken op stage, in de tweede helft van het derde jaar en eerste helft van het vierde jaar volg je zelfgekozen minors, waarna je gaat afstuder"
-            android:textSize="10sp" />
+            android:textSize="14sp" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -72,7 +72,7 @@ tools:showIn="@layout/app_bar_study_program_screen">
             android:layout_marginBottom="8dp"
             android:scrollbars="vertical"
             android:text="Software is overal om ons heen te vinden. Jij bent de specialist in het maken van grote en complexe software informatiesystemen die snel, efficiënt en veilig werken. Zo kun je denken aan het ontwikkelen van een functionele app, maar ook aan het analyseren van grote hoeveelheden data van social media. Bij het ontwikkelen van deze systemen kom je in aanraking met verschillende programmeertalen. Zo leer je in het eerste jaar programmeren in Python en geavanceerde programmeertalen zoals Java/C#. Vanaf het tweede jaar kies je zelf welke programmeertaal je wilt gebruiken. Naast het programmeren en ontwikkelen van verschillende toepassingen leer je ook samenwerken.  Na het volgen van de opleiding Informatica ben je breed inzetbaar binnen het vakgebied. Vanuit functies als data engineer, software developer en software engineer kun je verder groeien binnen de ICT.  Ben jij geïnteresseerd in nieuwe technologische ontwikkelingen, nieuwsgierig, een beetje eigenzinnig en een doorzetter, dan is de opleiding Informatica iets voor jou!  "
-            android:textSize="10sp" />
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/textView20"
@@ -86,7 +86,7 @@ tools:showIn="@layout/app_bar_study_program_screen">
             android:layout_marginBottom="8dp"
             android:scrollbars="vertical"
             android:text="Toelatingsvoorwaarden: \n\n Met een mbo-niveau 4, havo en-of vwo-diploma ben je toelaatbaar tot deze opleiding. Hogeschool Rotterdam stelt geen eisen aan je vakkenpakket of het domein waarin je je mbo-diploma hebt behaald."
-            android:textSize="10sp" />
+            android:textSize="14sp" />
 
     </LinearLayout>
 </ScrollView>

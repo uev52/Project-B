@@ -15,7 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 
-public class communicatie extends AppCompatActivity
+public class technische_informatica extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".technische_informatica"
+    tools:showIn="@layout/app_bar_technische_informatica">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_gravity="center"
+                android:text="Technische Informatica"
+                android:textAllCaps="false"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:scrollbars="vertical"
+                android:text="In het eerste jaar oriënteer je je op het vakgebied en wordt de basis gelegd voor de rest van de studie. Tijdens de eerste zes maanden van de opleiding wordt extra aandacht besteed aan het op peil brengen van je wiskunde, natuurkunde, Nederlands en Engels. Vakkennis die een belangrijke rol speelt in de opleiding. Daarnaast staan in het eerste jaar ook programmeren, computer- en netwerksystemen centraal. Je brengt de opgedane kennis ook direct in de praktijk tijdens praktische opdrachten en projecten."
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="154dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                app:srcCompat="@drawable/tinformatica" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:scrollbars="vertical"
+                android:text="Als technisch informaticus werk je aan moderne ICT-systemen waarbij hard- en software geïntegreerd zijn. Dankzij je kennis van programmeren en hardware kun je juist op het snijpunt daarvan opereren.
+
+In het dagelijks leven zijn we steeds meer afhankelijk geworden van ICT-systemen. Reizen in het OV kan alleen nog met de OV-chipkaart, je bagage komt op Schiphol automatisch op de juiste plek, energiemeters worden ‘slim’ en medische ingrepen worden soms door een apparaat in plaats van een chirurg gedaan. Allemaal voorbeelden waarbij hard- en software samenkomen in een enkel systeem.
+
+Als technisch informaticus draag je bij aan het ontwikkelen, beveiligen en in de lucht houden van deze systemen. Gedurende de studie maak je kennis met de technische aspecten van ICT. Je leert te programmeren in diverse programmeertalen, waaronder de zogenaamde 'lagere' talen voor hardware toepassingen. Hiermee leer je oplossingen ontwikkelen voor verschillende apparaten, robots en andere moderne systemen. Je bent een all-rounder op alle disciplines, maar specialiseert je ook in een of meerdere aspecten in het werkveld. Denk daarbij aan Machine Learning, Augmented Reality, Automated Systems en uiteraard de met IoT (Internet of Things) nauw verbonden met Embedded Systems."
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:scrollbars="vertical"
+                android:text="Toelatingsvoorwaarden: \n\n Met een mbo-niveau 4, havo en-of vwo-diploma ben je toelaatbaar tot deze opleiding. Hogeschool Rotterdam stelt geen eisen aan je vakkenpakket of het domein waarin je je mbo-diploma hebt behaald."
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

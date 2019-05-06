@@ -10,9 +10,25 @@
         android:supportsRtl="true"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity
+            android:name=".camd"
+            android:label="@string/title_activity_camd"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".cmgt"
+            android:label="@string/title_activity_cmgt"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".technische_informatica"
+            android:label="@string/title_activity_technische_informatica"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".technischeinformatica"
+            android:label="@string/title_activity_technischeinformatica"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".communicatie"
             android:label="@string/title_activity_communicatie"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".contact_form"
             android:label="@string/title_activity_contact_form"
