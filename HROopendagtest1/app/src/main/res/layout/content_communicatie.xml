@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".communicatie"
+    tools:showIn="@layout/app_bar_communicatie">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_gravity="center"
+                android:text="Communicatie"
+                android:textAllCaps="false"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:scrollbars="vertical"
+                android:text="In het propedeusejaar staat de praktijk direct centraal; alles wat je leert, pas je toe in vraagstukken. Je gaat op bedrijfssafari in Rotterdam en kijkt in de keuken van communicatieprofessionals. Zo leer je wat communicatie is en wat je ermee kunt. Waardoor worden merken succesvol? Hoe werkt mediapsychologie? Welke rol kun jij als smart connector hebben binnen bedrijven? In kleine teams werk je aan projecten, zoals het ontwikkelen van een online tijdschrift. In een redactie ga je aan de slag met het ontwikkelen van aansprekende en interactieve content (tekst én beeld), aansluitend op de interesses van de doelgroep. Aan het eind van jaar 1 onderzoek je een onderwerp uit het communicatievak dat jij interessant vindt en je schrijft daar een propedeusescriptie over. Guerrillamarketing, storytelling, reputatiemanagement: waar wil jij expert in worden?"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="154dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                app:srcCompat="@drawable/communicatie" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:scrollbars="vertical"
+                android:text="Heb je een scherp oog en oor voor de verhalen van mensen en merken? Ben je creatief met tekst en beeld en gefascineerd door de wereld van media? Dan is de opleiding Communicatie iets voor jou!
+
+Organisaties staan voor grote uitdagingen. Een nieuw product promoten, samenwerken met klanten, medewerkers en inwoners, laten zien dat je goede dingen doet voor de samenleving. Hoe doe je dat in een tijd van kritische journalisten, vloggers, maatschappelijke discussies en elkaar snel opvolgende trends?
+Onze opleiding Communicatie leidt jou in vier jaar op tot wat we - met trots - een smart connector noemen. Een professional die voor slimme verbindingen zorgt."
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:scrollbars="vertical"
+                android:text="Toelatingsvoorwaarden: \n\n Met een mbo-niveau 4, havo en-of vwo-diploma ben je toelaatbaar tot deze opleiding. Hogeschool Rotterdam stelt geen eisen aan je vakkenpakket of het domein waarin je je mbo-diploma hebt behaald."
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

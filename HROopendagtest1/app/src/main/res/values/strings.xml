@@ -26,9 +26,9 @@
 
     <string name="title_activity_study_program_screen">Study Program</string>
 
-    <string name="title_activity_popup"/>
+    <string name="title_activity_popup" />
 
-    <string name="anti_warning"/>
+    <string name="anti_warning" />
 
     <!--HOME SCREEN-->
     <string name="hro_home_title_1">Overtref</string>
@@ -46,6 +46,14 @@
     <string name="hro_Home_btn3_txt_1">04</string>
     <string name="hro_Home_btn3_txt_2">June</string>
     <string name="hro_Home_btn3_txt_3">2019</string>
+    <string name="title_activity_communicatie">communicatie</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
 
 
 </resources>

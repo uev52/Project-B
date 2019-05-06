@@ -1,95 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+app:layout_behavior="@string/appbar_scrolling_view_behavior"
+tools:context=".study_program_screen"
+tools:showIn="@layout/app_bar_study_program_screen">
+
+<ScrollView
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".study_program_screen"
-    tools:showIn="@layout/app_bar_study_program_screen">
+    android:layout_height="match_parent">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center"
+            android:text="Informatica"
+            android:textAllCaps="false"
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textView21"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_gravity="center"
-                android:text="Informatica"
-                android:textAllCaps="false"
-                android:textSize="25sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView19"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                android:scrollbars="vertical"
-                android:text="In het eerste jaar oriënteer je je op het informaticavakgebied en wordt de basis gelegd voor de rest van de studie. Elke onderwijsperiode bestaat uit 10 lesweken waarin je concepten en vaardigheden uit het vakgebiedkrijgt aangeleerd. Daarin zit een leerlijn Development waar je goed leert programmeren en de leerlijn Analyse waar je leert problemen op te lossen voordat je start met programmeren. Ook is er elke periode aandacht voor de ontwikkeling van communicatievaardigheden en werk je in het eerste jaar in groepsverband aan twee projecten van elk een half jaar. \n\n Nadat je vooral hebt kennis gemaakt met facetten van het vakgebied, ga je in de hoofdfase deze kennis verdiepen, zowel theoretisch als praktisch. Samen met studenten van andere opleidingen werk je aan innovatieve projecten, waarbij Rotterdamse bedrijven betrokken zijn.
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:scrollbars="vertical"
+            android:text="In het eerste jaar oriënteer je je op het informaticavakgebied en wordt de basis gelegd voor de rest van de studie. Elke onderwijsperiode bestaat uit 10 lesweken waarin je concepten en vaardigheden uit het vakgebiedkrijgt aangeleerd. Daarin zit een leerlijn Development waar je goed leert programmeren en de leerlijn Analyse waar je leert problemen op te lossen voordat je start met programmeren. Ook is er elke periode aandacht voor de ontwikkeling van communicatievaardigheden en werk je in het eerste jaar in groepsverband aan twee projecten van elk een half jaar. \n\n Nadat je vooral hebt kennis gemaakt met facetten van het vakgebied, ga je in de hoofdfase deze kennis verdiepen, zowel theoretisch als praktisch. Samen met studenten van andere opleidingen werk je aan innovatieve projecten, waarbij Rotterdamse bedrijven betrokken zijn.
 
         In de projecten werk je aan praktijkgesimuleerde omstandigheden in groepsverband en pas je theorie toe. Hierbij werk je binnen toenemende complexiteit toe naar een werkend product/oplossing, door middel van gerichte projectontwikkelmethodieken. In het derde jaar ga je twintig weken op stage, in de tweede helft van het derde jaar en eerste helft van het vierde jaar volg je zelfgekozen minors, waarna je gaat afstuder"
-                android:textSize="10sp" />
+            android:textSize="10sp" />
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="154dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                app:srcCompat="@drawable/informaticastatistieken" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="154dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            app:srcCompat="@drawable/informaticastatistieken" />
 
-            <TextView
-                android:id="@+id/textView17"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                android:scrollbars="vertical"
-                android:text="Software is overal om ons heen te vinden. Jij bent de specialist in het maken van grote en complexe software informatiesystemen die snel, efficiënt en veilig werken. Zo kun je denken aan het ontwikkelen van een functionele app, maar ook aan het analyseren van grote hoeveelheden data van social media. Bij het ontwikkelen van deze systemen kom je in aanraking met verschillende programmeertalen. Zo leer je in het eerste jaar programmeren in Python en geavanceerde programmeertalen zoals Java/C#. Vanaf het tweede jaar kies je zelf welke programmeertaal je wilt gebruiken. Naast het programmeren en ontwikkelen van verschillende toepassingen leer je ook samenwerken.  Na het volgen van de opleiding Informatica ben je breed inzetbaar binnen het vakgebied. Vanuit functies als data engineer, software developer en software engineer kun je verder groeien binnen de ICT.  Ben jij geïnteresseerd in nieuwe technologische ontwikkelingen, nieuwsgierig, een beetje eigenzinnig en een doorzetter, dan is de opleiding Informatica iets voor jou!  "
-                android:textSize="10sp" />
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:scrollbars="vertical"
+            android:text="Software is overal om ons heen te vinden. Jij bent de specialist in het maken van grote en complexe software informatiesystemen die snel, efficiënt en veilig werken. Zo kun je denken aan het ontwikkelen van een functionele app, maar ook aan het analyseren van grote hoeveelheden data van social media. Bij het ontwikkelen van deze systemen kom je in aanraking met verschillende programmeertalen. Zo leer je in het eerste jaar programmeren in Python en geavanceerde programmeertalen zoals Java/C#. Vanaf het tweede jaar kies je zelf welke programmeertaal je wilt gebruiken. Naast het programmeren en ontwikkelen van verschillende toepassingen leer je ook samenwerken.  Na het volgen van de opleiding Informatica ben je breed inzetbaar binnen het vakgebied. Vanuit functies als data engineer, software developer en software engineer kun je verder groeien binnen de ICT.  Ben jij geïnteresseerd in nieuwe technologische ontwikkelingen, nieuwsgierig, een beetje eigenzinnig en een doorzetter, dan is de opleiding Informatica iets voor jou!  "
+            android:textSize="10sp" />
 
-            <TextView
-                android:id="@+id/textView20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                android:scrollbars="vertical"
-                android:text="Toelatingsvoorwaarden: \n\n Met een mbo-niveau 4, havo en-of vwo-diploma ben je toelaatbaar tot deze opleiding. Hogeschool Rotterdam stelt geen eisen aan je vakkenpakket of het domein waarin je je mbo-diploma hebt behaald."
-                android:textSize="10sp" />
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:scrollbars="vertical"
+            android:text="Toelatingsvoorwaarden: \n\n Met een mbo-niveau 4, havo en-of vwo-diploma ben je toelaatbaar tot deze opleiding. Hogeschool Rotterdam stelt geen eisen aan je vakkenpakket of het domein waarin je je mbo-diploma hebt behaald."
+            android:textSize="10sp" />
 
-        </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
+</ScrollView>
 
 
 </android.support.constraint.ConstraintLayout>
