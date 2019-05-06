@@ -65,8 +65,7 @@ public class settings extends AppCompatActivity
         btn_reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), popActivity.class);
-                startActivity(i);
+                Toast.makeText(getBaseContext(), "Succesfully reset", Toast.LENGTH_LONG).show();
             }
         });
 
