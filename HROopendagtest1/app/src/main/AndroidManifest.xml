@@ -5,11 +5,12 @@
 
     <application
         android:allowBackup="true"
+
         android:icon="@mipmap/hro_icon_text"
+
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
 
 
         <activity
@@ -42,7 +43,9 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:background="?background">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

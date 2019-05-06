@@ -23,7 +23,6 @@
 
     <Switch
         android:id="@+id/swtch_nightmode"
-        style="@style/HRO_switch"
         android:layout_width="41dp"
         android:layout_height="50dp"
         android:layout_marginStart="88dp"
@@ -102,7 +101,6 @@
 
     <Switch
         android:id="@+id/swtch_notifications"
-        style="@style/HRO_switch"
         android:layout_width="41dp"
         android:layout_height="50dp"
         android:layout_marginStart="80dp"

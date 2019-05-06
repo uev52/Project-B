@@ -1,6 +1,7 @@
 package com.example.hroopendagtest1;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,8 +14,21 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    public static final String PREFS_NAME = AppUtil.getPrefsName();
+    public static final String PREF_DARK_THEME = AppUtil.getPrefDarkTheme();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+        // Checks for dark theme and changes theme
+        SharedPreferences preferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        boolean useDarkTheme = preferences.getBoolean(PREF_DARK_THEME,  false);
+        if(useDarkTheme) {
+            setTheme(R.style.AppTheme_Dark);
+        }
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
