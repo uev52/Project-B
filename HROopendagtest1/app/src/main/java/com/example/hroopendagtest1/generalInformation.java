@@ -2,25 +2,28 @@ package com.example.hroopendagtest1;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class generalInformation extends AppCompatActivity
 
         implements NavigationView.OnNavigationItemSelectedListener {
+    //contact and floorplan buttons
     Button contactBtn;
     Button floorplanBtn;
+    //study program buttons
+    Button commBtn;
+    Button informaticaBtn;
+    Button techinfoBtn;
+    Button cmgtBtn;
+    Button camdBtn;
 
 
     @Override
@@ -53,7 +56,47 @@ public class generalInformation extends AppCompatActivity
         floorplanBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(), floor_plan.class);
+                startActivity(i);
+            }
+        });
+        commBtn = (Button)findViewById(R.id.commBtn);
+        commBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(), communicatie.class);
+                startActivity(i);
+            }
+        });
+        informaticaBtn = (Button)findViewById(R.id.informaticaBtn);
+        informaticaBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(), study_program_screen.class);
+                startActivity(i);
+            }
+        });
+        techinfoBtn = (Button)findViewById(R.id.techinfoBtn);
+        techinfoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(), technische_informatica.class);
+                startActivity(i);
+            }
+        });
+        cmgtBtn = (Button)findViewById(R.id.cmgtBtn);
+        cmgtBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(), cmgt.class);
+                startActivity(i);
+            }
+        });
+        camdBtn = (Button)findViewById(R.id.camdBtn);
+        camdBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(), camd.class);
                 startActivity(i);
             }
         });

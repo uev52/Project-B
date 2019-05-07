@@ -11,7 +11,7 @@
 
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/commBtn"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="216dp"
         android:layout_height="31dp"
@@ -29,7 +29,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/informaticaBtn"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="216dp"
         android:layout_height="35dp"
@@ -44,10 +44,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.558"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintTop_toBottomOf="@+id/commBtn" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/techinfoBtn"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="216dp"
         android:layout_height="31dp"
@@ -62,10 +62,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.553"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        app:layout_constraintTop_toBottomOf="@+id/informaticaBtn" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/cmgtBtn"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="216dp"
         android:layout_height="36dp"
@@ -80,10 +80,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.553"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button8" />
+        app:layout_constraintTop_toBottomOf="@+id/techinfoBtn" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/camdBtn"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="217dp"
         android:layout_height="36dp"
@@ -98,7 +98,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.556"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button9" />
+        app:layout_constraintTop_toBottomOf="@+id/cmgtBtn" />
 
     <TextView
         android:id="@+id/textView2"
