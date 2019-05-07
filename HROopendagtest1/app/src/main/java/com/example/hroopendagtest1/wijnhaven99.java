@@ -58,8 +58,8 @@ public class wijnhaven99 extends AppCompatActivity implements NavigationView.OnN
                 float x = Floor.getScaleX();
                 float y = Floor.getScaleY();
 
-                Floor.setScaleX((int) (x-1));
-                Floor.setScaleX((int) (y-1));
+                Floor.setScaleX((int) (x));
+                Floor.setScaleX((int) (y));
             }
         });
 
