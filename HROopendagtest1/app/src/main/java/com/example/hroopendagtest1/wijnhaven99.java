@@ -40,7 +40,7 @@ public class wijnhaven99 extends AppCompatActivity implements NavigationView.OnN
         Floor = (ImageView)findViewById(R.id.ImageView99);
         ZoomControls = (ZoomControls)findViewById(R.id.ZoomControls);
 
-        ZoomControls.setOnZoomOutClickListener(new View.OnClickListener() {
+        ZoomControls.setOnZoomInClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 float x = Floor.getScaleX();
@@ -58,10 +58,12 @@ public class wijnhaven99 extends AppCompatActivity implements NavigationView.OnN
                 float x = Floor.getScaleX();
                 float y = Floor.getScaleY();
 
-                Floor.setScaleX((int) (x));
-                Floor.setScaleX((int) (y));
+                Floor.setScaleX((int) (x-1));
+                Floor.setScaleX((int) (y-1));
             }
         });
+
+
 
 
 
