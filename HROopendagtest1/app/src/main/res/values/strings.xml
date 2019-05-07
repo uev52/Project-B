@@ -46,6 +46,8 @@
     <string name="hro_Home_btn3_txt_1">04</string>
     <string name="hro_Home_btn3_txt_2">June</string>
     <string name="hro_Home_btn3_txt_3">2019</string>
+    <string name="title_activity_openday2">openday2</string>
+
     <string name="title_activity_communicatie">communicatie</string>
 
     <string name="menu_home">Home</string>
@@ -54,6 +56,7 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+    <string name="title_activity_openday3">openday3</string>
     <string name="title_activity_technischeinformatica">technischeinformatica</string>
     <string name="title_activity_technische_informatica">technische_informatica</string>
     <string name="title_activity_cmgt">cmgt</string>

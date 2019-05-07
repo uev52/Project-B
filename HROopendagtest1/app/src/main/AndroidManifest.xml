@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity
+            android:name=".openday3"
+            android:label="@string/title_activity_openday3"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".openday2"
+            android:label="@string/title_activity_openday2"
             android:name=".camd"
             android:label="@string/title_activity_camd"
             android:theme="@style/AppTheme.NoActionBar"></activity>
