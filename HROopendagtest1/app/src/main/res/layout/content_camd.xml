@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".camd"
+    tools:showIn="@layout/app_bar_camd">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_gravity="center"
+                android:text="Communication and Multimedia Design "
+                android:textAllCaps="false"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:scrollbars="vertical"
+                android:text="Het studiejaar is opgedeeld in 4 kwartalen, waarin je elk kwartaal in jouw eigen studio werkt aan een realistisch vraagstuk in een Design Challenge voor een echte opdrachtgever met je projectteam.\n\nDaarnaast volg je Design Theory. Hierin staat theorie centraal die niet vanzelfsprekend aan bod komt tijdens het werken in de studio. Deze verdiepende achtergrondinformatie helpt je de Design Challenge en het ontwerpvak in perspectief te plaatsen. Design Theory bestaat uit hoor- en werkcolleges. Met wat behandeld wordt in de hoorcolleges ga je aan de slag in het werkcollege. Design Theory vereist een hoge mate van zelfstudie."
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="154dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                app:srcCompat="@drawable/camd" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:scrollbars="vertical"
+                android:text="Bij ons ziet studeren er vaak anders uit. Als ontwerper zit je weinig in de schoolbanken op de traditionele manier. We werken samen met elkaar in de studio, voor echte opdrachtgevers.
+
+Je ontwerpt betekenisvolle interactieve producten en diensten voor de mens: van website, app, interactieve installatie, tot volledige experience. Voordat je begint met een ontwerp doe je uitgebreid onderzoek naar de gebruikersbehoeften en naar de omgeving waarin jouw interactieve ontwerp gebruikt wordt. Je checkt voortdurend met de gebruiker voor wie je aan het ontwerpen bent en gaat deze partijen ook op locatie betrekken. Ontwerpen is immers: prototypes maken, testen, falen, herontwerpen, testen, bijstellen etc. Je bent bezig met schetsen, onderzoeken, bouwen of onderzoek buiten de deur.
+Je leert werken vanuit de belangen en beleving van gebruikers en opdrachtgevers. Een actieve houding is voorwaarde voor het ontwerpproces bij Communication and Multimedia Design. Evenals een gezonde dosis nieuwsgierigheid, lef en zelfstandigheid om werk van hoge kwaliteit op te leveren. Daarnaast verwachten we dat je kritisch kunt kijken naar je werk en handelen."
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:scrollbars="vertical"
+                android:text="Toelatingsvoorwaarden: \n\n Met een mbo-niveau 4, havo en-of vwo-diploma ben je toelaatbaar tot deze opleiding. Hogeschool Rotterdam stelt geen eisen aan je vakkenpakket of het domein waarin je je mbo-diploma hebt behaald."
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

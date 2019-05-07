@@ -5,31 +5,25 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
-import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.view.MenuItem;
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
+
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.Toast;
 
-public class generalInformation extends AppCompatActivity
-
+public class technische_informatica extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    Button contactBtn;
-    Button floorplanBtn;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_general_information);
+        setContentView(R.layout.activity_technische_informatica);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -39,24 +33,6 @@ public class generalInformation extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-
-        contactBtn = (Button)findViewById(R.id.contactBtn);
-        contactBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), contact_form.class);
-                startActivity(i);
-            }
-        });
-        floorplanBtn = (Button)findViewById(R.id.floorplans);
-        floorplanBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), communicatie.class);
-                startActivity(i);
-            }
-        });
     }
 
     @Override
@@ -68,8 +44,6 @@ public class generalInformation extends AppCompatActivity
             super.onBackPressed();
         }
     }
-
-
 
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -115,9 +89,9 @@ public class generalInformation extends AppCompatActivity
 
         startActivity(i);
 
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 }
+

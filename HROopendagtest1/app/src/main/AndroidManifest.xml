@@ -5,14 +5,30 @@
 
     <application
         android:allowBackup="true"
-
         android:icon="@mipmap/hro_icon_text"
-
         android:label="@string/app_name"
         android:supportsRtl="true"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-
-
+        <activity
+            android:name=".camd"
+            android:label="@string/title_activity_camd"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".cmgt"
+            android:label="@string/title_activity_cmgt"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".technische_informatica"
+            android:label="@string/title_activity_technische_informatica"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".technischeinformatica"
+            android:label="@string/title_activity_technischeinformatica"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".communicatie"
+            android:label="@string/title_activity_communicatie"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".contact_form"
             android:label="@string/title_activity_contact_form"
@@ -29,23 +45,19 @@
             android:name=".openday"
             android:label="@string/title_activity_openday"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".settings"
             android:label="@string/title_activity_settings"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".study_program_screen"
             android:label="@string/title_activity_study_program_screen"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".MainActivity"
+            android:background="?background"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:background="?background">
-
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
