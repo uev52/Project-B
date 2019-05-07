@@ -114,7 +114,7 @@ public class openday2 extends AppCompatActivity
         btn_sp1_info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), MainActivity.class);
+                Intent i=new Intent(getApplicationContext(), communicatie.class);
                 startActivity(i);
             }
         });
@@ -136,7 +136,7 @@ public class openday2 extends AppCompatActivity
         btn_sp3_info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), MainActivity.class);
+                Intent i=new Intent(getApplicationContext(), technische_informatica.class);
                 startActivity(i);
             }
         });
@@ -147,7 +147,7 @@ public class openday2 extends AppCompatActivity
         btn_sp4_info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), MainActivity.class);
+                Intent i=new Intent(getApplicationContext(), cmgt.class);
                 startActivity(i);
             }
         });
@@ -158,7 +158,7 @@ public class openday2 extends AppCompatActivity
         btn_sp5_info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), MainActivity.class);
+                Intent i=new Intent(getApplicationContext(), camd.class);
                 startActivity(i);
             }
         });
