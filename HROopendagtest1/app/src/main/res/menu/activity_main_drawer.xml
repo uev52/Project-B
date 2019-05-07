@@ -11,9 +11,6 @@
             android:id="@+id/nav_openday"
             android:title="@string/open_day" />
         <item
-            android:id="@+id/nav_information"
-            android:title="@string/information" />
-        <item
             android:id="@+id/nav_generalInformation"
             android:title="@string/general_information" />
         <item
