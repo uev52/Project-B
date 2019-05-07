@@ -35,23 +35,23 @@ public class floor_plan extends AppCompatActivity implements NavigationView.OnNa
             }
         });
 
-//        Wijnhaven103 = (Button)findViewById(R.id.Wijnhaven103);
-//        Wijnhaven103.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i=new Intent(getApplicationContext(), wijnhaven103.class);
-//                startActivity(i);
-//            }
-//        });
-//
-//        Wijnhaven107 = (Button)findViewById(R.id.Wijnhaven107);
-//        Wijnhaven107.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i=new Intent(getApplicationContext(), wijnhaven107.class);
-//                startActivity(i);
-//            }
-//        });
+        Wijnhaven103 = (Button)findViewById(R.id.Wijnhaven103);
+        Wijnhaven103.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(), wijnhaven103.class);
+                startActivity(i);
+            }
+        });
+
+        Wijnhaven107 = (Button)findViewById(R.id.Wijnhaven107);
+        Wijnhaven107.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(), wijnhaven107.class);
+                startActivity(i);
+            }
+        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
