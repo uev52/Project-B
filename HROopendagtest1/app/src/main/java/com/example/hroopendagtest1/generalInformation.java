@@ -53,7 +53,7 @@ public class generalInformation extends AppCompatActivity
         floorplanBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), floor_plan.class);
+                Intent i=new Intent(getApplicationContext(), communicatie.class);
                 startActivity(i);
             }
         });
