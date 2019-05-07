@@ -48,6 +48,8 @@
     <string name="hro_Home_btn3_txt_3">2019</string>
     <string name="title_activity_openday2">openday2</string>
 
+    <string name="title_activity_communicatie">communicatie</string>
+
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
@@ -55,6 +57,10 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
     <string name="title_activity_openday3">openday3</string>
+    <string name="title_activity_technischeinformatica">technischeinformatica</string>
+    <string name="title_activity_technische_informatica">technische_informatica</string>
+    <string name="title_activity_cmgt">cmgt</string>
+    <string name="title_activity_camd">camd</string>
 
 
 </resources>
