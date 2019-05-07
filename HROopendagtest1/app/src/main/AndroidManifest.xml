@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
 
-
+        <activity
+            android:name=".wijnhaven99"
+            android:label="Wijnhaven 99"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".contact_form"
             android:label="@string/title_activity_contact_form"
