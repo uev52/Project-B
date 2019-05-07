@@ -81,8 +81,8 @@ public class contact_form extends AppCompatActivity implements NavigationView.On
                 //sharingfunctionality of the button
                 startActivity(Intent.createChooser(Mailing, "Choose mail application"));
 
-                //http://androidmkab.com/2016/12/13/create-android-contact-form-beginne/
-                //https://www.youtube.com/watch?v=tZ2YEw6SoBU
+
+                //https://www.youtube.com/watch?v=AV13zohVHBg
                 //-----------------
 
 

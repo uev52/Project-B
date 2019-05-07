@@ -36,6 +36,8 @@ public class wijnhaven99 extends AppCompatActivity implements NavigationView.OnN
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //https://www.youtube.com/watch?v=STCsL3bfwxI
+
         title=(TextView) findViewById(R.id.FloorTitle);
         Floor = (ImageView)findViewById(R.id.ImageView99);
         ZoomControls = (ZoomControls)findViewById(R.id.ZoomControls);
@@ -84,7 +86,7 @@ public class wijnhaven99 extends AppCompatActivity implements NavigationView.OnN
             @Override
             public void onClick(View v) {
                 title.setText("First Floor");
-                Floor.setImageResource(R.drawable.wh994);
+                Floor.setImageResource(R.drawable.wh992);
 
             }
 
@@ -96,7 +98,7 @@ public class wijnhaven99 extends AppCompatActivity implements NavigationView.OnN
             @Override
             public void onClick(View v) {
                 title.setText("Second Floor");
-                Floor.setImageResource(R.drawable.wh992);
+                Floor.setImageResource(R.drawable.wh993);
 
             }
 
@@ -108,7 +110,7 @@ public class wijnhaven99 extends AppCompatActivity implements NavigationView.OnN
             @Override
             public void onClick(View v) {
                 title.setText("Third Floor");
-                Floor.setImageResource(R.drawable.wh993);
+                Floor.setImageResource(R.drawable.wh994);
 
             }
 
