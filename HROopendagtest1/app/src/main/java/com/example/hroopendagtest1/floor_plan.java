@@ -25,7 +25,9 @@ public class floor_plan extends AppCompatActivity implements NavigationView.OnNa
         setContentView(R.layout.activity_floor_plan);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+//Classes are basically entire objects, that are made up of other objects/attributes
 
+ //intent is een activity buiten de activity
         Wijnhaven99 = (Button)findViewById(R.id.Wijnhaven99);
         Wijnhaven99.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,12 +74,18 @@ public class floor_plan extends AppCompatActivity implements NavigationView.OnNa
         }
     }
 
+//this works as a reference to the current Object, whose Method or constructor is being invoked
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+
+//'This' works as a reference to the current Object, whose Method or constructor is being invoked
+
+// The new keyword is a Java operator that creates the object. Initialization
+// The new operator is followed by a call to a constructor, which initializes the new object.
 
         Intent i;
         switch(id){

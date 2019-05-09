@@ -42,20 +42,34 @@ public class wijnhaven99 extends AppCompatActivity implements NavigationView.OnN
         Floor = (ImageView)findViewById(R.id.ImageView99);
         ZoomControls = (ZoomControls)findViewById(R.id.ZoomControls);
 
-        ZoomControls.setOnZoomInClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                float x = Floor.getScaleX();
-                float y = Floor.getScaleY();
 
-                Floor.setScaleX((int) (x+1));
-                Floor.setScaleY((int) (y+1));
+// float is less precise as double in java.
+// float is used in stead of integer
+
+
+// View.OnClicklistener = Called when a view has been clicked
+
+
+// Say you're trying to override your parent class' method harvest() but spell it harvset(),
+// your program will silently call the base class, and without @Override, you wouldn't have any warning about that.
+
+// The new keyword is a Java operator that creates the object. Initialization
+// The new operator is followed by a call to a constructor, which initializes the new object.
+
+        ZoomControls.setOnZoomInClickListener(new View.OnClickListener() {
+            @Override //override programs parent class and give warning
+            public void onClick(View v) {
+                float x = Floor.getScaleX(); // normal values
+                float y = Floor.getScaleY(); // normal values
+
+                Floor.setScaleX((int) (x+1)); //what you changed
+                Floor.setScaleY((int) (y+1)); //what you changed
 
             }
         });
 
         ZoomControls.setOnZoomOutClickListener(new View.OnClickListener() {
-            @Override
+                @Override
             public void onClick(View v) {
                 float x = Floor.getScaleX();
                 float y = Floor.getScaleY();
@@ -65,6 +79,9 @@ public class wijnhaven99 extends AppCompatActivity implements NavigationView.OnN
             }
         });
 
+
+// show ... if button pressed
+// change text if button pressed
 
 
 
