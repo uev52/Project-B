@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity
+            android:name=".wijnhaven99"
+            android:label="wijnhaven99"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".wijnhaven103"
+            android:label="wijnhaven103"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".wijnhaven107"
+            android:label="wijnhaven107"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
             android:name=".openday3"
             android:label="@string/title_activity_openday3"
             android:theme="@style/AppTheme.NoActionBar"/>
