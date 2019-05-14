@@ -12,7 +12,7 @@
         <activity
             android:name=".wijnhaven107"
             android:label="Wijnhaven 107"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".wijnhaven103"
             android:label="Wijnhaven 103"
