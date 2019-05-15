@@ -13,8 +13,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 public class floor_plan extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+    Button Wijnhaven99;
+    Button Wijnhaven103;
+    Button Wijnhaven107;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +27,33 @@ public class floor_plan extends AppCompatActivity implements NavigationView.OnNa
         setContentView(R.layout.activity_floor_plan);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        Wijnhaven99 = (Button)findViewById(R.id.Wijnhaven99);
+        Wijnhaven99.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i= new Intent(getApplicationContext(), wijnhaven99.class);
+                startActivity(i);
+            }
+        });
+
+        Wijnhaven103 = (Button)findViewById(R.id.Wijnhaven103);
+        Wijnhaven103.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i= new Intent(getApplicationContext(), wijnhaven103.class);
+                startActivity(i);
+            }
+        });
+
+        Wijnhaven107 = (Button)findViewById(R.id.Wijnhaven107);
+        Wijnhaven107.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i= new Intent(getApplicationContext(), wijnhaven107.class);
+                startActivity(i);
+            }
+        });
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

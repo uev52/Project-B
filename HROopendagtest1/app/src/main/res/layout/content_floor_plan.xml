@@ -8,113 +8,71 @@
     tools:context=".floor_plan"
     tools:showIn="@layout/app_bar_floor_plan">
 
-    <TextView
-        android:id="@+id/floorName"
-        android:layout_width="0dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/HRO_mainColor"
-        android:gravity="center"
-        android:text="First Floor"
-        android:textColor="@color/HRO_white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buildingName" />
 
-    <Button
-        android:id="@+id/PreviousFloorButton"
-        android:layout_width="150dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/HRO_mainColor"
-        android:text="Previous Floor"
-        android:textColor="@color/HRO_white"
-        android:textColorLink="@color/design_default_color_primary"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/NextFloorButton"
-        android:layout_width="150dp"
-        android:layout_height="20dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/HRO_mainColor"
-        android:text="Next Floor"
-        android:textColor="@color/HRO_white"
-        android:textColorLink="@color/design_default_color_primary"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="409dp"
-        android:layout_height="347dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:rotation="90"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toTopOf="@+id/PreviousBuildingButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/floorName"
-        app:layout_constraintVertical_bias="0.451"
-        app:srcCompat="@mipmap/cmi1070" />
+        <Button
+            android:id="@+id/Wijnhaven99"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/HRO_mainColor"
+            android:text="Wijnhaven99"
+            android:textColor="@color/HRO_white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/Wijnhaven103"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ChooseBuilding" />
 
-    <Button
-        android:id="@+id/NextBuildingButton"
-        android:layout_width="150dp"
-        android:layout_height="20dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/HRO_mainColor"
-        android:text="Next Building"
-        android:textColor="@color/HRO_white"
-        android:textColorLink="@color/design_default_color_primary"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toTopOf="@+id/NextFloorButton"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <Button
+            android:id="@+id/Wijnhaven103"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/HRO_mainColor"
+            android:text="Wijnhaven103"
+            android:textColor="@color/HRO_white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/Wijnhaven107"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Wijnhaven99" />
 
-    <Button
-        android:id="@+id/PreviousBuildingButton"
-        android:layout_width="150dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/HRO_mainColor"
-        android:text="Previous Building"
-        android:textColor="@color/HRO_white"
-        android:textColorLink="@color/design_default_color_primary"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toTopOf="@+id/PreviousFloorButton"
-        app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/Wijnhaven107"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/HRO_mainColor"
+            android:text="Wijnhaven107"
+            android:textColor="@color/HRO_white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.61"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Wijnhaven103" />
 
-    <TextView
-        android:id="@+id/buildingName"
-        android:layout_width="0dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/HRO_mainColor"
-        android:gravity="center"
-        android:text="Wijnhaven 107"
-        android:textColor="@color/HRO_white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/ChooseBuilding"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/HRO_mainColor"
+            android:gravity="center"
+            android:text="Choose Building"
+            android:textColor="@color/HRO_white"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/Wijnhaven99"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
 
 </android.support.constraint.ConstraintLayout>
