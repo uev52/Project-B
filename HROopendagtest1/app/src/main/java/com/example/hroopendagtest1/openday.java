@@ -108,60 +108,7 @@ public class openday extends AppCompatActivity
 
         });
 
-        // information button. by clicking the current screen will switch to the study program screen of Communication that provide more detailed information
-        btn_sp1_info=(Button)findViewById(R.id.btn_sp1_info);
 
-        btn_sp1_info.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), communicatie.class);
-                startActivity(i);
-            }
-        });
-
-        // information button. by clicking the current screen will switch to the study program screen of Informatica that provide more detailed information
-        btn_sp2_info=(Button)findViewById(R.id.btn_sp2_info);
-
-        btn_sp2_info.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), study_program_screen.class);
-                startActivity(i);
-            }
-        });
-
-        // information button. by clicking the current screen will switch to the study program screen of ? that provide more detailed information
-        btn_sp3_info=(Button)findViewById(R.id.btn_sp3_info);
-
-        btn_sp3_info.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), technische_informatica.class);
-                startActivity(i);
-            }
-        });
-
-        // information button. by clicking the current screen will switch to the study program screen of ? that provide more detailed information
-        btn_sp4_info=(Button)findViewById(R.id.btn_sp4_info);
-
-        btn_sp4_info.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), cmgt.class);
-                startActivity(i);
-            }
-        });
-
-        // information button. by clicking the current screen will switch to the study program screen of ? that provide more detailed information
-        btn_sp5_info=(Button)findViewById(R.id.btn_sp5_info);
-
-        btn_sp5_info.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), camd.class);
-                startActivity(i);
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -253,7 +200,7 @@ public class openday extends AppCompatActivity
 // the sharing text/ body is set here
                 shareIntent.putExtra(Intent.EXTRA_TEXT,messageBody);
                 shareIntent.putExtra(Intent.EXTRA_SUBJECT,messageSubject);
-// the sharing box/ sharing possibilities are set here
+// the sharing box title is set here
                 startActivity(Intent.createChooser(shareIntent,"Share with"));
                 break;
 
