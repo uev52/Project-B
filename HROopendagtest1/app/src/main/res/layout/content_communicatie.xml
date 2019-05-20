@@ -47,17 +47,6 @@
                 android:text="In het propedeusejaar staat de praktijk direct centraal; alles wat je leert, pas je toe in vraagstukken. Je gaat op bedrijfssafari in Rotterdam en kijkt in de keuken van communicatieprofessionals. Zo leer je wat communicatie is en wat je ermee kunt. Waardoor worden merken succesvol? Hoe werkt mediapsychologie? Welke rol kun jij als smart connector hebben binnen bedrijven? In kleine teams werk je aan projecten, zoals het ontwikkelen van een online tijdschrift. In een redactie ga je aan de slag met het ontwikkelen van aansprekende en interactieve content (tekst én beeld), aansluitend op de interesses van de doelgroep. Aan het eind van jaar 1 onderzoek je een onderwerp uit het communicatievak dat jij interessant vindt en je schrijft daar een propedeusescriptie over. Guerrillamarketing, storytelling, reputatiemanagement: waar wil jij expert in worden?"
                 android:textSize="14sp" />
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="154dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                app:srcCompat="@drawable/communicatie" />
-
             <TextView
                 android:id="@+id/textView17"
                 android:layout_width="wrap_content"
@@ -74,6 +63,13 @@
 Organisaties staan voor grote uitdagingen. Een nieuw product promoten, samenwerken met klanten, medewerkers en inwoners, laten zien dat je goede dingen doet voor de samenleving. Hoe doe je dat in een tijd van kritische journalisten, vloggers, maatschappelijke discussies en elkaar snel opvolgende trends?
 Onze opleiding Communicatie leidt jou in vier jaar op tot wat we - met trots - een smart connector noemen. Een professional die voor slimme verbindingen zorgt."
                 android:textSize="14sp" />
+
+            <com.github.chrisbanes.photoview.PhotoView
+
+                android:id="@+id/com_stats"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                app:srcCompat="@drawable/infostatistieken" />
 
             <TextView
                 android:id="@+id/textView20"
