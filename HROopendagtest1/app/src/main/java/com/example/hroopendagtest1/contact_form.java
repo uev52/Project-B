@@ -18,6 +18,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -46,10 +48,10 @@ public class contact_form extends AppCompatActivity implements NavigationView.On
         // an entity that can only be assigned once. Once a final variable has been assigned,
         // it always contains the same value.
 
-        final EditText editName        = (EditText) findViewById(R.id.editName);
-        final EditText editYouremail   = (EditText) findViewById(R.id.editYouremail);
-        final EditText editSubject     = (EditText) findViewById(R.id.editSubject);
-        final EditText editContent     = (EditText) findViewById(R.id.editContent);
+        final EditText editName        =  findViewById(R.id.editName);
+        final EditText editYouremail   =  findViewById(R.id.editYouremail);
+        final EditText editSubject     =  findViewById(R.id.editSubject);
+        final EditText editContent     =  findViewById(R.id.editContent);
 
         Button email = (Button) findViewById(R.id.sendButton);
         email.setOnClickListener(new View.OnClickListener() {
@@ -59,34 +61,52 @@ public class contact_form extends AppCompatActivity implements NavigationView.On
 
                 //public means that the method is visible and can be called from other objects of other types.
                 // void means that the method has no return value
-                String Name     = editName.getText().toString();
-                String Email    = editYouremail.getText().toString();
-                String Subject  = editSubject.getText().toString();
-                String Content  = editContent.getText().toString();
+                String name     = editName.getText().toString();
+                String email    = editYouremail.getText().toString();
+                String subject  = editSubject.getText().toString();
+                String content  = editContent.getText().toString();
+                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
-                //start maling activity, everything next is sending data from one application to another
-                Intent Mailing = new Intent(android.content.Intent.ACTION_SEND);
-                //sharingapps that need to be shown:
-                Mailing.setType("plain/text");
-
-                //who is the mail being sended to
-                Mailing.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"0946639@hr.nl"});
-
-                //what is the subject
-                Mailing.putExtra(android.content.Intent.EXTRA_SUBJECT, Subject);
-
-                //mail content and other information
-                Mailing.putExtra(android.content.Intent.EXTRA_TEXT, "Name:" + Name + '\n' + "Email:" + Email + '\n' + "Content:" + '\n' + Content);
-
-                //sharingfunctionality of the button
-                startActivity(Intent.createChooser(Mailing, "Choose mail application"));
-
+//https://stackoverflow.com/questions/12947620/email-address-validation-in-android-on-edittext
                 //http://androidmkab.com/2016/12/13/create-android-contact-form-beginne/
                 //https://www.youtube.com/watch?v=tZ2YEw6SoBU
                 //-----------------
 
+                //
 
 
+                //final EditText emailValidate = (EditText)findViewById(R.id.textMessage);
+                //
+                //final TextView textView = (TextView)findViewById(R.id.text);
+                //
+                //String email = emailValidate.getText().toString().trim();
+                //
+
+                //
+                //// onClick of button perform this simplest code.
+                if (email.matches(emailPattern))
+                {
+                    //start maling activity, everything next is sending data from one application to another
+                    Intent Mailing = new Intent(android.content.Intent.ACTION_SEND);
+                    //sharingapps that need to be shown:
+                    Mailing.setType("plain/text");
+
+                    //who is the mail being sended to
+                    Mailing.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"0946639@hr.nl"});
+
+                    //what is the subject
+                    Mailing.putExtra(android.content.Intent.EXTRA_SUBJECT, subject);
+
+                    //mail content and other information
+                    Mailing.putExtra(android.content.Intent.EXTRA_TEXT, "Name:" + name + '\n' + "Email:" + email + '\n' + "Content:" + '\n' + content);
+
+                    //sharingfunctionality of the button
+                    startActivity(Intent.createChooser(Mailing, "Choose mail application"));
+                }
+                else
+                {
+                Toast.makeText(getApplicationContext(),"Invalid email address", Toast.LENGTH_SHORT).show();
+                }
 
             }
         });
