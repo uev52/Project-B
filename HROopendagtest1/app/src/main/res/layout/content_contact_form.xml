@@ -150,6 +150,7 @@
             android:layout_height="match_parent"
             android:ems="10"
             android:gravity="top|left"
+            android:background="@null"
             android:hint="Type here"
             android:inputType="textMultiLine"
             android:paddingLeft="10dp"
