@@ -21,8 +21,8 @@ public class wijnhaven107 extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wijnhaven107);
 
-        PhotoView photoView = (PhotoView) findViewById(R.id.cmi1070);
-        photoView.setImageResource(R.mipmap.cmi1070);
+        PhotoView cmi1070 = (PhotoView) findViewById(R.id.cmi1070);
+        cmi1070.setImageResource(R.mipmap.cmi1070);
         PhotoView cmi1071 = (PhotoView) findViewById(R.id.cmi1071);
         cmi1071.setImageResource(R.mipmap.cmi1071);
         PhotoView cmi1072 = (PhotoView) findViewById(R.id.cmi1072);
@@ -46,18 +46,96 @@ public class wijnhaven107 extends AppCompatActivity implements View.OnClickListe
         nextFloorwh99.setOnClickListener(this);
         previousFloorwh99.setOnClickListener(this);
 
+        viewFlipper.getDisplayedChild();
 
+        if (viewFlipper.getDisplayedChild() == 0)
+            nextFloorwh99.setVisibility(View.VISIBLE);
+        previousFloorwh99.setVisibility(View.INVISIBLE);
+//
+//
+//
+
+
+//https://www.youtube.com/watch?v=peO5cUczncc
     }
 
+
     @Override
-    public void onClick (View v) {
-        if (v == nextFloorwh99){
+    public void onClick(View v) {
+
+        if (v == nextFloorwh99) {
             viewFlipper.showNext();
             viewFlippertext99.showNext();
+
+
+            if (viewFlipper.getDisplayedChild() == 1)
+                nextFloorwh99.setVisibility(View.VISIBLE);
+            previousFloorwh99.setVisibility(View.VISIBLE);
+
+            if (viewFlipper.getDisplayedChild() == 2)
+                nextFloorwh99.setVisibility(View.VISIBLE);
+            previousFloorwh99.setVisibility(View.VISIBLE);
+
+            if (viewFlipper.getDisplayedChild() == 3)
+                nextFloorwh99.setVisibility(View.VISIBLE);
+            previousFloorwh99.setVisibility(View.VISIBLE);
+
+            if (viewFlipper.getDisplayedChild() == 4)
+                nextFloorwh99.setVisibility(View.VISIBLE);
+            previousFloorwh99.setVisibility(View.VISIBLE);
+
+            if (viewFlipper.getDisplayedChild() == 5)
+                nextFloorwh99.setVisibility(View.VISIBLE);
+            previousFloorwh99.setVisibility(View.VISIBLE);
+
+            if (viewFlipper.getDisplayedChild() == 6)
+                nextFloorwh99.setVisibility(View.VISIBLE);
+            previousFloorwh99.setVisibility(View.VISIBLE);
+
+            if (viewFlipper.getDisplayedChild() == 7)
+                nextFloorwh99.setVisibility(View.INVISIBLE);
+            previousFloorwh99.setVisibility(View.VISIBLE);
         }
-        else if (v == previousFloorwh99){
+
+        if (v == previousFloorwh99) {
+
             viewFlipper.showPrevious();
             viewFlippertext99.showPrevious();
+
+            if (viewFlipper.getDisplayedChild() == 0) {
+                nextFloorwh99.setVisibility(View.VISIBLE);
+                previousFloorwh99.setVisibility(View.INVISIBLE);
+            }
+
+            if (viewFlipper.getDisplayedChild() == 1) {
+                nextFloorwh99.setVisibility(View.VISIBLE);
+                previousFloorwh99.setVisibility(View.VISIBLE);
+            }
+
+            if (viewFlipper.getDisplayedChild() == 2) {
+                nextFloorwh99.setVisibility(View.VISIBLE);
+                previousFloorwh99.setVisibility(View.VISIBLE);
+            }
+            if (viewFlipper.getDisplayedChild() == 3) {
+                nextFloorwh99.setVisibility(View.VISIBLE);
+                previousFloorwh99.setVisibility(View.VISIBLE);
+            }
+
+            if (viewFlipper.getDisplayedChild() == 4) {
+                nextFloorwh99.setVisibility(View.VISIBLE);
+                previousFloorwh99.setVisibility(View.VISIBLE);
+            }
+
+            if (viewFlipper.getDisplayedChild() == 5) {
+                nextFloorwh99.setVisibility(View.VISIBLE);
+                previousFloorwh99.setVisibility(View.VISIBLE);
+            }
+
+            if (viewFlipper.getDisplayedChild() == 6) {
+                nextFloorwh99.setVisibility(View.VISIBLE);
+                previousFloorwh99.setVisibility(View.VISIBLE);
+            }
+
         }
     }
 }
