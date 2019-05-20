@@ -111,40 +111,7 @@ public class contact_form extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        Intent i;
-        switch(id){
-            case R.id.nav_home:
-                i = new Intent(this, MainActivity.class);
-                break;
-
-            case R.id.nav_openday:
-                i = new Intent(this, openday.class);
-                break;
-
-            case R.id.nav_generalInformation:
-                i = new Intent(this, generalInformation.class);
-                break;
-
-            case R.id.nav_contact:
-                i = new Intent(this, contact_form.class);
-                break;
-
-            case R.id.nav_floorPlans:
-                i = new Intent(this, floor_plan.class);
-                break;
-
-            case R.id.nav_settings:
-                i = new Intent(this, settings.class);
-                break;
-
-            default:
-                i = new Intent(this, MainActivity.class);
-                break;
-        }
-
-        startActivity(i);
+        startActivity(AppUtil.changeScreen(item.getItemId(), getBaseContext()));
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -3,12 +3,13 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/HRO_mainColor</item>
+
     </style>
 
 
     <style name="AppTheme_Dark" parent="Theme.AppCompat">
         <!-- Dark theme base colours -->
-        <item name="colorPrimary">@color/HRO_mainColor</item>
+        <item name="colorPrimary">@color/HRO_black</item>
         <item name="colorPrimaryDark">@color/HRO_mainColorDark</item>
         <item name="colorAccent">@color/HRO_subColor4</item>
         <item name="windowActionBar">false</item>
@@ -20,6 +21,11 @@
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="NavigationTheme" parent="AppTheme">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
     </style>
 
 

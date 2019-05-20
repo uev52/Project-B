@@ -8,9 +8,6 @@
             android:id="@+id/nav_home"
             android:title="@string/home" />
         <item
-            android:id="@+id/nav_openday"
-            android:title="@string/open_day" />
-        <item
             android:id="@+id/nav_generalInformation"
             android:title="@string/general_information" />
         <item
