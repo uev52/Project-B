@@ -1,6 +1,8 @@
 package com.example.hroopendagtest1;
 
 import android.content.Intent;
+import android.graphics.Paint;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -11,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class generalInformation extends AppCompatActivity
 
@@ -24,6 +27,8 @@ public class generalInformation extends AppCompatActivity
     Button techinfoBtn;
     Button cmgtBtn;
     Button camdBtn;
+    TextView phoneNumber;
+
 
 
     @Override
@@ -42,6 +47,18 @@ public class generalInformation extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        phoneNumber = (TextView) findViewById(R.id.Phone);
+        phoneNumber.setPaintFlags(phoneNumber.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+        phoneNumber.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_DIAL);
+                i.setData(Uri.parse("tel:0107944000"));
+                startActivity(i);
+            }
+        });
+
 
 
         contactBtn = (Button)findViewById(R.id.contactBtn);
