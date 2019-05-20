@@ -63,10 +63,6 @@
             android:label="@string/title_activity_openday"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".settings"
-            android:label="@string/title_activity_settings"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".study_program_screen"
             android:label="@string/title_activity_study_program_screen"
             android:theme="@style/AppTheme.NoActionBar" />
