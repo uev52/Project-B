@@ -47,16 +47,11 @@
                 android:text="Het studiejaar is opgedeeld in 4 kwartalen, waarin je elk kwartaal in jouw eigen studio werkt aan een realistisch vraagstuk in een Design Challenge voor een echte opdrachtgever met je projectteam.\n\nDaarnaast volg je Design Theory. Hierin staat theorie centraal die niet vanzelfsprekend aan bod komt tijdens het werken in de studio. Deze verdiepende achtergrondinformatie helpt je de Design Challenge en het ontwerpvak in perspectief te plaatsen. Design Theory bestaat uit hoor- en werkcolleges. Met wat behandeld wordt in de hoorcolleges ga je aan de slag in het werkcollege. Design Theory vereist een hoge mate van zelfstudie."
                 android:textSize="14sp" />
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="154dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                app:srcCompat="@drawable/camd" />
+            <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/camd_stats"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                app:srcCompat="@drawable/infostatistieken" />
 
             <TextView
                 android:id="@+id/textView17"

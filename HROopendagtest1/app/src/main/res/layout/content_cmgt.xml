@@ -49,17 +49,6 @@
 Binnen de projecten werk je ideeën uit en experimenteer je met technieken. Wanneer iets niet lukt, doe je het de volgende keer anders. Hier komt een bepaalde mate van zelfsturing bij kijken die je moet liggen. Er worden lessen aangeboden waar op dat moment behoefte aan is. Je reflecteert op je eigen ontwikkeling en je wordt bijgestaan door een coach."
                 android:textSize="14sp" />
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="154dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                app:srcCompat="@drawable/cmgt" />
-
             <TextView
                 android:id="@+id/textView17"
                 android:layout_width="wrap_content"
@@ -77,6 +66,13 @@ Als CMGT'er ben je een developer (programmeur) van interactieve digitale product
 
 Je differentieert je van andere programmeurs door je mate van creativiteit en je kennis en gevoel voor interactie tussen apparaten en mensen (gebruikers)."
                 android:textSize="14sp" />
+
+            <com.github.chrisbanes.photoview.PhotoView
+
+                android:id="@+id/cmgt_stats"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                app:srcCompat="@drawable/infostatistieken" />
 
             <TextView
                 android:id="@+id/textView20"

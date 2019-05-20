@@ -15,6 +15,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 
+import com.github.chrisbanes.photoview.PhotoView;
+
 public class camd extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -33,6 +35,9 @@ public class camd extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        PhotoView photoView = (PhotoView) findViewById(R.id.camd_stats);
+        photoView.setImageResource(R.drawable.infostatistieken);
     }
 
     @Override

@@ -15,6 +15,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.ZoomControls;
+
+import com.github.chrisbanes.photoview.PhotoView;
 
 public class study_program_screen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -34,6 +37,11 @@ public class study_program_screen extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        PhotoView photoView = (PhotoView) findViewById(R.id.Info_stats);
+        photoView.setImageResource(R.drawable.infostatistieken);
+
+
+
     }
 
     @Override

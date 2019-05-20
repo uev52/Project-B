@@ -47,17 +47,6 @@
                 android:text="In het eerste jaar oriënteer je je op het vakgebied en wordt de basis gelegd voor de rest van de studie. Tijdens de eerste zes maanden van de opleiding wordt extra aandacht besteed aan het op peil brengen van je wiskunde, natuurkunde, Nederlands en Engels. Vakkennis die een belangrijke rol speelt in de opleiding. Daarnaast staan in het eerste jaar ook programmeren, computer- en netwerksystemen centraal. Je brengt de opgedane kennis ook direct in de praktijk tijdens praktische opdrachten en projecten."
                 android:textSize="14sp" />
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="154dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                app:srcCompat="@drawable/tinformatica" />
-
             <TextView
                 android:id="@+id/textView17"
                 android:layout_width="wrap_content"
@@ -75,6 +64,12 @@ In het dagelijks leven zijn we steeds meer afhankelijk geworden van ICT-systemen
 
 Als technisch informaticus draag je bij aan het ontwikkelen, beveiligen en in de lucht houden van deze systemen. Gedurende de studie maak je kennis met de technische aspecten van ICT. Je leert te programmeren in diverse programmeertalen, waaronder de zogenaamde 'lagere' talen voor hardware toepassingen. Hiermee leer je oplossingen ontwikkelen voor verschillende apparaten, robots en andere moderne systemen. Je bent een all-rounder op alle disciplines, maar specialiseert je ook in een of meerdere aspecten in het werkveld. Denk daarbij aan Machine Learning, Augmented Reality, Automated Systems en uiteraard de met IoT (Internet of Things) nauw verbonden met Embedded Systems."
                 android:textSize="14sp" />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/t_infostats"
+                android:layout_width="match_parent"
+                android:layout_height="199dp"
+                app:srcCompat="@drawable/infostatistieken" />
 
             <TextView
                 android:id="@+id/textView20"

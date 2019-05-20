@@ -49,17 +49,6 @@ tools:showIn="@layout/app_bar_study_program_screen">
         In de projecten werk je aan praktijkgesimuleerde omstandigheden in groepsverband en pas je theorie toe. Hierbij werk je binnen toenemende complexiteit toe naar een werkend product/oplossing, door middel van gerichte projectontwikkelmethodieken. In het derde jaar ga je twintig weken op stage, in de tweede helft van het derde jaar en eerste helft van het vierde jaar volg je zelfgekozen minors, waarna je gaat afstuder"
             android:textSize="14sp" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="154dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            app:srcCompat="@drawable/informaticastatistieken" />
-
         <TextView
             android:id="@+id/textView17"
             android:layout_width="wrap_content"
@@ -73,6 +62,13 @@ tools:showIn="@layout/app_bar_study_program_screen">
             android:scrollbars="vertical"
             android:text="Software is overal om ons heen te vinden. Jij bent de specialist in het maken van grote en complexe software informatiesystemen die snel, efficiënt en veilig werken. Zo kun je denken aan het ontwikkelen van een functionele app, maar ook aan het analyseren van grote hoeveelheden data van social media. Bij het ontwikkelen van deze systemen kom je in aanraking met verschillende programmeertalen. Zo leer je in het eerste jaar programmeren in Python en geavanceerde programmeertalen zoals Java/C#. Vanaf het tweede jaar kies je zelf welke programmeertaal je wilt gebruiken. Naast het programmeren en ontwikkelen van verschillende toepassingen leer je ook samenwerken.  Na het volgen van de opleiding Informatica ben je breed inzetbaar binnen het vakgebied. Vanuit functies als data engineer, software developer en software engineer kun je verder groeien binnen de ICT.  Ben jij geïnteresseerd in nieuwe technologische ontwikkelingen, nieuwsgierig, een beetje eigenzinnig en een doorzetter, dan is de opleiding Informatica iets voor jou!  "
             android:textSize="14sp" />
+
+        <com.github.chrisbanes.photoview.PhotoView
+
+            android:id="@+id/Info_stats"
+            android:layout_width="wrap_content"
+            android:layout_height="175dp"
+            app:srcCompat="@drawable/infostatistieken" />
 
         <TextView
             android:id="@+id/textView20"
