@@ -264,29 +264,23 @@
             app:layout_constraintStart_toStartOf="@+id/schedule"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="54dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            app:layout_constraintEnd_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="@+id/time_title"
-            app:srcCompat="@drawable/iconfinder_calendar_299092" />
-
-        <TextView
-            android:id="@+id/textView11"
+        <android.support.design.widget.FloatingActionButton
+            android:onClick="addToCalender"
+            android:id="@+id/add_schedule_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
-            android:text="+"
-            android:textColor="#949494"
-            android:textSize="32dp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/imageView4"
-            app:layout_constraintStart_toStartOf="@+id/imageView4"
-            app:layout_constraintTop_toTopOf="@+id/imageView4" />
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            app:backgroundTint="@color/HRO_subColor3"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toTopOf="@+id/textView8"
+            app:layout_constraintEnd_toEndOf="@+id/btn_sp3"
+            app:layout_constraintTop_toTopOf="@+id/time_title"
+            app:maxImageSize="35dp"
+            app:srcCompat="@drawable/iconfinder_calendar_299092" />
 
 
     </android.support.constraint.ConstraintLayout>

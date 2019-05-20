@@ -48,7 +48,7 @@
     <string name="hro_Home_btn3_txt_3">2019</string>
 
 
-    <string name="title_activity_openday2">openday2</string>
+    <string name="title_activity_openday2">openday</string>
     <string name="title_activity_communicatie">Communicatie</string>
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
@@ -56,7 +56,7 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
-    <string name="title_activity_openday3">openday3</string>
+    <string name="title_activity_openday3">openday</string>
     <string name="title_activity_technische_informatica">Technische Informatica</string>
     <string name="title_activity_cmgt">Creative Media and Game Technologies</string>
     <string name="title_activity_camd">Communication and Multimedia Design</string>

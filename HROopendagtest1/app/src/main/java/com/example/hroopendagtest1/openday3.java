@@ -2,7 +2,10 @@ package com.example.hroopendagtest1;
 
 import android.content.Intent;
 import android.media.Image;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.CalendarContract;
+import android.support.annotation.RequiresApi;
 import android.view.Menu;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -16,8 +19,40 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Calendar;
+
 public class openday3 extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
+    //set to phone calender functionality
+    // in order to communicate using an API
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public void addToCalender(View view){
+        Intent setcalendar = new Intent(Intent.ACTION_INSERT);
+        setcalendar.setType("vnd.android.cursor.item/event");
+        setcalendar.putExtra(CalendarContract.Events.TITLE, "OPENDAY CMI");
+        setcalendar.putExtra(CalendarContract.Events.EVENT_LOCATION, "Wijnhaven 107, 3011 WN, Rotterdam ");
+        setcalendar.putExtra(CalendarContract.Events.DESCRIPTION, "Following the openday of CMI at the Hogeschool Rotterdam");
+        // set the begin time and date of the event
+        Calendar begin = Calendar.getInstance();
+        begin.set(2019,5,4, 16, 0);
+        // set the end time and date of the event
+        Calendar end = Calendar.getInstance();
+        end.set(2019,5,4, 20, 0);
+
+        setcalendar.putExtra(CalendarContract.EXTRA_EVENT_ALL_DAY, true);
+        //view begin time and date
+        setcalendar.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME,
+                begin.getTimeInMillis());
+        // view end time and date
+        setcalendar.putExtra(CalendarContract.EXTRA_EVENT_END_TIME,
+                end.getTimeInMillis());
+        // start calendar activity
+        startActivity(setcalendar);
+    }
+
+
     ImageView schedule;
     Button btn_sp1;
     Button btn_sp2;
@@ -248,8 +283,9 @@ public class openday3 extends AppCompatActivity
             case R.id.share_button:
                 Intent shareIntent = new Intent(Intent.ACTION_SEND);
                 shareIntent.setType("text/plain");
-                String messageBody = "your body here";
-                String messageSubject = "your subject";
+                String messageBody ="Hi there,\n\nThere is an openday at the Hogeschool Rotterdam on 4th of June.\nThe openday starts at 16:00 until 20:00 and takes places at Wijnhaven 107 in Rotterdam\nI will be there, would you like to join me?";
+
+                String messageSubject = "OPENDAY CMI";
 // the sharing text/ body is set here
                 shareIntent.putExtra(Intent.EXTRA_TEXT,messageBody);
                 shareIntent.putExtra(Intent.EXTRA_SUBJECT,messageSubject);
