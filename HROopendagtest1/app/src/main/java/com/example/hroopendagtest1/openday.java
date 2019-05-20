@@ -1,8 +1,15 @@
 package com.example.hroopendagtest1;
 
+import android.annotation.SuppressLint;
+import android.content.ContentResolver;
+import android.content.ContentValues;
 import android.content.Intent;
-import android.media.Image;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.CalendarContract;
+import android.support.annotation.RequiresApi;
+import android.support.design.widget.FloatingActionButton;
 import android.view.Menu;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -15,9 +22,40 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class openday extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    //set to phone calender functionality
+    // in order to communicate using an API
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public void addToCalender(View view){
+        Intent setcalendar = new Intent(Intent.ACTION_INSERT);
+        setcalendar.setType("vnd.android.cursor.item/event");
+        setcalendar.putExtra(CalendarContract.Events.TITLE, "OPENDAY CMI");
+        setcalendar.putExtra(CalendarContract.Events.EVENT_LOCATION, "Wijnhaven 107, 3011 WN, Rotterdam ");
+        setcalendar.putExtra(CalendarContract.Events.DESCRIPTION, "Following the openday of CMI at the Hogeschool Rotterdam");
+        // set the begin time and date of the event
+        Calendar begin = Calendar.getInstance();
+        begin.set(2019,3,4, 16, 0);
+        // set the end time and date of the event
+        Calendar end = Calendar.getInstance();
+        end.set(2019,3,4, 20, 0);
+
+        setcalendar.putExtra(CalendarContract.EXTRA_EVENT_ALL_DAY, true);
+        //view begin time and date
+        setcalendar.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME,
+                begin.getTimeInMillis());
+        // view end time and date
+        setcalendar.putExtra(CalendarContract.EXTRA_EVENT_END_TIME,
+                end.getTimeInMillis());
+        // start calendar activity
+        startActivity(setcalendar);
+    }
     ImageView schedule;
     Button btn_sp1;
     Button btn_sp2;
@@ -34,12 +72,15 @@ public class openday extends AppCompatActivity
 
 
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_openday);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
 
         title=(TextView) findViewById(R.id.scheduleTitle);
         schedule = (ImageView)findViewById(R.id.schedule);
@@ -108,60 +149,7 @@ public class openday extends AppCompatActivity
 
         });
 
-        // information button. by clicking the current screen will switch to the study program screen of Communication that provide more detailed information
-        btn_sp1_info=(Button)findViewById(R.id.btn_sp1_info);
 
-        btn_sp1_info.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), communicatie.class);
-                startActivity(i);
-            }
-        });
-
-        // information button. by clicking the current screen will switch to the study program screen of Informatica that provide more detailed information
-        btn_sp2_info=(Button)findViewById(R.id.btn_sp2_info);
-
-        btn_sp2_info.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), study_program_screen.class);
-                startActivity(i);
-            }
-        });
-
-        // information button. by clicking the current screen will switch to the study program screen of ? that provide more detailed information
-        btn_sp3_info=(Button)findViewById(R.id.btn_sp3_info);
-
-        btn_sp3_info.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), technische_informatica.class);
-                startActivity(i);
-            }
-        });
-
-        // information button. by clicking the current screen will switch to the study program screen of ? that provide more detailed information
-        btn_sp4_info=(Button)findViewById(R.id.btn_sp4_info);
-
-        btn_sp4_info.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), cmgt.class);
-                startActivity(i);
-            }
-        });
-
-        // information button. by clicking the current screen will switch to the study program screen of ? that provide more detailed information
-        btn_sp5_info=(Button)findViewById(R.id.btn_sp5_info);
-
-        btn_sp5_info.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), camd.class);
-                startActivity(i);
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -215,12 +203,12 @@ public class openday extends AppCompatActivity
             case R.id.share_button:
                 Intent shareIntent = new Intent(Intent.ACTION_SEND);
                 shareIntent.setType("text/plain");
-                String messageBody = "your body here";
-                String messageSubject = "your subject";
+                String messageBody = "Hi there,\n\nThere is an openday at the Hogeschool Rotterdam on 4th of April.\nThe openday starts at 16:00 until 20:00 and takes places at Wijnhaven 107 in Rotterdam\nI will be there, would you like to join me?";
+                String messageSubject = "OPENDAY CMI";
 // the sharing text/ body is set here
                 shareIntent.putExtra(Intent.EXTRA_TEXT,messageBody);
                 shareIntent.putExtra(Intent.EXTRA_SUBJECT,messageSubject);
-// the sharing box/ sharing possibilities are set here
+// the sharing box title is set here
                 startActivity(Intent.createChooser(shareIntent,"Share with"));
                 break;
 

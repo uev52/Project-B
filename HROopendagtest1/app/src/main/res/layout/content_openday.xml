@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <ImageView
+        <ImageView
         android:id="@+id/time_title"
         android:layout_width="380dp"
         android:layout_height="100dp"
@@ -45,6 +45,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/time_title" />
 
+
+
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="380dp"
@@ -54,153 +56,81 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:alpha="0.6"
         android:background="#cacaca"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-    <Button
-        android:id="@+id/contactBtn"
-        android:layout_width="220dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/HRO_subColor1"
-        android:text="Communicatie"
-        android:textColor="@color/HRO_subColor5"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        <Button
+            android:id="@+id/contactBtn"
+            android:layout_width="365dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/HRO_subColor1"
+            android:text="Communicatie"
+            android:textColor="@color/HRO_subColor5"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
 
-    <Button
-        android:id="@+id/btn_sp1_info"
-        android:layout_width="65dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/HRO_mainColor"
+        <Button
+            android:id="@+id/btn_sp2"
+            android:layout_width="365dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/HRO_subColor1"
+            android:text="Informatica"
+            android:textColor="@color/HRO_subColor5"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/contactBtn" />
 
-        android:text="info"
-        android:textColor="@color/HRO_subColor5"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/contactBtn"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        <Button
+            android:id="@+id/btn_sp4"
+            android:layout_width="365dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/HRO_subColor1"
+            android:text="Communication and Multimedia Design"
+            android:textColor="@color/HRO_subColor5"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/btn_sp3" />
 
-    <Button
-        android:id="@+id/btn_sp2"
-        android:layout_width="220dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/HRO_subColor1"
-        android:text="Informatica"
-        android:textColor="@color/HRO_subColor5"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/contactBtn" />
+        <Button
+            android:id="@+id/btn_sp3"
+            android:layout_width="365dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/HRO_subColor1"
+            android:text="Technisch informatica"
+            android:textColor="@color/HRO_subColor5"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/btn_sp2" />
 
-    <Button
-        android:id="@+id/btn_sp2_info"
-        android:layout_width="65dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/HRO_mainColor"
-        android:text="info"
-        android:textColor="@color/HRO_subColor5"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/contactBtn"
-        app:layout_constraintTop_toBottomOf="@+id/btn_sp1_info" />
+        <Button
+            android:id="@+id/btn_sp5"
+            android:layout_width="365dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/HRO_subColor1"
+            android:text="Creative Media and Game technologies"
+            android:textColor="@color/HRO_subColor5"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/btn_sp4" />
 
-    <Button
-        android:id="@+id/btn_sp4"
-        android:layout_width="220dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/HRO_subColor1"
-        android:text="CM and GT"
-        android:textColor="@color/HRO_subColor5"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/btn_sp3" />
-
-    <Button
-        android:id="@+id/btn_sp4_info"
-        android:layout_width="65dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/HRO_mainColor"
-        android:text="info"
-        android:textColor="@color/HRO_subColor5"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/contactBtn"
-        app:layout_constraintTop_toBottomOf="@+id/btn_sp3_info" />
-
-    <Button
-        android:id="@+id/btn_sp3"
-        android:layout_width="220dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/HRO_subColor1"
-        android:text="Technisch informatica"
-        android:textColor="@color/HRO_subColor5"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/btn_sp2" />
-
-    <Button
-        android:id="@+id/btn_sp3_info"
-        android:layout_width="65dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/HRO_mainColor"
-        android:text="info"
-        android:textColor="@color/HRO_subColor5"
-        android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/contactBtn"
-        app:layout_constraintTop_toBottomOf="@+id/btn_sp2_info" />
-
-    <Button
-        android:id="@+id/btn_sp5"
-        android:layout_width="220dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/HRO_subColor1"
-        android:text="CMD"
-        android:textColor="@color/HRO_subColor5"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/btn_sp4" />
-
-    <Button
-        android:id="@+id/btn_sp5_info"
-        android:layout_width="65dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/HRO_mainColor"
-        android:text="info"
-        android:textColor="@color/HRO_subColor5"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintStart_toEndOf="@+id/contactBtn"
-        app:layout_constraintTop_toBottomOf="@+id/btn_sp4_info" />
-
-    <TextView
+        <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -271,47 +201,33 @@
         app:layout_constraintStart_toEndOf="@+id/date_title"
         app:layout_constraintTop_toTopOf="@+id/time_title" />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="26dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="8dp"
-        android:text="From: 4 p.m.  to:  8 p.m "
-        android:textColor="@color/design_default_color_primary"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:text="From: 4 p.m.  to:  8 p.m "
+            android:textColor="@color/design_default_color_primary"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:text="Wijnhaven 107, 3011 WN, Rotterdam "
-        android:textColor="@color/design_default_color_primary"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/place_title"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="2dp"
+            android:text="Wijnhaven 107, 3011 WN, Rotterdam "
+            android:textColor="@color/design_default_color_primary"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/place_title"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="More information"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_sp1_info"
-        app:layout_constraintStart_toEndOf="@+id/contactBtn"
-        app:layout_constraintTop_toBottomOf="@+id/time_title" />
-
-    <TextView
+        <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -325,28 +241,48 @@
         app:layout_constraintStart_toStartOf="@+id/imageView3"
         app:layout_constraintTop_toBottomOf="@+id/btn_sp5" />
 
-    <ImageView
-        android:id="@+id/schedule"
-        android:layout_width="370dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="@+id/imageView3"
-        app:srcCompat="@drawable/default_schedule" />
+        <ImageView
+            android:id="@+id/schedule"
+            android:layout_width="370dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView3"
+            app:layout_constraintStart_toStartOf="@+id/imageView3"
+            app:layout_constraintTop_toTopOf="@+id/imageView3"
+            app:srcCompat="@drawable/default_schedule" />
 
-    <TextView
-        android:id="@+id/scheduleTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="choose a studyprogram"
-        android:textColor="#FCFFFFFF"
-        app:layout_constraintEnd_toEndOf="@+id/schedule"
-        app:layout_constraintStart_toStartOf="@+id/schedule"
-        app:layout_constraintTop_toTopOf="@+id/schedule" />
+        <TextView
+            android:id="@+id/scheduleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="choose a studyprogram"
+            android:textColor="@color/HRO_black"
+            app:layout_constraintEnd_toEndOf="@+id/schedule"
+            app:layout_constraintStart_toStartOf="@+id/schedule"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:onClick="addToCalender"
+            android:id="@+id/add_schedule_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            app:backgroundTint="@color/HRO_subColor3"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toTopOf="@+id/textView8"
+            app:layout_constraintEnd_toEndOf="@+id/btn_sp3"
+            app:layout_constraintTop_toTopOf="@+id/time_title"
+            app:maxImageSize="35dp"
+            app:srcCompat="@drawable/iconfinder_calendar_299092" />
+
+
     </android.support.constraint.ConstraintLayout>
 
 </ScrollView>
