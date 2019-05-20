@@ -43,9 +43,6 @@ public class AppUtil{
                 i = new Intent(context, floor_plan.class);
                 break;
 
-            case R.id.nav_settings:
-                i = new Intent(context, settings.class);
-                break;
 
             default:
                 i = new Intent(context, MainActivity.class);

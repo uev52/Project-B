@@ -9,7 +9,7 @@
 
     <style name="AppTheme_Dark" parent="Theme.AppCompat">
         <!-- Dark theme base colours -->
-        <item name="colorPrimary">@color/HRO_black</item>
+        <item name="colorPrimary">@color/HRO_mainColorDark</item>
         <item name="colorPrimaryDark">@color/HRO_mainColorDark</item>
         <item name="colorAccent">@color/HRO_subColor4</item>
         <item name="windowActionBar">false</item>
