@@ -99,6 +99,26 @@
             android:text="Fifth Floor"
             android:textColor="@color/HRO_white"
             android:textSize="20sp" />
+        <TextView
+            android:id="@+id/sixthfloor"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="8dp"
+            android:background="@color/HRO_mainColor"
+            android:gravity="center"
+            android:text="Sixth Floor"
+            android:textColor="@color/HRO_white"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/seventhfloor"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="8dp"
+            android:background="@color/HRO_mainColor"
+            android:gravity="center"
+            android:text="Seventh Floor"
+            android:textColor="@color/HRO_white"
+            android:textSize="20sp" />
     </ViewFlipper>
 
     <ViewFlipper
