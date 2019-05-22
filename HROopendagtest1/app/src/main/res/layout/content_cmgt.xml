@@ -71,7 +71,7 @@ Je differentieert je van andere programmeurs door je mate van creativiteit en je
 
                 android:id="@+id/cmgt_stats"
                 android:layout_width="match_parent"
-                android:layout_height="175dp"
+                android:layout_height="300dp"
                 app:srcCompat="@drawable/infostatistieken" />
 
             <TextView

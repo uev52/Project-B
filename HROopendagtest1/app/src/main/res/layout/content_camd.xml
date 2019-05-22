@@ -50,7 +50,7 @@
             <com.github.chrisbanes.photoview.PhotoView
             android:id="@+id/camd_stats"
                 android:layout_width="match_parent"
-                android:layout_height="175dp"
+                android:layout_height="300dp"
                 app:srcCompat="@drawable/infostatistieken" />
 
             <TextView
