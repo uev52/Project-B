@@ -5,19 +5,19 @@
     <color name="HRO_mainColor">#BF4750</color>
     <color name="HRO_subColor1">#E95662</color>
     <color name="HRO_subColor2">#D9505B</color>
-    <color name="HRO_subColor3">#EF8F97</color>
-    <color name="HRO_subColor4">#FF5E6B</color>
+    <color name="HRO_subColor3">#EC939B</color>
+    <color name="HRO_subColor4">#EC4A57</color>
     <color name="HRO_subColor5">#FAE9E9</color>
     <color name="HRO_subColor6">#F7F1F1</color>
 
     <color name="HRO_white">#FFFFFF</color>
     <color name="HRO_white2">#F4F4F6</color>
 
-    <color name="HRO_black">#000000</color>
+    <color name="HRO_black">#FFFFFF</color>
     <color name="HRO_black2">#33343B</color>
 
     <color name="HRO_lightGrey">#FEFEFE</color>
-    <color name="HRO_grey">#6D6D6D</color>
+    <color name="HRO_grey">#8E8D8D</color>
 
 
 
