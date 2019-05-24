@@ -60,19 +60,18 @@ public class MainThread extends Thread {
         timeMillis = (System.nanoTime() - startTime) / 1000000;
         waitTime = targetTime - timeMillis;
 
+
         try {
-            if (waitTime > 0)
-                this.sleep(waitTime);
-        } catch (Exception e) {
+            this.sleep(waitTime);
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
 
         totalTime += System.nanoTime() - startTime;
         frameCount++;
         if (frameCount == MAX_FPS) {
             averageFPS = 1000 / ((totalTime / frameCount) / 1000000);
-            frameCount = 0;
-            totalTime = 0;
             System.out.println(averageFPS);
 
         }
