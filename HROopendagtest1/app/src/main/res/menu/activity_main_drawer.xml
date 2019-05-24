@@ -16,6 +16,9 @@
         <item
             android:id="@+id/nav_floorPlans"
             android:title="@string/floorplans" />
+        <item
+            android:id="@+id/game"
+            android:title="@string/game" />
 
     </group>
 

@@ -67,6 +67,10 @@
             android:label="@string/title_activity_study_program_screen"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name=".game"
+            android:label="@string/game"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:background="?background"
             android:label="@string/app_name"

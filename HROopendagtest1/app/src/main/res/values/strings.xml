@@ -52,6 +52,7 @@
     <string name="title_activity_technische_informatica">Technische Informatica</string>
     <string name="title_activity_cmgt">Creative Media and Game Technologies</string>
     <string name="title_activity_camd">Communication and Multimedia Design</string>
+    <string name="game">game</string>
 
 
 </resources>
