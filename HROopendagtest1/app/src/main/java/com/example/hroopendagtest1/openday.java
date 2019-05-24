@@ -1,9 +1,12 @@
 package com.example.hroopendagtest1;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -23,6 +26,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -56,7 +60,7 @@ public class openday extends AppCompatActivity
         // start calendar activity
         startActivity(setcalendar);
     }
-    ImageView schedule;
+    ImageView schedule,blur,floor0,floor1,floor2,floor3,floor4,floor5;
     Button btn_sp1;
     Button btn_sp2;
     Button btn_sp3;
@@ -67,7 +71,9 @@ public class openday extends AppCompatActivity
     TextView note,note_text,time1,time2,time3,time4,time5,time6,time7,course1,course2,course3,course4,course5,course6,course7,room1,room2,room3,room4,room5,room6,room7;
     public int sp;
 
-
+    Dialog pop;
+    TextView titleTv,messageTv;
+    ImageView closePopupRoom;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -102,7 +108,15 @@ public class openday extends AppCompatActivity
         room6= (TextView)findViewById(R.id.classroom6);
         room7= (TextView)findViewById(R.id.classroom7);
         schedule = (ImageView)findViewById(R.id.schedule);
+        blur = (ImageView)findViewById(R.id.imageView4);
+        floor0 = (ImageView)findViewById(R.id.cmi1070);
+        floor1 = (ImageView)findViewById(R.id.cmi1071);
+        floor2 = (ImageView)findViewById(R.id.cmi1072);
+        floor3 = (ImageView)findViewById(R.id.cmi1073);
+        floor4 = (ImageView)findViewById(R.id.cmi1074);
+        floor5 = (ImageView)findViewById(R.id.cmi1075);
 
+        pop = new Dialog(this);
 
 
 
@@ -183,6 +197,55 @@ public class openday extends AppCompatActivity
 
         });
 
+        room1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                roomPlan();
+            }
+
+        });
+
+        room2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                roomPlan();
+            }
+
+        });
+
+        room3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                roomPlan();
+
+            }
+
+        });
+
+        room4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                roomPlan();
+            }
+
+        });
+
+        room5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                roomPlan();
+            }
+
+        });
+
+        room6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                roomPlan();
+            }
+
+        });
+
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -206,6 +269,7 @@ public class openday extends AppCompatActivity
     }
 
     public void makeVisible(){
+        blur.setVisibility(blur.INVISIBLE);
         note.setVisibility(note.INVISIBLE);
         note_text.setVisibility(note_text.INVISIBLE);
         time1.setVisibility(time1.VISIBLE);
@@ -231,6 +295,41 @@ public class openday extends AppCompatActivity
         room7.setVisibility(room7.VISIBLE);
     }
 
+    public void roomPlan(){
+        if (sp == 1){
+            showPopupRoom();
+
+        }
+        if (sp == 2){
+            showPopupRoom();
+
+
+        }
+        if (sp == 3){
+            showPopupRoom();
+
+        }
+        if (sp == 4){
+            showPopupRoom();
+
+
+        }
+        if (sp == 5){
+            showPopupRoom();
+
+        }
+
+
+    }
+
+    public void showPopupRoom(){
+        pop.setContentView(R.layout.activity_roompop);
+
+        pop.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        pop.show();
+    }
+
+
     public void makeSchedule(){
         time1.setText("16:00 - 16:45");
         time2.setText("16:45 - 17:00");
@@ -252,6 +351,7 @@ public class openday extends AppCompatActivity
             room4.setText("H.1.403");
             room5.setText("H.0.310");
             room6.setText("H.2.211");
+
 
         }
         if (sp == 2){

@@ -268,7 +268,6 @@
             app:layout_constraintTop_toTopOf="@+id/imageView3" />
 
         <android.support.design.widget.FloatingActionButton
-            android:onClick="addToCalender"
             android:id="@+id/add_schedule_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -277,7 +276,8 @@
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
             android:clickable="true"
-            app:backgroundTint="@color/HRO_subColor3"
+            android:onClick="addToCalender"
+            app:backgroundTint="@color/HRO_subColor4"
             app:fabSize="normal"
             app:layout_constraintBottom_toTopOf="@+id/textView8"
             app:layout_constraintEnd_toEndOf="@+id/btn_sp3"
@@ -566,19 +566,17 @@
             app:layout_constraintStart_toStartOf="@+id/classroom_course"
             app:layout_constraintTop_toBottomOf="@+id/classroom6" />
 
-        <TextView
-            android:id="@+id/note_text"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="8dp"
-            android:text="Please Choose one of the openday's by clicking one of the buttons above, in order to show the day schedule."
-            android:textColor="@color/HRO_grey"
-            android:textStyle="italic"
-            app:layout_constraintEnd_toEndOf="@+id/schedule"
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="368dp"
+            android:layout_height="254dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:alpha="0.7"
+            android:background="@color/HRO_black2"
+            android:visibility="visible"
             app:layout_constraintStart_toStartOf="@+id/schedule"
-            app:layout_constraintTop_toTopOf="@+id/workshop1" />
+            app:layout_constraintTop_toTopOf="@+id/course_title" />
 
         <TextView
             android:id="@+id/note"
@@ -594,6 +592,19 @@
             app:layout_constraintEnd_toStartOf="@+id/note_text"
             app:layout_constraintTop_toTopOf="@+id/note_text" />
 
+        <TextView
+            android:id="@+id/note_text"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="In order to show the day schedule, Please Choose one of the openday's by clicking one of the buttons above."
+            android:textColor="@color/HRO_subColor3"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="@+id/schedule"
+            app:layout_constraintStart_toStartOf="@+id/schedule"
+            app:layout_constraintTop_toTopOf="@+id/workshop1" />
 
     </android.support.constraint.ConstraintLayout>
 
