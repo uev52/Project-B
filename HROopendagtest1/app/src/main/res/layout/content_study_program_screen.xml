@@ -66,8 +66,8 @@ tools:showIn="@layout/app_bar_study_program_screen">
         <com.github.chrisbanes.photoview.PhotoView
 
             android:id="@+id/Info_stats"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_width="wrap_content"
+            android:layout_height="175dp"
             app:srcCompat="@drawable/infostatistieken" />
 
         <TextView

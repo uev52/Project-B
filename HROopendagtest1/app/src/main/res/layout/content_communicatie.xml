@@ -68,7 +68,7 @@ Onze opleiding Communicatie leidt jou in vier jaar op tot wat we - met trots - e
 
                 android:id="@+id/com_stats"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="175dp"
                 app:srcCompat="@drawable/infostatistieken" />
 
             <TextView

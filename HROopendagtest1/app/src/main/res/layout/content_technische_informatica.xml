@@ -68,7 +68,7 @@ Als technisch informaticus draag je bij aan het ontwikkelen, beveiligen en in de
             <com.github.chrisbanes.photoview.PhotoView
                 android:id="@+id/t_infostats"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="199dp"
                 app:srcCompat="@drawable/infostatistieken" />
 
             <TextView
