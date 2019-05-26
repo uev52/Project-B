@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 public class game extends Activity {
     @Override
@@ -14,4 +15,11 @@ public class game extends Activity {
         setContentView(new GamePanel(this));
 
     }
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(getBaseContext(), "You can't quit this game", Toast.LENGTH_LONG).show();
+    }
+
 }
+

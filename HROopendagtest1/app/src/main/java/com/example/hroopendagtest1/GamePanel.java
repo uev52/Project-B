@@ -23,8 +23,9 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback {
         thread = new MainThread(getHolder(), this);
         setFocusable(true);
 
-        player = new RectPlayer(new Rect(100, 100, 200, 200), Color.rgb(255, 0, 0));
-        playerPoint = new Point(150, 150);
+        Point p = new Point(150, 150);
+        Rect r = new Rect(100, 100, 200, 200);
+        player = new RectPlayer(p, r, Color.RED);
 
 
     }
@@ -57,14 +58,16 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        float x = event.getX();
+        float y = event.getY();
+
         switch (event.getAction()){
             case MotionEvent.ACTION_DOWN:
             case MotionEvent.ACTION_MOVE:
-                playerPoint.set((int)event.getX(), (int)event.getY());
+                player.setPosition(x, y);
         }
 
         return true;
-//        return super.onTouchEvent(event);
     }
 
     public void update() {

@@ -7,12 +7,18 @@ import android.graphics.Rect;
 
 public class RectPlayer implements GameObject {
 
+    private Point position;
     private Rect rectangle;
     private int color;
 
-    public RectPlayer(Rect rectangle, int color){
+    public RectPlayer(Point position,Rect rectangle, int color){
+        this.position = position;
         this.rectangle = rectangle;
         this.color = color;
+    }
+
+    public void setPosition(float x, float y){
+        this.position.set((int)x , (int)y);
     }
 
     @Override

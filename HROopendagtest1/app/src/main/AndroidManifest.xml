@@ -69,7 +69,8 @@
         <activity
             android:name=".game"
             android:label="@string/game"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".MainActivity"
             android:background="?background"
