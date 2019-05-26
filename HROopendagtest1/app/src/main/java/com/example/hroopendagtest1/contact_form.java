@@ -58,36 +58,49 @@ public class contact_form extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View v) {
 
-
-                //public means that the method is visible and can be called from other objects of other types.
+                // public means that the method is visible and can be called from other objects of other types.
                 // void means that the method has no return value
                 String name     = editName.getText().toString();
                 String email    = editYouremail.getText().toString();
                 String subject  = editSubject.getText().toString();
                 String content  = editContent.getText().toString();
-                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
-//https://stackoverflow.com/questions/12947620/email-address-validation-in-android-on-edittext
+
+                //https://stackoverflow.com/questions/12947620/email-address-validation-in-android-on-edittext
                 //http://androidmkab.com/2016/12/13/create-android-contact-form-beginne/
                 //https://www.youtube.com/watch?v=tZ2YEw6SoBU
-                //-----------------
 
-                //
+                if (TextUtils.isEmpty(name)){
+                    editName.setError("Enter Your Name");
+                    editName.requestFocus();
+                    return;
+                }
 
 
-                //final EditText emailValidate = (EditText)findViewById(R.id.textMessage);
-                //
-                //final TextView textView = (TextView)findViewById(R.id.text);
-                //
-                //String email = emailValidate.getText().toString().trim();
-                //
+                Boolean onError = false;
+                if (!isValidEmail(email)) {
+                    onError = true;
+                    editYouremail.setError("Invalid Email");
+                    return;
+                }
 
-                //
-                //// onClick of button perform this simplest code.
-                if (email.matches(emailPattern))
-                {
+
+                if (TextUtils.isEmpty(subject)){
+                    editSubject.setError("Enter Your Subject");
+                    editSubject.requestFocus();
+                    return;
+                }
+
+                if (TextUtils.isEmpty(content)){
+                    editContent.setError("Enter Your Message");
+                    editContent.requestFocus();
+                    return;
+                }
+
+
                     //start maling activity, everything next is sending data from one application to another
                     Intent Mailing = new Intent(android.content.Intent.ACTION_SEND);
+
                     //sharingapps that need to be shown:
                     Mailing.setType("plain/text");
 
@@ -102,14 +115,20 @@ public class contact_form extends AppCompatActivity implements NavigationView.On
 
                     //sharingfunctionality of the button
                     startActivity(Intent.createChooser(Mailing, "Choose mail application"));
-                }
-                else
-                {
-                Toast.makeText(getApplicationContext(),"Invalid email address", Toast.LENGTH_SHORT).show();
-                }
+
+
 
             }
         });
+
+
+    }
+    private boolean isValidEmail(String email) {
+        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+
+        Pattern pattern = Pattern.compile(emailPattern);
+        Matcher matcher = pattern.matcher(email);
+        return matcher.matches();
     }
 
 
@@ -139,3 +158,5 @@ public class contact_form extends AppCompatActivity implements NavigationView.On
         return true;
     }
 }
+
+
