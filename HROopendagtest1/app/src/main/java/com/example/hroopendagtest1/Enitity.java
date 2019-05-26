@@ -5,13 +5,13 @@ import android.graphics.Paint;
 import android.graphics.Point;
 import android.graphics.Rect;
 
-public class RectPlayer implements GameObject {
+public class Entity implements GameObject {
 
     private Point position;
     private Rect rectangle;
     private int color;
 
-    public RectPlayer(Point position,Rect rectangle, int color){
+    public Entity(Point position,Rect rectangle, int color){
         this.position = position;
         this.rectangle = rectangle;
         this.color = color;

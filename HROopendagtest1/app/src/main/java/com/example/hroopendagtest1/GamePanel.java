@@ -12,6 +12,8 @@ import android.view.SurfaceView;
 public class GamePanel extends SurfaceView implements SurfaceHolder.Callback {
     private MainThread thread;
 
+    private RectPlayer player
+
 
     
 
