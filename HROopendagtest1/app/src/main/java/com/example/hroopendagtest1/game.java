@@ -1,6 +1,7 @@
 package com.example.hroopendagtest1;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
@@ -19,6 +20,7 @@ public class game extends Activity {
     @Override
     public void onBackPressed() {
         Toast.makeText(getBaseContext(), "You can't quit this game", Toast.LENGTH_LONG).show();
+        startActivity(new Intent(this, MainActivity.class));
     }
 
 }

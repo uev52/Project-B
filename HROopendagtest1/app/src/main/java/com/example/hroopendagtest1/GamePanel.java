@@ -12,8 +12,6 @@ import android.view.SurfaceView;
 public class GamePanel extends SurfaceView implements SurfaceHolder.Callback {
     private MainThread thread;
 
-    private RectPlayer player;
-    private Point playerPoint;
 
     
 
@@ -23,9 +21,6 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback {
         thread = new MainThread(getHolder(), this);
         setFocusable(true);
 
-        Point p = new Point(150, 150);
-        Rect r = new Rect(100, 100, 200, 200);
-        player = new RectPlayer(p, r, Color.RED);
 
 
     }
@@ -53,25 +48,18 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback {
 
             }catch (Exception e){ e.printStackTrace(); }
             retry = false;
+
+
         }
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        float x = event.getX();
-        float y = event.getY();
-
-        switch (event.getAction()){
-            case MotionEvent.ACTION_DOWN:
-            case MotionEvent.ACTION_MOVE:
-                player.setPosition(x, y);
-        }
 
         return true;
     }
 
     public void update() {
-        player.update(playerPoint);
     }
 
     public void draw(Canvas canvas){
@@ -79,7 +67,5 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback {
 
         // background
         canvas.drawColor(Color.YELLOW);
-
-        player.draw(canvas);
     }
 }
