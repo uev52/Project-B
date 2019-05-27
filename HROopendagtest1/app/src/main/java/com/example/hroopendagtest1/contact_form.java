@@ -26,20 +26,20 @@ import java.util.regex.Pattern;
 import javax.security.auth.Subject;
 
 public class contact_form extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    private Activity activity;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_form);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar =  findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer =  findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView =  findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         //----------------
@@ -53,41 +53,55 @@ public class contact_form extends AppCompatActivity implements NavigationView.On
         final EditText editSubject     =  findViewById(R.id.editSubject);
         final EditText editContent     =  findViewById(R.id.editContent);
 
-        Button email = (Button) findViewById(R.id.sendButton);
+        Button email =  findViewById(R.id.sendButton);
         email.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-
-                //public means that the method is visible and can be called from other objects of other types.
+                // public means that the method is visible and can be called from other objects of other types.
                 // void means that the method has no return value
                 String name     = editName.getText().toString();
                 String email    = editYouremail.getText().toString();
                 String subject  = editSubject.getText().toString();
                 String content  = editContent.getText().toString();
-                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
-//https://stackoverflow.com/questions/12947620/email-address-validation-in-android-on-edittext
+
+                //https://stackoverflow.com/questions/12947620/email-address-validation-in-android-on-edittext
                 //http://androidmkab.com/2016/12/13/create-android-contact-form-beginne/
                 //https://www.youtube.com/watch?v=tZ2YEw6SoBU
-                //-----------------
-
-                //
 
 
-                //final EditText emailValidate = (EditText)findViewById(R.id.textMessage);
-                //
-                //final TextView textView = (TextView)findViewById(R.id.text);
-                //
-                //String email = emailValidate.getText().toString().trim();
-                //
+                //if name input is empty... checker
+                if (TextUtils.isEmpty(name)){
+                    editName.setError("Enter Your Name"); // error message with exclamation mark
+                    editName.requestFocus(); // brings the  cursor to this field
+                    return;
+                }
 
-                //
-                //// onClick of button perform this simplest code.
-                if (email.matches(emailPattern))
-                {
+
+
+                if (!isValidEmail(email)) {
+                    editYouremail.setError("Invalid Email");
+                    return;
+                }
+
+
+                if (TextUtils.isEmpty(subject)){
+                    editSubject.setError("Enter Your Subject");
+                    editSubject.requestFocus();
+                    return;
+                }
+
+                if (TextUtils.isEmpty(content)){
+                    editContent.setError("Enter Your Message");
+                    editContent.requestFocus();
+                    return;
+                }
+
+
                     //start maling activity, everything next is sending data from one application to another
                     Intent Mailing = new Intent(android.content.Intent.ACTION_SEND);
+
                     //sharingapps that need to be shown:
                     Mailing.setType("plain/text");
 
@@ -102,14 +116,20 @@ public class contact_form extends AppCompatActivity implements NavigationView.On
 
                     //sharingfunctionality of the button
                     startActivity(Intent.createChooser(Mailing, "Choose mail application"));
-                }
-                else
-                {
-                Toast.makeText(getApplicationContext(),"Invalid email address", Toast.LENGTH_SHORT).show();
-                }
+
+
 
             }
         });
+
+
+    }
+    private boolean isValidEmail(String email) {
+        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+
+        Pattern pattern = Pattern.compile(emailPattern);
+        Matcher matcher = pattern.matcher(email);
+        return matcher.matches();
     }
 
 
@@ -118,7 +138,7 @@ public class contact_form extends AppCompatActivity implements NavigationView.On
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer =  findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -134,8 +154,10 @@ public class contact_form extends AppCompatActivity implements NavigationView.On
         startActivity(AppUtil.changeScreen(item.getItemId(), getBaseContext()));
 
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer =  findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 }
+
+

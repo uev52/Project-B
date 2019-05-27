@@ -17,7 +17,7 @@ public class wijnhaven99 extends AppCompatActivity implements View.OnClickListen
     Button previousFloorwh99;
     ViewFlipper viewFlipper;
     ViewFlipper viewFlippertext99;
-    TextView seventhfloor;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,23 +26,20 @@ public class wijnhaven99 extends AppCompatActivity implements View.OnClickListen
 
 
         PhotoView cmi1070 = findViewById(R.id.cmi1070);
-        cmi1070.setImageResource(R.mipmap.cmi1070);
+        cmi1070.setImageResource(R.drawable.cmi990);
         PhotoView cmi1071 = findViewById(R.id.cmi1071);
-        cmi1071.setImageResource(R.mipmap.cmi1071);
+        cmi1071.setImageResource(R.drawable.cmi991);
         PhotoView cmi1072 = findViewById(R.id.cmi1072);
-        cmi1072.setImageResource(R.mipmap.cmi1072);
+        cmi1072.setImageResource(R.drawable.cmi992);
         PhotoView cmi1073 = findViewById(R.id.cmi1073);
-        cmi1073.setImageResource(R.mipmap.cmi1073);
+        cmi1073.setImageResource(R.drawable.cmi993);
         PhotoView cmi1074 = findViewById(R.id.cmi1074);
-        cmi1074.setImageResource(R.mipmap.cmi1074);
+        cmi1074.setImageResource(R.drawable.cmi994);
         PhotoView cmi1075 = findViewById(R.id.cmi1075);
-        cmi1075.setImageResource(R.mipmap.cmi1075);
-        PhotoView cmi1076 = findViewById(R.id.cmi1076);
-        cmi1076.setImageResource(R.mipmap.cmi1076);
-        PhotoView cmi1077 = findViewById(R.id.cmi1077);
-        cmi1077.setImageResource(R.mipmap.cmi1077);
+        cmi1075.setImageResource(R.drawable.cmi995);
 
-        //      seventhfloor =  findViewById(R.id.seventhfloor);
+
+
 
         viewFlipper = findViewById(R.id.viewFlipper);
         viewFlippertext99 = findViewById(R.id.viewFlippertext99);
@@ -91,14 +88,6 @@ public class wijnhaven99 extends AppCompatActivity implements View.OnClickListen
                 previousFloorwh99.setVisibility(View.VISIBLE);
 
             if (viewFlipper.getDisplayedChild() == 5)
-                nextFloorwh99.setVisibility(View.VISIBLE);
-                previousFloorwh99.setVisibility(View.VISIBLE);
-
-            if (viewFlipper.getDisplayedChild() == 6)
-                nextFloorwh99.setVisibility(View.VISIBLE);
-                previousFloorwh99.setVisibility(View.VISIBLE);
-
-            if (viewFlipper.getDisplayedChild() == 7)
                 nextFloorwh99.setVisibility(View.INVISIBLE);
                 previousFloorwh99.setVisibility(View.VISIBLE);
         }
@@ -108,39 +97,37 @@ public class wijnhaven99 extends AppCompatActivity implements View.OnClickListen
              viewFlipper.showPrevious();
              viewFlippertext99.showPrevious();
 
-            if (viewFlipper.getDisplayedChild() == 0) {
-                nextFloorwh99.setVisibility(View.VISIBLE);
-                previousFloorwh99.setVisibility(View.INVISIBLE);
-            }
+             if (viewFlipper.getDisplayedChild() == 0) {
+                 nextFloorwh99.setVisibility(View.VISIBLE);
+                 previousFloorwh99.setVisibility(View.INVISIBLE);
+             }
 
-            if (viewFlipper.getDisplayedChild() == 1) {
-                nextFloorwh99.setVisibility(View.VISIBLE);
-                previousFloorwh99.setVisibility(View.VISIBLE);
-            }
+             if (viewFlipper.getDisplayedChild() == 1) {
+                 nextFloorwh99.setVisibility(View.VISIBLE);
+                 previousFloorwh99.setVisibility(View.VISIBLE);
+             }
 
-            if (viewFlipper.getDisplayedChild() == 2) {
-                nextFloorwh99.setVisibility(View.VISIBLE);
-                previousFloorwh99.setVisibility(View.VISIBLE);
-            }
-            if (viewFlipper.getDisplayedChild() == 3) {
-                nextFloorwh99.setVisibility(View.VISIBLE);
-                previousFloorwh99.setVisibility(View.VISIBLE);
-            }
+             if (viewFlipper.getDisplayedChild() == 2) {
+                 nextFloorwh99.setVisibility(View.VISIBLE);
+                 previousFloorwh99.setVisibility(View.VISIBLE);
+             }
+             if (viewFlipper.getDisplayedChild() == 3) {
+                 nextFloorwh99.setVisibility(View.VISIBLE);
+                 previousFloorwh99.setVisibility(View.VISIBLE);
+             }
 
-            if (viewFlipper.getDisplayedChild() == 4) {
-                nextFloorwh99.setVisibility(View.VISIBLE);
-                previousFloorwh99.setVisibility(View.VISIBLE);
-            }
+             if (viewFlipper.getDisplayedChild() == 4) {
+                 nextFloorwh99.setVisibility(View.VISIBLE);
+                 previousFloorwh99.setVisibility(View.VISIBLE);
+             }
 
-            if (viewFlipper.getDisplayedChild() == 5) {
-                nextFloorwh99.setVisibility(View.VISIBLE);
-                previousFloorwh99.setVisibility(View.VISIBLE);
-            }
+             if (viewFlipper.getDisplayedChild() == 5) {
+                 nextFloorwh99.setVisibility(View.VISIBLE);
+                 previousFloorwh99.setVisibility(View.VISIBLE);
+             }
 
-            if (viewFlipper.getDisplayedChild() == 6) {
-                nextFloorwh99.setVisibility(View.VISIBLE);
-                previousFloorwh99.setVisibility(View.VISIBLE);
-            }
+
+
 
         }
     }

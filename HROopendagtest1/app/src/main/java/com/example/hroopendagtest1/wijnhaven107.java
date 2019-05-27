@@ -21,27 +21,25 @@ public class wijnhaven107 extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wijnhaven107);
 
-        PhotoView cmi1070 = (PhotoView) findViewById(R.id.cmi1070);
-        cmi1070.setImageResource(R.mipmap.cmi1070);
-        PhotoView cmi1071 = (PhotoView) findViewById(R.id.cmi1071);
-        cmi1071.setImageResource(R.mipmap.cmi1071);
-        PhotoView cmi1072 = (PhotoView) findViewById(R.id.cmi1072);
-        cmi1072.setImageResource(R.mipmap.cmi1072);
-        PhotoView cmi1073 = (PhotoView) findViewById(R.id.cmi1073);
-        cmi1073.setImageResource(R.mipmap.cmi1073);
-        PhotoView cmi1074 = (PhotoView) findViewById(R.id.cmi1074);
-        cmi1074.setImageResource(R.mipmap.cmi1074);
-        PhotoView cmi1075 = (PhotoView) findViewById(R.id.cmi1075);
-        cmi1075.setImageResource(R.mipmap.cmi1075);
-        PhotoView cmi1076 = (PhotoView) findViewById(R.id.cmi1076);
-        cmi1076.setImageResource(R.mipmap.cmi1076);
-        PhotoView cmi1077 = (PhotoView) findViewById(R.id.cmi1077);
-        cmi1077.setImageResource(R.mipmap.cmi1077);
+        PhotoView cmi1070 = findViewById(R.id.cmi1070);
+        cmi1070.setImageResource(R.drawable.cmi1070);
+        PhotoView cmi1071 = findViewById(R.id.cmi1071);
+        cmi1071.setImageResource(R.drawable.cmi1071);
+        PhotoView cmi1072 = findViewById(R.id.cmi1072);
+        cmi1072.setImageResource(R.drawable.cmi1072);
+        PhotoView cmi1073 = findViewById(R.id.cmi1073);
+        cmi1073.setImageResource(R.drawable.cmi1073);
+        PhotoView cmi1074 = findViewById(R.id.cmi1074);
+        cmi1074.setImageResource(R.drawable.cmi1074);
+        PhotoView cmi1075 = findViewById(R.id.cmi1075);
+        cmi1075.setImageResource(R.drawable.cmi1075);
+        PhotoView cmi1076 = findViewById(R.id.cmi1076);
+        cmi1076.setImageResource(R.drawable.cmi1076);
 
-        viewFlipper = (ViewFlipper) findViewById(R.id.viewFlipper);
-        viewFlippertext99 = (ViewFlipper)findViewById(R.id.viewFlippertext99);
-        nextFloorwh99 = (Button) findViewById(R.id.nextFloorwh99);
-        previousFloorwh99 = (Button) findViewById(R.id.previousFloorwh99);
+        viewFlipper = findViewById(R.id.viewFlipper);
+        viewFlippertext99 = findViewById(R.id.viewFlippertext99);
+        nextFloorwh99 = findViewById(R.id.nextFloorwh99);
+        previousFloorwh99 = findViewById(R.id.previousFloorwh99);
 
         nextFloorwh99.setOnClickListener(this);
         previousFloorwh99.setOnClickListener(this);
@@ -50,7 +48,7 @@ public class wijnhaven107 extends AppCompatActivity implements View.OnClickListe
 
         if (viewFlipper.getDisplayedChild() == 0)
             nextFloorwh99.setVisibility(View.VISIBLE);
-        previousFloorwh99.setVisibility(View.INVISIBLE);
+            previousFloorwh99.setVisibility(View.INVISIBLE);
 //
 //
 //
@@ -89,10 +87,6 @@ public class wijnhaven107 extends AppCompatActivity implements View.OnClickListe
             previousFloorwh99.setVisibility(View.VISIBLE);
 
             if (viewFlipper.getDisplayedChild() == 6)
-                nextFloorwh99.setVisibility(View.VISIBLE);
-            previousFloorwh99.setVisibility(View.VISIBLE);
-
-            if (viewFlipper.getDisplayedChild() == 7)
                 nextFloorwh99.setVisibility(View.INVISIBLE);
             previousFloorwh99.setVisibility(View.VISIBLE);
         }
@@ -131,10 +125,6 @@ public class wijnhaven107 extends AppCompatActivity implements View.OnClickListe
                 previousFloorwh99.setVisibility(View.VISIBLE);
             }
 
-            if (viewFlipper.getDisplayedChild() == 6) {
-                nextFloorwh99.setVisibility(View.VISIBLE);
-                previousFloorwh99.setVisibility(View.VISIBLE);
-            }
 
         }
     }
