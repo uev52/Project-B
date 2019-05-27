@@ -70,16 +70,17 @@ public class contact_form extends AppCompatActivity implements NavigationView.On
                 //http://androidmkab.com/2016/12/13/create-android-contact-form-beginne/
                 //https://www.youtube.com/watch?v=tZ2YEw6SoBU
 
+
+                //if name input is empty... checker
                 if (TextUtils.isEmpty(name)){
-                    editName.setError("Enter Your Name");
-                    editName.requestFocus();
+                    editName.setError("Enter Your Name"); // error message with exclamation mark
+                    editName.requestFocus(); // brings the  cursor to this field
                     return;
                 }
 
 
-                Boolean onError = false;
+
                 if (!isValidEmail(email)) {
-                    onError = true;
                     editYouremail.setError("Invalid Email");
                     return;
                 }
