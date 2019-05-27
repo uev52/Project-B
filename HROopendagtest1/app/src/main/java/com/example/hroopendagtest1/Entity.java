@@ -10,15 +10,22 @@ public class Entity implements GameObject {
     private Point position;
     private Rect rectangle;
     private int color;
+    private int size = 100;
 
-    public Entity(Point position,Rect rectangle, int color){
+    public Entity(Point position, Rect rectangle, int color) {
         this.position = position;
         this.rectangle = rectangle;
         this.color = color;
     }
 
-    public void setPosition(float x, float y){
-        this.position.set((int)x , (int)y);
+    public void setPosition(float x_, float y_) {
+        int touchX = (int) x_;
+        int touchY = (int) y_;
+        int centerX = touchX + size/2;
+        int centerY = touchY + size/2;
+
+        position.set(touchX, touchY);
+        rectangle.set(x, y, centerX + size/2, centerY + size/2);
     }
 
     @Override
@@ -33,9 +40,9 @@ public class Entity implements GameObject {
 
     }
 
-    public void update(Point point){
-        rectangle.set(point.x - rectangle.width()/2, point.y - rectangle.height() / 2,
-                point.x + rectangle.width()/2, point.y + rectangle.height() / 2);
+    public void update(Point point) {
+        rectangle.set(point.x - rectangle.width() / 2, point.y - rectangle.height() / 2,
+                point.x + rectangle.width() / 2, point.y + rectangle.height() / 2);
     }
 
 }
