@@ -5,6 +5,8 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.Rect;
+import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -13,6 +15,15 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback {
     private MainThread thread;
 
     private Entity player;
+
+
+    
+
+    private float scaleX;
+    private float scaleY;
+
+
+
 
 
     
@@ -66,10 +77,32 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback {
             case MotionEvent.ACTION_DOWN:
             case MotionEvent.ACTION_MOVE:
                 player.setPosition(x, y);
+                break;
+
+            case MotionEvent.ACTION_UP:
+
+                break;
+
+
         }
 
         return true;
     }
+
+    public void swipeUp(){
+
+    }
+    public void swipeRight(){
+
+    }
+    public void swipeDown(){
+
+    }
+    public void swipeLeft(){
+
+    }
+
+
 
     public void update() {
     }

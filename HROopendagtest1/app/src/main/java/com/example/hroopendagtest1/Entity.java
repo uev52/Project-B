@@ -19,13 +19,12 @@ public class Entity implements GameObject {
     }
 
     public void setPosition(float x_, float y_) {
-        int touchX = (int) x_;
-        int touchY = (int) y_;
-        int centerX = touchX + size/2;
-        int centerY = touchY + size/2;
+        int x = (int) x_;
+        int y = (int) y_;
 
-        position.set(touchX, touchY);
-        rectangle.set(x, y, centerX + size/2, centerY + size/2);
+        position.set(x, y);
+        rectangle.set(x - size / 2, y - size / 2,
+                x + size / 2, y + size / 2);
     }
 
     @Override
@@ -38,11 +37,6 @@ public class Entity implements GameObject {
     @Override
     public void update() {
 
-    }
-
-    public void update(Point point) {
-        rectangle.set(point.x - rectangle.width() / 2, point.y - rectangle.height() / 2,
-                point.x + rectangle.width() / 2, point.y + rectangle.height() / 2);
     }
 
 }
