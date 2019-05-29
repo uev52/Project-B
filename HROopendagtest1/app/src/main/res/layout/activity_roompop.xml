@@ -23,7 +23,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="200dp"
-        app:cardBackgroundColor="@color/coloGreenLight"
+        app:cardBackgroundColor="@color/colorGreenLight"
         app:cardCornerRadius="15dp">
 
         <LinearLayout
@@ -54,7 +54,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginBottom="10dp"
-                    android:src="@mipmap/cmi1070" />
+                    android:src="@drawable/cmi1070" />
 
                 <TextView
                     android:layout_width="match_parent"
