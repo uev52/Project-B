@@ -27,8 +27,7 @@
     <color name="colorGreen">#247b37</color>
     <color name="colorGreen1">#3eb959</color>
     <color name="colorAccent">#FF4081</color>
-
-
+    <color name="colorGreenLight">#abffc0</color>
 
 
 </resources>
