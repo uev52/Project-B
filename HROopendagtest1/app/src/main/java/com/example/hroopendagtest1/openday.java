@@ -60,20 +60,24 @@ public class openday extends AppCompatActivity
         // start calendar activity
         startActivity(setcalendar);
     }
-    ImageView schedule,blur,floor0,floor1,floor2,floor3,floor4,floor5;
-    Button btn_sp1;
-    Button btn_sp2;
-    Button btn_sp3;
-    Button btn_sp4;
-    Button btn_sp5;
 
-    TextView title;
-    TextView note,note_text,time1,time2,time3,time4,time5,time6,time7,course1,course2,course3,course4,course5,course6,course7,room1,room2,room3,room4,room5,room6,room7;
+    //schedule and schedule classroom rows items
+    ImageView schedule,blur,floor0,floor1,floor2,floor3,floor4,floor5;
+
+    //studie program buttons
+    Button btn_sp1, btn_sp2, btn_sp3, btn_sp4, btn_sp5;
+
+    // openday schedule cullom and row items
+    TextView title, note,note_text,time1,time2,time3,time4,time5,time6,time7,course1,course2,course3,course4,course5,course6,course7,room1,room2,room3,room4,room5,room6,room7;
+
+    // current study program checker for day schedule
     public int sp;
 
+    // Classroom information popup light box
     Dialog pop;
-    TextView titleTv,messageTv;
-    ImageView closePopupRoom;
+
+    //TextView titleTv,messageTv;
+    //ImageView closePopupRoom;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -83,6 +87,7 @@ public class openday extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        // create dayschedule items
         title=(TextView) findViewById(R.id.scheduleTitle);
         note= (TextView) findViewById(R.id.note);
         note_text = (TextView)findViewById(R.id.note_text);
@@ -92,21 +97,21 @@ public class openday extends AppCompatActivity
         time4= (TextView)findViewById(R.id.time_course4);
         time5= (TextView)findViewById(R.id.time_course5);
         time6= (TextView)findViewById(R.id.time_course6);
-        time7= (TextView)findViewById(R.id.time_course7);
+
         course1= (TextView)findViewById(R.id.workshop1);
         course2= (TextView)findViewById(R.id.workshop2);
         course3= (TextView)findViewById(R.id.workshop3);
         course4= (TextView)findViewById(R.id.workshop4);
         course5= (TextView)findViewById(R.id.workshop5);
         course6= (TextView)findViewById(R.id.workshop6);
-        course7= (TextView)findViewById(R.id.workshop7);
+
         room1= (TextView)findViewById(R.id.classroom1);
         room2= (TextView)findViewById(R.id.classroom2);
         room3= (TextView)findViewById(R.id.classroom3);
         room4= (TextView)findViewById(R.id.classroom4);
         room5= (TextView)findViewById(R.id.classroom5);
         room6= (TextView)findViewById(R.id.classroom6);
-        room7= (TextView)findViewById(R.id.classroom7);
+
         schedule = (ImageView)findViewById(R.id.schedule);
         blur = (ImageView)findViewById(R.id.imageView4);
         floor0 = (ImageView)findViewById(R.id.cmi1070);
@@ -130,12 +135,9 @@ public class openday extends AppCompatActivity
                 title.setText("Communicatie");
                 makeSchedule();
                 makeVisible();
-
-
             }
 
         });
-
 
         // Studyprogram button for Informatica (changes the day achedule)
         btn_sp2=(Button)findViewById(R.id.btn_sp2);
@@ -147,7 +149,6 @@ public class openday extends AppCompatActivity
                 title.setText("Informatica");
                 makeSchedule();
                 makeVisible();
-
             }
 
         });
@@ -162,11 +163,10 @@ public class openday extends AppCompatActivity
                 title.setText("Technisch Informatica");
                 makeSchedule();
                 makeVisible();
-
-
             }
 
         });
+
         // Studyprogram button for Creative Design & Game Technology (changes the day achedule)
         btn_sp4=(Button)findViewById(R.id.btn_sp4);
 
@@ -177,7 +177,6 @@ public class openday extends AppCompatActivity
                 title.setText("MD&GT");
                 makeSchedule();
                 makeVisible();
-
             }
 
         });
@@ -192,11 +191,11 @@ public class openday extends AppCompatActivity
                 title.setText("CMD");
                 makeSchedule();
                 makeVisible();
-
             }
 
         });
 
+        // classroom popup linking when clicked on text in row 1
         room1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -205,6 +204,7 @@ public class openday extends AppCompatActivity
 
         });
 
+        // classroom popup linking when clicked on text in row 2
         room2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -213,15 +213,16 @@ public class openday extends AppCompatActivity
 
         });
 
+        // classroom popup linking when clicked on text in row 3
         room3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 roomPlan();
-
             }
 
         });
 
+        // classroom popup linking when clicked on text in row 4
         room4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -230,6 +231,7 @@ public class openday extends AppCompatActivity
 
         });
 
+        // classroom popup linking when clicked on text in row 5
         room5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -238,6 +240,7 @@ public class openday extends AppCompatActivity
 
         });
 
+        // classroom popup linking when clicked on text in row 6
         room6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -268,6 +271,7 @@ public class openday extends AppCompatActivity
         }
     }
 
+    // custom function makes items in dayschedule visible or invisible when needed
     public void makeVisible(){
         blur.setVisibility(blur.INVISIBLE);
         note.setVisibility(note.INVISIBLE);
@@ -278,23 +282,24 @@ public class openday extends AppCompatActivity
         time4.setVisibility(time4.VISIBLE);
         time5.setVisibility(time5.VISIBLE);
         time6.setVisibility(time6.VISIBLE);
-        time7.setVisibility(time7.VISIBLE);
+
         course1.setVisibility(course1.VISIBLE);
         course2.setVisibility(course2.VISIBLE);
         course3.setVisibility(course3.VISIBLE);
         course4.setVisibility(course4.VISIBLE);
         course5.setVisibility(course5.VISIBLE);
         course6.setVisibility(course6.VISIBLE);
-        course7.setVisibility(course7.VISIBLE);
+
         room1.setVisibility(room1.VISIBLE);
         room2.setVisibility(room2.VISIBLE);
         room3.setVisibility(room3.VISIBLE);
         room4.setVisibility(room4.VISIBLE);
         room5.setVisibility(room5.VISIBLE);
         room6.setVisibility(room6.VISIBLE);
-        room7.setVisibility(room7.VISIBLE);
+
     }
 
+    // custom function for checking for the current chosen study program an showing popup activity when pressed on classroom
     public void roomPlan(){
         if (sp == 1){
             showPopupRoom();
@@ -318,10 +323,9 @@ public class openday extends AppCompatActivity
             showPopupRoom();
 
         }
-
-
     }
 
+    // custom function thes sets the popup class
     public void showPopupRoom(){
         pop.setContentView(R.layout.activity_roompop);
 
@@ -329,8 +333,10 @@ public class openday extends AppCompatActivity
         pop.show();
     }
 
-
+    // custom funtion that sets the required day schedule items to the corresponding study program
     public void makeSchedule(){
+
+        // values in the fist column that are always the same
         time1.setText("16:00 - 16:45");
         time2.setText("16:45 - 17:00");
         time3.setText("17:00 - 18:00");

@@ -23,7 +23,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="200dp"
-        app:cardBackgroundColor="@color/HRO_subColor1"
+        app:cardBackgroundColor="@color/coloGreenLight"
         app:cardCornerRadius="15dp">
 
         <LinearLayout
