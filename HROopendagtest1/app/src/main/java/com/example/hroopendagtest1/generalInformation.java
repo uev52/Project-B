@@ -1,6 +1,7 @@
 package com.example.hroopendagtest1;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Paint;
 import android.net.Uri;
 import android.os.Bundle;
@@ -33,6 +34,15 @@ public class generalInformation extends AppCompatActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        // Checks for dark theme and changes theme
+        SharedPreferences preferences = getSharedPreferences(AppUtil.getPrefsName(), MODE_PRIVATE);
+        boolean useDarkTheme = preferences.getBoolean(AppUtil.getPrefDarkTheme(),  false);
+        if(useDarkTheme) {
+            setTheme(R.style.AppTheme_Dark);
+        }
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_general_information);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
