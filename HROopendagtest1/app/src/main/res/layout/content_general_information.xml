@@ -145,10 +145,12 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+
         android:layout_marginBottom="8dp"
         android:background="@color/HRO_mainColor"
         android:text="Informatica"
         android:textSize="14sp"
+
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/techinfoBtn"
         app:layout_constraintEnd_toEndOf="parent"
@@ -164,12 +166,14 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
+
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="@color/HRO_mainColor"
         android:text="Technische Informatica"
         android:textSize="14sp"
+
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/cmgtBtn"
         app:layout_constraintEnd_toEndOf="parent"
