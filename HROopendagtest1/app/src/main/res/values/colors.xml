@@ -13,7 +13,7 @@
     <color name="HRO_white">#FFFFFF</color>
     <color name="HRO_white2">#F4F4F6</color>
 
-    <color name="HRO_black">#FFFFFF</color>
+    <color name="HRO_black">#000000</color>
     <color name="HRO_black2">#33343B</color>
 
     <color name="HRO_lightGrey">#FEFEFE</color>
