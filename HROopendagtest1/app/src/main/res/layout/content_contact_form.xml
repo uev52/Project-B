@@ -161,7 +161,7 @@
             android:inputType="textMultiLine"
             android:paddingLeft="10dp"
             android:textColor="@color/HRO_black"
-            android:textColorHint="@color/HRO_black"
+            android:textColorHint="#b2734c"
             android:textSize="20dp" />
     </ScrollView>
 
