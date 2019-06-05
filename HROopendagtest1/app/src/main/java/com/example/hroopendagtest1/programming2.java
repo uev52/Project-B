@@ -28,7 +28,7 @@ import javax.security.auth.Subject;
 public class programming2 extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     EditText secondinput1;
     EditText secondinput2;
-    Button   Check2;
+    Button   secondCheck;
     View     view;
 
     @Override
@@ -45,8 +45,8 @@ public class programming2 extends AppCompatActivity implements NavigationView.On
         view = this.getWindow().getDecorView();
 
 
-        Check2 = findViewById(R.id.Check1);
-        Check2.setOnClickListener(new View.OnClickListener() {
+        secondCheck = findViewById(R.id.Check1);
+        secondCheck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String firstinput = secondinput1.getText().toString();
@@ -57,11 +57,11 @@ public class programming2 extends AppCompatActivity implements NavigationView.On
                 if (firstinput.equals(answer1) && secondinput.equals(answer2)){
                     Toast.makeText(getApplicationContext(),  "Correct!", Toast.LENGTH_LONG).show();
                     view.setBackgroundResource(R.color.colorGreen1);
-                    Check2.setText("Next");
-                    Check2.setOnClickListener(new View.OnClickListener() {
+                    secondCheck.setText("Next");
+                    secondCheck.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent i=new Intent(getApplicationContext(), programming1.class);
+                            Intent i=new Intent(getApplicationContext(), programming3.class);
                             startActivity(i);
                         }
                     });

@@ -9,7 +9,11 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".programming3"></activity>
+        <activity
+            android:name=".programming3"
+            android:label="programming3"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".programming2"
             android:label="programming2"
