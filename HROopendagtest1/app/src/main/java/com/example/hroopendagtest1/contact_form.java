@@ -82,6 +82,7 @@ public class contact_form extends AppCompatActivity implements NavigationView.On
 
                 if (!isValidEmail(email)) {
                     editYouremail.setError("Invalid Email");
+                    editYouremail.requestFocus();
                     return;
                 }
 
