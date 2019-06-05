@@ -12,69 +12,83 @@
 
         <activity
             android:name=".wijnhaven107"
+            android:background="?background"
             android:label="Wijnhaven107"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".wijnhaven103"
+            android:background="?background"
             android:label="Wijnhaven103"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".wijnhaven99"
+            android:background="?background"
             android:label="Wijnhaven99"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:screenOrientation="portrait"
             android:name=".openday3"
+            android:background="?background"
             android:label="@string/title_activity_openday3"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:screenOrientation="portrait"
             android:name=".openday2"
+            android:background="?background"
             android:label="@string/title_activity_openday2"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:screenOrientation="portrait"
             android:name=".camd"
+            android:background="?background"
             android:label="@string/title_activity_camd"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:screenOrientation="portrait"
             android:name=".cmgt"
+            android:background="?background"
             android:label="@string/title_activity_cmgt"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:screenOrientation="portrait"
             android:name=".technische_informatica"
+            android:background="?background"
             android:label="@string/title_activity_technische_informatica"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:screenOrientation="portrait"
             android:name=".communicatie"
+            android:background="?background"
             android:label="@string/title_activity_communicatie"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:screenOrientation="portrait"
             android:name=".contact_form"
+            android:background="?background"
             android:label="@string/title_activity_contact_form"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:screenOrientation="portrait"
             android:name=".floor_plan"
+            android:background="?background"
             android:label="@string/floorplans"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:screenOrientation="portrait"
             android:name=".generalInformation"
+            android:background="?background"
             android:label="@string/general_information"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:screenOrientation="portrait"
             android:name=".openday"
+            android:background="?background"
             android:label="@string/title_activity_openday"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:screenOrientation="portrait"
             android:name=".study_program_screen"
+            android:background="?background"
             android:label="@string/title_activity_study_program_screen"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
