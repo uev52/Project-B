@@ -43,7 +43,6 @@ public class AppUtil{
                 i = new Intent(context, programming1.class);
                 break;
 
-
             default:
                 i = new Intent(context, MainActivity.class);
                 break;

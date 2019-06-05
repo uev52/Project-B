@@ -13,8 +13,7 @@
             android:name=".programmingwinner"
             android:label="programmingwinner"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".programming5"
             android:label="programming5"
@@ -40,6 +39,26 @@
             android:label="@string/programming_test"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
+		<activity            
+			android:name=".quiz_CMGT"
+            android:label="@string/title_activity_quiz__cmgt"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".quiz_CAMD"
+            android:label="@string/title_activity_quiz__cmgt"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".quiz_Communicatie"
+            android:label="@string/title_activity_quiz__cmgt"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".quiz_TechInformatica"
+            android:label="@string/title_activity_quiz__cmgt"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".quiz_Informatica"
+            android:label="@string/title_activity_quiz__cmgt"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".wijnhaven107"
             android:label="Wijnhaven107"

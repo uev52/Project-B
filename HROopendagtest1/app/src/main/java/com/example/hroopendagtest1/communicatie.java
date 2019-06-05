@@ -14,11 +14,14 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.widget.Button;
 
 import com.github.chrisbanes.photoview.PhotoView;
 
 public class communicatie extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private Button quizBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,15 @@ public class communicatie extends AppCompatActivity
 
         PhotoView photoView = (PhotoView) findViewById(R.id.com_stats);
         photoView.setImageResource(R.drawable.infostatistieken);
+
+        quizBtn = findViewById(R.id.startCommunicatieQuiz);
+        quizBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), quiz_Communicatie.class);
+                startActivity(i);
+            }
+        });
     }
 
     @Override
