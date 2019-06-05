@@ -26,9 +26,9 @@ import java.util.regex.Pattern;
 import javax.security.auth.Subject;
 
 public class programming2 extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    EditText input1;
-    EditText input2;
-    Button   Check1;
+    EditText secondinput1;
+    EditText secondinput2;
+    Button   Check2;
     View     view;
 
     @Override
@@ -38,27 +38,27 @@ public class programming2 extends AppCompatActivity implements NavigationView.On
         Toolbar toolbar =  findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        input1 = findViewById(R.id.input1);
-        input2 = findViewById(R.id.input2);
+        secondinput1 = findViewById(R.id.input1);
+        secondinput2 = findViewById(R.id.input2);
 
         //Get the view so I can later use it to change the background color
         view = this.getWindow().getDecorView();
 
 
-        Check1 = findViewById(R.id.Check1);
-        Check1.setOnClickListener(new View.OnClickListener() {
+        Check2 = findViewById(R.id.Check1);
+        Check2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String firstinput = input1.getText().toString();
-                String answer1 = "b";
-                String secondinput = input2.getText().toString();
-                String answer2 = "sum";
+                String firstinput = secondinput1.getText().toString();
+                String answer1 = "y=4";
+                String secondinput = secondinput2.getText().toString();
+                String answer2 = "j";
 
                 if (firstinput.equals(answer1) && secondinput.equals(answer2)){
                     Toast.makeText(getApplicationContext(),  "Correct!", Toast.LENGTH_LONG).show();
                     view.setBackgroundResource(R.color.colorGreen1);
-                    Check1.setText("Next");
-                    Check1.setOnClickListener(new View.OnClickListener() {
+                    Check2.setText("Next");
+                    Check2.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Intent i=new Intent(getApplicationContext(), programming1.class);
