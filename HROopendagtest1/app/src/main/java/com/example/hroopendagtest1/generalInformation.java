@@ -29,6 +29,7 @@ public class generalInformation extends AppCompatActivity
     Button cmgtBtn;
     Button camdBtn;
     TextView phoneNumber;
+    TextView Adress;
 
 
 
@@ -68,9 +69,16 @@ public class generalInformation extends AppCompatActivity
                 startActivity(i);
             }
         });
-
-
-
+        Adress = (TextView) findViewById(R.id.AdressInfo);
+        Adress.setPaintFlags(Adress.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+        Adress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse("geo:51.917278,4.484342"));
+                startActivity(i);
+            }
+        });
         contactBtn = (Button)findViewById(R.id.contactBtn);
         contactBtn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -13,19 +13,21 @@
     <color name="HRO_white">#FFFFFF</color>
     <color name="HRO_white2">#F4F4F6</color>
 
-    <color name="HRO_black">#FFFFFF</color>
+    <color name="HRO_black">#000000</color>
     <color name="HRO_black2">#33343B</color>
 
     <color name="HRO_lightGrey">#FEFEFE</color>
 
-    <color name="HRO_grey">#8E8D8D</color>
+    <color name="HRO_grey">#6D6D6D</color>
+    <color name="selectedBlue">#003152</color>
+
     <color name="colorPrimary">#848cb7</color>
     <color name="colorPrimaryDark">#6d749f</color>
     <color name="colorRed">#ff3943</color>
     <color name="colorRedDark">#801b20</color>
     <color name="coloGreenLight">#abffc0</color>
     <color name="colorGreen">#247b37</color>
-    <color name="colorGreen1">#3eb959</color>
+    <color name="colorGreen1">#3EB959</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorGreenLight">#abffc0</color>
 

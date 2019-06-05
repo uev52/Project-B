@@ -14,7 +14,7 @@
     <string name="settings">Settings</string>
     <string name="my_contact">Question Form</string>
     <string name="my_events">My events</string>
-
+    <string name="programming_test">Programming Test</string>
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_openday">Openday</string>
 
@@ -52,6 +52,8 @@
     <string name="title_activity_technische_informatica">Technische Informatica</string>
     <string name="title_activity_cmgt">Creative Media and Game Technologies</string>
     <string name="title_activity_camd">Communication and Multimedia Design</string>
+    <string name="title_activity_quiz">quizActivity</string>
+    <string name="title_activity_quiz__cmgt">quiz_CMGT</string>
 
     <string name="room_popup_title">Classroom information</string>
     <string name="room_popup_text">Here must come more information about the classroom</string>
