@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.ZoomControls;
 
@@ -21,6 +22,8 @@ import com.github.chrisbanes.photoview.PhotoView;
 
 public class study_program_screen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private Button quizBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,9 +42,14 @@ public class study_program_screen extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         PhotoView photoView = (PhotoView) findViewById(R.id.Info_stats);
         photoView.setImageResource(R.drawable.infostatistieken);
-
-
-
+        quizBtn = findViewById(R.id.startInformaticaQuiz);
+        quizBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), quiz_Informatica.class);
+                startActivity(i);
+            }
+        });
     }
 
     @Override
