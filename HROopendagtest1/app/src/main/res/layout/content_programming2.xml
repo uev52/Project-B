@@ -64,7 +64,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/firstsum "
         android:layout_width="112dp"
         android:layout_height="27dp"
         android:layout_marginStart="8dp"

@@ -25,56 +25,16 @@ import java.util.regex.Pattern;
 
 import javax.security.auth.Subject;
 
-public class programming3 extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    EditText thirdinput1;
-    EditText thirdinput2;
-    Button   thirdCheck;
-    View     view;
+public class programmingwinner extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_programming3);
+        setContentView(R.layout.activity_programmingwinner);
         Toolbar toolbar =  findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        thirdinput1 = findViewById(R.id.input1);
-        thirdinput2 = findViewById(R.id.input2);
 
-        //Get the view so I can later use it to change the background color
-        view = this.getWindow().getDecorView();
-
-
-        thirdCheck = findViewById(R.id.Check1);
-        thirdCheck.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String firstinput = thirdinput1.getText().toString();
-                String answer1 = "<10";
-                String secondinput = thirdinput2.getText().toString();
-                String answer2 = "y=";
-
-                if (firstinput.equals(answer1) && secondinput.equals(answer2)){
-                    Toast.makeText(getApplicationContext(),  "Correct!", Toast.LENGTH_LONG).show();
-                    view.setBackgroundResource(R.color.colorGreen1);
-                    thirdCheck.setText("Next");
-                    thirdCheck.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent i=new Intent(getApplicationContext(), programming4.class);
-                            startActivity(i);
-                        }
-                    });
-
-                    return;
-                }else{
-                    Toast.makeText(getApplicationContext(),  "Wrong!", Toast.LENGTH_LONG).show();
-                    view.setBackgroundResource(R.color.colorRed);
-                    return;
-                }
-
-            }
-        });
 
 
 
