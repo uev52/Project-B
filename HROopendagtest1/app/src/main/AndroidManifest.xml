@@ -9,31 +9,51 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity
+            android:name=".quiz_CMGT"
+            android:label="@string/title_activity_quiz__cmgt"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".quiz_CAMD"
+            android:label="@string/title_activity_quiz__cmgt"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".quiz_Communicatie"
+            android:label="@string/title_activity_quiz__cmgt"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".quiz_TechInformatica"
+            android:label="@string/title_activity_quiz__cmgt"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".quiz_Informatica"
+            android:label="@string/title_activity_quiz__cmgt"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
 
         <activity
             android:name=".wijnhaven107"
             android:label="Wijnhaven107"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".wijnhaven103"
             android:label="Wijnhaven103"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".wijnhaven99"
             android:label="Wijnhaven99"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".openday3"
             android:label="@string/title_activity_openday3"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".openday2"
             android:label="@string/title_activity_openday2"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".camd"
             android:label="@string/title_activity_camd"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".cmgt"
             android:label="@string/title_activity_cmgt"
