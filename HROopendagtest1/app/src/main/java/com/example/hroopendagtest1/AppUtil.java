@@ -1,11 +1,7 @@
 package com.example.hroopendagtest1;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-
-import static android.content.Context.MODE_PRIVATE;
 
 public class AppUtil{
     private static String PREFS_NAME = "prefs";
@@ -43,6 +39,9 @@ public class AppUtil{
                 i = new Intent(context, floor_plan.class);
                 break;
 
+            case R.id.nav_programming1:
+                i = new Intent(context, programming1.class);
+                break;
 
             default:
                 i = new Intent(context, MainActivity.class);

@@ -28,7 +28,10 @@ public class programming1 extends AppCompatActivity implements NavigationView.On
 
            input1 = findViewById(R.id.input1);
            input2 = findViewById(R.id.input2);
+
+           //Get the view so I can later use it to change the background color
            view = this.getWindow().getDecorView();
+
            Check1 = findViewById(R.id.Check1);
            Check1.setOnClickListener(new View.OnClickListener() {
                @Override
