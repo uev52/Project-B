@@ -34,15 +34,6 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Het Eerste Jaar"
-                android:layout_marginLeft="4dp"
-                android:textStyle="bold"
-                android:textSize="18sp"/>
-
-
-            <TextView
                 android:id="@+id/textView19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -57,15 +48,6 @@
 
 Binnen de projecten werk je ideeën uit en experimenteer je met technieken. Wanneer iets niet lukt, doe je het de volgende keer anders. Hier komt een bepaalde mate van zelfsturing bij kijken die je moet liggen. Er worden lessen aangeboden waar op dat moment behoefte aan is. Je reflecteert op je eigen ontwikkeling en je wordt bijgestaan door een coach."
                 android:textSize="14sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Beschrijving"
-                android:layout_marginLeft="4dp"
-                android:textStyle="bold"
-                android:textSize="18sp"/>
-
 
             <TextView
                 android:id="@+id/textView17"
@@ -85,30 +67,12 @@ Als CMGT'er ben je een developer (programmeur) van interactieve digitale product
 Je differentieert je van andere programmeurs door je mate van creativiteit en je kennis en gevoel voor interactie tussen apparaten en mensen (gebruikers)."
                 android:textSize="14sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Statistieken"
-                android:layout_marginLeft="4dp"
-                android:textStyle="bold"
-                android:textSize="18sp"/>
-
-
             <com.github.chrisbanes.photoview.PhotoView
 
                 android:id="@+id/cmgt_stats"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 app:srcCompat="@drawable/infostatistieken" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Toelatingsvoorwaarden:"
-                android:layout_marginLeft="4dp"
-                android:textStyle="bold"
-                android:textSize="18sp"/>
-
 
             <TextView
                 android:id="@+id/textView20"
@@ -121,21 +85,8 @@ Je differentieert je van andere programmeurs door je mate van creativiteit en je
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="8dp"
                 android:scrollbars="vertical"
-                android:text="Met een mbo-niveau 4, havo en-of vwo-diploma ben je toelaatbaar tot deze opleiding. Hogeschool Rotterdam stelt geen eisen aan je vakkenpakket of het domein waarin je je mbo-diploma hebt behaald."
+                android:text="Toelatingsvoorwaarden: \n\n Met een mbo-niveau 4, havo en-of vwo-diploma ben je toelaatbaar tot deze opleiding. Hogeschool Rotterdam stelt geen eisen aan je vakkenpakket of het domein waarin je je mbo-diploma hebt behaald."
                 android:textSize="14sp" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/startcmgtQuiz"
-                android:text="Take the quiz here!"
-                android:layout_gravity="center"
-                android:layout_margin="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginBottom="8dp"
-                android:textColor="@color/HRO_white"
-                android:background="@color/HRO_mainColorDark"
-                android:textSize="15dp"/>
 
         </LinearLayout>
     </ScrollView>

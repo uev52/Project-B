@@ -14,14 +14,11 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.widget.Button;
 
 import com.github.chrisbanes.photoview.PhotoView;
 
 public class technische_informatica extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
-    private Button quizBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,14 +38,6 @@ public class technische_informatica extends AppCompatActivity
 
         PhotoView photoView = (PhotoView) findViewById(R.id.t_infostats);
         photoView.setImageResource(R.drawable.infostatistieken);
-        quizBtn = findViewById(R.id.startTechInfoQuiz);
-        quizBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), quiz_TechInformatica.class);
-                startActivity(i);
-            }
-        });
     }
 
     @Override

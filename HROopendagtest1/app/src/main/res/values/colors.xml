@@ -18,10 +18,6 @@
 
     <color name="HRO_lightGrey">#FEFEFE</color>
 
-    <color name="HRO_grey">#6D6D6D</color>
-    <color name="selectedBlue">#003152</color>
-
-
     <color name="HRO_grey">#8E8D8D</color>
     <color name="colorPrimary">#848cb7</color>
     <color name="colorPrimaryDark">#6d749f</color>
