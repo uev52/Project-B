@@ -44,6 +44,7 @@ public class programming1 extends AppCompatActivity implements NavigationView.On
            //Get the view so I can later use it to change the background color
            view = this.getWindow().getDecorView();
 
+
            Check1 = findViewById(R.id.Check1);
            Check1.setOnClickListener(new View.OnClickListener() {
                @Override
@@ -56,6 +57,15 @@ public class programming1 extends AppCompatActivity implements NavigationView.On
                    if (firstinput.equals(answer1) && secondinput.equals(answer2)){
                        Toast.makeText(getApplicationContext(),  "Correct!", Toast.LENGTH_LONG).show();
                        view.setBackgroundResource(R.color.colorGreen1);
+                       Check1.setText("Next");
+                       Check1.setOnClickListener(new View.OnClickListener() {
+                           @Override
+                           public void onClick(View v) {
+                               Intent i=new Intent(getApplicationContext(), programming2.class);
+                               startActivity(i);
+                           }
+                       });
+
                        return;
                    }else{
                        Toast.makeText(getApplicationContext(),  "Wrong!", Toast.LENGTH_LONG).show();
