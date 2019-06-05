@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".openday"
-    tools:showIn="@layout/app_bar_openday">
+    tools:showIn="@layout/app_bar_openday2">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -67,7 +67,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
-            android:background="@color/HRO_subColor1"
+            android:background="?colorPrimary"
             android:text="Communicatie"
             android:textColor="@color/HRO_subColor5"
             app:layout_constraintStart_toStartOf="@+id/imageView"
@@ -95,7 +95,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
-            android:background="@color/HRO_subColor1"
+            android:background="?colorPrimary"
             android:text="Informatica"
             android:textColor="@color/HRO_subColor5"
             app:layout_constraintStart_toStartOf="@+id/imageView"
@@ -122,7 +122,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
-            android:background="@color/HRO_subColor1"
+            android:background="?colorPrimary"
             android:text="CM and GT"
             android:textColor="@color/HRO_subColor5"
             app:layout_constraintStart_toStartOf="@+id/imageView"
@@ -149,7 +149,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
-            android:background="@color/HRO_subColor1"
+            android:background="?colorPrimary"
             android:text="Technisch informatica"
             android:textColor="@color/HRO_subColor5"
             app:layout_constraintStart_toStartOf="@+id/imageView"
@@ -177,7 +177,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:background="@color/HRO_subColor1"
+            android:background="?colorPrimary"
             android:text="CMD"
             android:textColor="@color/HRO_subColor5"
             app:layout_constraintBottom_toBottomOf="@+id/imageView"
