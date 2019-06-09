@@ -3,7 +3,10 @@ package com.example.hroopendagtest1;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
@@ -17,6 +20,7 @@ public class wijnhaven99 extends AppCompatActivity implements View.OnClickListen
     Button previousFloorwh99;
     ViewFlipper viewFlipper;
     ViewFlipper viewFlippertext99;
+    Spinner spinner1;
 
 
     @Override
@@ -24,6 +28,7 @@ public class wijnhaven99 extends AppCompatActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wijnhaven99);
 
+        spinner1 = findViewById(R.id.spinner1);
 
         PhotoView cmi1070 = findViewById(R.id.cmi1070);
         cmi1070.setImageResource(R.drawable.cmi990);
@@ -38,9 +43,6 @@ public class wijnhaven99 extends AppCompatActivity implements View.OnClickListen
         PhotoView cmi1075 = findViewById(R.id.cmi1075);
         cmi1075.setImageResource(R.drawable.cmi995);
 
-
-
-
         viewFlipper = findViewById(R.id.viewFlipper);
         viewFlippertext99 = findViewById(R.id.viewFlippertext99);
         nextFloorwh99 = findViewById(R.id.nextFloorwh99);
@@ -51,9 +53,53 @@ public class wijnhaven99 extends AppCompatActivity implements View.OnClickListen
 
         viewFlipper.getDisplayedChild();
 
-        if (viewFlipper.getDisplayedChild() == 0)
-            nextFloorwh99.setVisibility(View.VISIBLE);
-            previousFloorwh99.setVisibility(View.INVISIBLE);
+        ArrayAdapter<String> spinner1Adapter = new ArrayAdapter(wijnhaven99.this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Buildings));
+        spinner1Adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        ArrayAdapter<String> spinner2Adapter = new ArrayAdapter(wijnhaven99.this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Floors));
+        spinner2Adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        spinner1.setAdapter(spinner2Adapter);
+
+        spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
+
+                switch(i){
+                    case 0:
+                        viewFlipper.setDisplayedChild(0);
+                        viewFlippertext99.setDisplayedChild(0);
+                        break;
+                    case 1:
+                        viewFlipper.setDisplayedChild(1);
+                        viewFlippertext99.setDisplayedChild(1);
+                        break;
+                    case 2:
+                        viewFlipper.setDisplayedChild(2);
+                        viewFlippertext99.setDisplayedChild(2);
+                        break;
+                    case 3:
+                        viewFlipper.setDisplayedChild(3);
+                        viewFlippertext99.setDisplayedChild(3);
+                        break;
+                    case 4:
+                        viewFlipper.setDisplayedChild(4);
+                        viewFlippertext99.setDisplayedChild(4);
+                        break;
+                    case 5:
+                        viewFlipper.setDisplayedChild(5);
+                        viewFlippertext99.setDisplayedChild(5);
+                        break;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 //
 //
 //
@@ -126,9 +172,8 @@ public class wijnhaven99 extends AppCompatActivity implements View.OnClickListen
                  previousFloorwh99.setVisibility(View.VISIBLE);
              }
 
-
-
-
-        }
+         }
     }
+
+
 }
