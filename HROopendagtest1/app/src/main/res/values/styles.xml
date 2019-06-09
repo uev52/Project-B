@@ -3,6 +3,7 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/HRO_mainColor</item>
+        <item name="boxBackgroundColor">@color/HRO_darkgrey</item>
 
     </style>
 
