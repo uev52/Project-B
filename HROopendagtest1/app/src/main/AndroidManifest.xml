@@ -12,7 +12,7 @@
         <activity
             android:name=".quizActivity"
             android:label="@string/title_activity_quiz"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".programmingwinner"
             android:label="programmingwinner"
@@ -80,12 +80,7 @@
             android:background="?background"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity
-            android:name=".quiz_Informatica"
-            android:label="@string/title_activity_quiz__cmgt"
-            android:background="?background"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"/>
+
         <activity
             android:name=".wijnhaven107"
             android:background="?background"
