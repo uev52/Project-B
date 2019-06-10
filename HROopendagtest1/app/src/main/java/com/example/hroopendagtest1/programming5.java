@@ -50,10 +50,13 @@ public class programming5 extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View v) {
                 String firstinput = fifthinput1.getText().toString();
+                firstinput = firstinput.replace(" ","");
                 String answer1 = "*";
                 String secondinput = fifthinput2.getText().toString();
+                secondinput = secondinput.replace(" ","");
                 String answer2 = "hash";
                 String thirdinput = fifthinput3.getText().toString();
+                thirdinput = thirdinput.replace(" ","");
                 String answer3 = "star";
 
                 if (firstinput.equals(answer1) && secondinput.equals(answer2) && thirdinput.equals(answer3)){

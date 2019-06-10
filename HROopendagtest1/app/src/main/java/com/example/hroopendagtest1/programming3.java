@@ -48,8 +48,10 @@ public class programming3 extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View v) {
                 String firstinput = thirdinput1.getText().toString();
+                firstinput = firstinput.replace(" ","");
                 String answer1 = "<10";
                 String secondinput = thirdinput2.getText().toString();
+                secondinput = secondinput.replace(" ","");
                 String answer2 = "y=";
 
                 if (firstinput.equals(answer1) && secondinput.equals(answer2)){
