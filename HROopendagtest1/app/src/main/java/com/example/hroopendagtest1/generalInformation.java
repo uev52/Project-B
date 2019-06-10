@@ -75,7 +75,7 @@ public class generalInformation extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse("geo:51.917278,4.484342"));
+                i.setData(Uri.parse("geo:51.917380,4.484382?q=51.917380,4.484382"));
                 startActivity(i);
             }
         });
