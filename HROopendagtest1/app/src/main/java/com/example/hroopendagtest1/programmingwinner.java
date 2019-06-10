@@ -1,6 +1,9 @@
 package com.example.hroopendagtest1;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.Image;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -9,8 +12,11 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 public class programmingwinner extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+    ImageView victory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +46,16 @@ public class programmingwinner extends AppCompatActivity implements NavigationVi
 
         NavigationView navigationView =  findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        victory = (ImageView) findViewById(R.id.victory);
+        victory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse("https://youtu.be/k9iYm9PEAHg?t=45"));
+                startActivity(i);
+            }
+        });
 
     }
 
