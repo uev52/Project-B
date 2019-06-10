@@ -221,7 +221,7 @@ public class quiz_Informatica extends AppCompatActivity
             if (score<=10){
                 questionsView.setText("Maybe you should consider learning more about this study program!");
             }
-            else if (score>10 && score<17){
+            else if (score>10 && score<20){
                 questionsView.setText("Nice! You did pretty good");
             }
             else{

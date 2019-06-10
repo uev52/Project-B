@@ -32,8 +32,8 @@ public class quiz_Communicatie extends AppCompatActivity
     private Boolean choice2Selected = false;
     private Boolean choice3Selected = false;
     private int addedScore = 0;
-    int [] pointsPerQuestion = new int[quizLibr.InfoQuestions.length+1];
-    int[] selectedAnswers = new int[quizLibr.InfoQuestions.length+1];
+    int [] pointsPerQuestion = new int[quizLibr.CommunicatieQuestions.length+1];
+    int[] selectedAnswers = new int[quizLibr.CommunicatieQuestions.length+1];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,14 +64,14 @@ public class quiz_Communicatie extends AppCompatActivity
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (questionNumber!= quizLibr.InfoQuestions.length){
+                if (questionNumber!= quizLibr.CommunicatieQuestions.length){
                     questionNumber = questionNumber+1;
                     updatePoints();
                     updateQuestion();
                     colorChoices();
                     activeBtn();
                     colorBtn();
-                    System.out.println(quizLibr.InfoQuestions.length);
+                    System.out.println(quizLibr.CommunicatieQuestions.length);
                     System.out.println(questionNumber);}
                 else{
                     updatePoints();
@@ -210,7 +210,7 @@ public class quiz_Communicatie extends AppCompatActivity
         resetButtons();
         colorPrevBtn();
 
-        if (questionNumber == quizLibr.InfoQuestions.length){
+        if (questionNumber == quizLibr.CommunicatieQuestions.length){
             buttonChoice1.setVisibility(View.GONE);
             buttonChoice2.setVisibility(View.GONE);
             buttonChoice3.setVisibility(View.GONE);
@@ -364,7 +364,7 @@ public class quiz_Communicatie extends AppCompatActivity
         }
     }
     private void setSelected(){
-        if (questionNumber!= quizLibr.InfoQuestions.length){
+        if (questionNumber!= quizLibr.CommunicatieQuestions.length){
             if (selectedAnswers[questionNumber+1] ==1){
                 choice1Selected = true;
                 choice2Selected = false;
