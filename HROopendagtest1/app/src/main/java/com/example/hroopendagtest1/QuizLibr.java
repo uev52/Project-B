@@ -11,15 +11,15 @@ public class QuizLibr {
             "How long does this Study Program take?",
             "During which year do you take an internship?",
             "How many hours quals one ECT?",
-            "Hoe heten mijn ouders?"
-
+            "Which of the following is a programming language?",
+            ""
     };
 
     public String Infochoices [][] ={
-            {"Sevven", "Rivver", "Winter"},
-            {"19", "20", "21"},
-            {"2", "3", "4"},
-            {"Hans & Lida", "Huub & Gerda", "Henk & Anita"},
+            {"2 years", "5 years", "4 years"},
+            {"2nd year", "3rd year", "5th year"},
+            {"28", "18", "30"},
+            {"C+", "Z-", "C-"},
     };
 
     public String cmgtQuestions [] = {
@@ -79,7 +79,7 @@ public class QuizLibr {
             {"Hans & Lida", "Huub & Gerda", "Henk & Anita"},
     };
 
-    public String InfoAnswers [] = {"4 years","3rd year","28","Python","60"};
+    public String InfoAnswers [] = {"4 years","3rd year","28","C+","60"};
     public String InfoSecondAnswers [] = {"5 years","4th year","24","Python & Java", "48"};
 
     public String cmgtAnswers[] = {"Sevven","20","4","Hans & Lida"};
