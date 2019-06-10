@@ -6,12 +6,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".openday"
+    tools:context=".openday2"
     tools:showIn="@layout/app_bar_openday">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/groundfloor"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/HRO_subColor2"
+            android:gravity="center"
+            android:textColor="@color/HRO_white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/time_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/time_title"
@@ -19,7 +35,7 @@
             android:layout_height="100dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="55dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:alpha="0.6"
@@ -32,7 +48,7 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="380dp"
-            android:layout_height="254dp"
+            android:layout_height="250dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="32dp"
@@ -45,24 +61,26 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/time_title" />
 
+
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="380dp"
             android:layout_height="310dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
+            android:alpha="0.6"
             android:background="#cacaca"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <Button
             android:id="@+id/contactBtn"
-            android:layout_width="220dp"
+            android:layout_width="365dp"
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
@@ -74,23 +92,8 @@
             app:layout_constraintTop_toTopOf="@+id/imageView" />
 
         <Button
-            android:id="@+id/btn_sp1_info"
-            android:layout_width="65dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:background="@color/HRO_mainColor"
-
-            android:text="info"
-            android:textColor="@color/HRO_subColor5"
-            android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@+id/contactBtn"
-            app:layout_constraintTop_toTopOf="@+id/imageView" />
-
-        <Button
             android:id="@+id/btn_sp2"
-            android:layout_width="220dp"
+            android:layout_width="365dp"
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
@@ -102,49 +105,21 @@
             app:layout_constraintTop_toBottomOf="@+id/contactBtn" />
 
         <Button
-            android:id="@+id/btn_sp2_info"
-            android:layout_width="65dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:background="@color/HRO_mainColor"
-            android:text="info"
-            android:textColor="@color/HRO_subColor5"
-            android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@+id/contactBtn"
-            app:layout_constraintTop_toBottomOf="@+id/btn_sp1_info" />
-
-        <Button
             android:id="@+id/btn_sp4"
-            android:layout_width="220dp"
+            android:layout_width="365dp"
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
             android:background="@color/HRO_subColor1"
-            android:text="CM and GT"
+            android:text="Communication and Multimedia Design"
             android:textColor="@color/HRO_subColor5"
             app:layout_constraintStart_toStartOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@+id/btn_sp3" />
 
         <Button
-            android:id="@+id/btn_sp4_info"
-            android:layout_width="65dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:background="@color/HRO_mainColor"
-            android:text="info"
-            android:textColor="@color/HRO_subColor5"
-            android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@+id/contactBtn"
-            app:layout_constraintTop_toBottomOf="@+id/btn_sp3_info" />
-
-        <Button
             android:id="@+id/btn_sp3"
-            android:layout_width="220dp"
+            android:layout_width="365dp"
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
@@ -156,49 +131,17 @@
             app:layout_constraintTop_toBottomOf="@+id/btn_sp2" />
 
         <Button
-            android:id="@+id/btn_sp3_info"
-            android:layout_width="65dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:background="@color/HRO_mainColor"
-            android:text="info"
-            android:textColor="@color/HRO_subColor5"
-            android:textSize="14sp"
-            app:layout_constraintStart_toEndOf="@+id/contactBtn"
-            app:layout_constraintTop_toBottomOf="@+id/btn_sp2_info" />
-
-        <Button
             android:id="@+id/btn_sp5"
-            android:layout_width="220dp"
+            android:layout_width="365dp"
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
             android:background="@color/HRO_subColor1"
-            android:text="CMD"
+            android:text="Creative Media and Game technologies"
             android:textColor="@color/HRO_subColor5"
             app:layout_constraintBottom_toBottomOf="@+id/imageView"
             app:layout_constraintStart_toStartOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@+id/btn_sp4" />
-
-        <Button
-            android:id="@+id/btn_sp5_info"
-            android:layout_width="65dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@color/HRO_mainColor"
-            android:text="info"
-            android:textColor="@color/HRO_subColor5"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView"
-            app:layout_constraintStart_toEndOf="@+id/contactBtn"
-            app:layout_constraintTop_toBottomOf="@+id/btn_sp4_info" />
 
         <TextView
             android:id="@+id/textView2"
@@ -265,7 +208,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginLeft="12dp"
             android:layout_marginTop="8dp"
-            android:text="Friday, April 24, 2019"
+            android:text="Thursday, April 24, 2019"
             android:textColor="@color/design_default_color_primary"
             android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@+id/date_title"
@@ -277,7 +220,7 @@
             android:layout_height="26dp"
             android:layout_marginStart="12dp"
             android:layout_marginLeft="12dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="5dp"
             android:text="From: 4 p.m.  to:  8 p.m "
             android:textColor="@color/design_default_color_primary"
             android:textSize="18sp"
@@ -288,28 +231,14 @@
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginLeft="12dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="2dp"
             android:text="Wijnhaven 107, 3011 WN, Rotterdam "
             android:textColor="@color/design_default_color_primary"
             android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@+id/place_title"
             app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="More information"
-            android:textColor="#000000"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_sp1_info"
-            app:layout_constraintStart_toEndOf="@+id/contactBtn"
-            app:layout_constraintTop_toBottomOf="@+id/time_title" />
 
         <TextView
             android:id="@+id/textView5"
@@ -318,19 +247,22 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
             android:text="Day schedule"
             android:textAllCaps="true"
             android:textColor="#000000"
             android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="@+id/imageView3"
-            app:layout_constraintTop_toBottomOf="@+id/btn_sp5" />
+            app:layout_constraintBottom_toTopOf="@+id/course_title"
+            app:layout_constraintStart_toStartOf="@+id/schedule"
+            app:layout_constraintTop_toTopOf="@+id/imageView3" />
 
         <ImageView
             android:id="@+id/schedule"
             android:layout_width="370dp"
             android:layout_height="300dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="24dp"
             app:layout_constraintEnd_toEndOf="@+id/imageView3"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/imageView3"
             app:layout_constraintTop_toTopOf="@+id/imageView3"
             app:srcCompat="@drawable/default_schedule" />
@@ -339,17 +271,29 @@
             android:id="@+id/scheduleTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"
             android:text="choose a studyprogram"
-            android:textColor="@color/HRO_black"
-            app:layout_constraintEnd_toEndOf="@+id/schedule"
-            app:layout_constraintStart_toStartOf="@+id/schedule"
-            app:layout_constraintTop_toTopOf="@+id/schedule" />
+            android:textColor="@color/HRO_black2"
+            app:layout_constraintBottom_toTopOf="@+id/course_title"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/add_schedule_btn"
+            app:layout_constraintEnd_toEndOf="@+id/add_schedule_btn"
+            app:layout_constraintStart_toStartOf="@+id/add_schedule_btn"
+            app:layout_constraintTop_toTopOf="@+id/add_schedule_btn" />
 
         <android.support.design.widget.FloatingActionButton
-            android:onClick="addToCalender"
             android:id="@+id/add_schedule_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -358,13 +302,337 @@
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
             android:clickable="true"
-            app:backgroundTint="@color/HRO_subColor3"
+            android:foreground="@android:drawable/ic_input_add"
+            android:foregroundGravity="left|bottom"
+            android:onClick="addToCalender"
+            app:backgroundTint="@color/HRO_subColor4"
             app:fabSize="normal"
             app:layout_constraintBottom_toTopOf="@+id/textView8"
-            app:layout_constraintEnd_toEndOf="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="@+id/btn_sp3"
             app:layout_constraintTop_toTopOf="@+id/time_title"
             app:maxImageSize="35dp"
             app:srcCompat="@drawable/iconfinder_calendar_299092" />
+
+        <TextView
+            android:id="@+id/time_course1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/schedule"
+            app:layout_constraintTop_toBottomOf="@+id/course_title" />
+
+        <TextView
+            android:id="@+id/time_course2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:text="TextView"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/schedule"
+            app:layout_constraintTop_toBottomOf="@+id/time_course1" />
+
+        <TextView
+            android:id="@+id/time_course3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:text="TextView"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/schedule"
+            app:layout_constraintTop_toBottomOf="@+id/time_course2" />
+
+        <TextView
+            android:id="@+id/time_course4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:text="TextView"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/schedule"
+            app:layout_constraintTop_toBottomOf="@+id/time_course3" />
+
+        <TextView
+            android:id="@+id/time_course5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:text="TextView"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/schedule"
+            app:layout_constraintTop_toBottomOf="@+id/time_course4" />
+
+        <TextView
+            android:id="@+id/course_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="16dp"
+            android:text="course"
+            android:textColor="@color/HRO_black"
+            app:layout_constraintStart_toEndOf="@+id/time_course1"
+            app:layout_constraintTop_toTopOf="@+id/schedule" />
+
+        <TextView
+            android:id="@+id/time_course6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:text="TextView"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/schedule"
+            app:layout_constraintTop_toBottomOf="@+id/time_course5" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:text="time"
+            android:textColor="@color/HRO_black"
+            app:layout_constraintStart_toStartOf="@+id/schedule"
+            app:layout_constraintTop_toTopOf="@+id/schedule" />
+
+        <TextView
+            android:id="@+id/workshop1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            android:visibility="invisible"
+            app:layout_constraintStart_toEndOf="@+id/time_course1"
+            app:layout_constraintTop_toBottomOf="@+id/course_title" />
+
+        <TextView
+            android:id="@+id/workshop2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:text="TextView"
+            android:visibility="invisible"
+            app:layout_constraintStart_toEndOf="@+id/time_course2"
+            app:layout_constraintTop_toBottomOf="@+id/workshop1" />
+
+        <TextView
+            android:id="@+id/workshop3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:text="TextView"
+            android:visibility="invisible"
+            app:layout_constraintStart_toEndOf="@+id/time_course3"
+            app:layout_constraintTop_toBottomOf="@+id/workshop2" />
+
+        <TextView
+            android:id="@+id/workshop4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:text="TextView"
+            android:visibility="invisible"
+            app:layout_constraintStart_toEndOf="@+id/time_course4"
+            app:layout_constraintTop_toBottomOf="@+id/workshop3" />
+
+        <TextView
+            android:id="@+id/workshop5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:text="TextView"
+            android:visibility="invisible"
+            app:layout_constraintStart_toEndOf="@+id/time_course5"
+            app:layout_constraintTop_toBottomOf="@+id/workshop4" />
+
+        <TextView
+            android:id="@+id/workshop6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:text="TextView"
+            android:visibility="invisible"
+            app:layout_constraintStart_toEndOf="@+id/time_course6"
+            app:layout_constraintTop_toBottomOf="@+id/workshop5" />
+
+        <TextView
+            android:id="@+id/classroom_course"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:text="classroom"
+            android:textColor="@color/HRO_black"
+            app:layout_constraintEnd_toEndOf="@+id/schedule"
+            app:layout_constraintTop_toTopOf="@+id/schedule" />
+
+        <TextView
+            android:id="@+id/classroom1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            android:textColor="@color/design_default_color_primary"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/classroom_course"
+            app:layout_constraintStart_toStartOf="@+id/classroom_course"
+            app:layout_constraintTop_toBottomOf="@+id/classroom_course" />
+
+        <TextView
+            android:id="@+id/classroom2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="TextView"
+            android:textColor="@color/design_default_color_primary"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/classroom_course"
+            app:layout_constraintStart_toStartOf="@+id/classroom_course"
+            app:layout_constraintTop_toBottomOf="@+id/classroom1" />
+
+        <TextView
+            android:id="@+id/classroom3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="TextView"
+            android:textColor="@color/design_default_color_primary"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/classroom_course"
+            app:layout_constraintStart_toStartOf="@+id/classroom_course"
+            app:layout_constraintTop_toBottomOf="@+id/classroom2" />
+
+        <TextView
+            android:id="@+id/classroom4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="TextView"
+            android:textColor="@color/design_default_color_primary"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/classroom_course"
+            app:layout_constraintStart_toStartOf="@+id/classroom_course"
+            app:layout_constraintTop_toBottomOf="@+id/classroom3" />
+
+        <TextView
+            android:id="@+id/classroom5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="TextView"
+            android:textColor="@color/design_default_color_primary"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/classroom_course"
+            app:layout_constraintStart_toStartOf="@+id/classroom_course"
+            app:layout_constraintTop_toBottomOf="@+id/classroom4" />
+
+        <TextView
+            android:id="@+id/classroom6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="TextView"
+            android:textColor="@color/design_default_color_primary"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/classroom_course"
+            app:layout_constraintStart_toStartOf="@+id/classroom_course"
+            app:layout_constraintTop_toBottomOf="@+id/classroom5" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="368dp"
+            android:layout_height="275dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:alpha="0.7"
+            android:background="@color/HRO_black2"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/schedule"
+            app:layout_constraintTop_toTopOf="@+id/course_title" />
+
+        <TextView
+            android:id="@+id/note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="!"
+            android:textColor="@color/HRO_subColor4"
+            android:textSize="55dp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@+id/note_text"
+            app:layout_constraintEnd_toStartOf="@+id/note_text"
+            app:layout_constraintTop_toTopOf="@+id/note_text" />
+
+        <TextView
+            android:id="@+id/note_text"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="In order to show the day schedule, Please Choose one of the openday's by clicking one of the buttons above."
+            android:textColor="@color/HRO_subColor3"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="@+id/schedule"
+            app:layout_constraintStart_toStartOf="@+id/schedule"
+            app:layout_constraintTop_toTopOf="@+id/workshop1" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/shareit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:onClick="showshare"
+            app:backgroundTint="@color/HRO_mainColor"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toTopOf="@+id/add_schedule_btn"
+            app:layout_constraintEnd_toEndOf="@+id/time_title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_share_black_24dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="24dp"
+            android:text="Share openday"
+            android:textColor="@color/HRO_white"
+            app:layout_constraintBottom_toTopOf="@+id/add_schedule_btn"
+            app:layout_constraintEnd_toStartOf="@+id/shareit" />
 
     </android.support.constraint.ConstraintLayout>
 

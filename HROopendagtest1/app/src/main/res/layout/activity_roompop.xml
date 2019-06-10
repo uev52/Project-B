@@ -1,78 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="5dp"
-    android:layout_marginTop="150dp"
-    android:layout_marginRight="5dp"
-    android:gravity="center">
+    tools:context=".wijnhaven99">
+
+
+    <TextView
+        android:id="@+id/textView99"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/HRO_mainColor"
+        android:gravity="center"
+        android:text="Wijnhaven 99"
+        android:textColor="@color/HRO_white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/viewFlippertext99"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ViewFlipper
+        android:id="@+id/viewFlippertext99"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/viewFlipper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView99">
+
+        <TextView
+            android:id="@+id/groundfloor"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="8dp"
+            android:background="@color/HRO_mainColor"
+            android:gravity="center"
+            android:text="Ground Floor"
+            android:textColor="@color/HRO_white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/firstfloor"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="8dp"
+            android:background="@color/HRO_mainColor"
+            android:gravity="center"
+            android:text="First Floor"
+            android:textColor="@color/HRO_white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/secondfloor"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="8dp"
+            android:background="@color/HRO_mainColor"
+            android:gravity="center"
+            android:text="Second Floor"
+            android:textColor="@color/HRO_white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/thirdfloor"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="8dp"
+            android:background="@color/HRO_mainColor"
+            android:gravity="center"
+            android:text="Third Floor"
+            android:textColor="@color/HRO_white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/fourthfloor"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="8dp"
+            android:background="@color/HRO_mainColor"
+            android:gravity="center"
+            android:text="Fourth Floor"
+            android:textColor="@color/HRO_white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/fifthfloor"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="8dp"
+            android:background="@color/HRO_mainColor"
+            android:gravity="center"
+            android:text="Fifth Floor"
+            android:textColor="@color/HRO_white"
+            android:textSize="20sp" />
+
+
+    </ViewFlipper>
+
 
     <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="7dp"
-        android:layout_marginRight="7dp"
-        android:elevation="5dp" />
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewFlippertext99"
+        app:srcCompat="@drawable/h0310" />
 
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="200dp"
-        app:cardBackgroundColor="@color/colorGreenLight"
-        app:cardCornerRadius="15dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:layout_marginBottom="25dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:text="@string/room_popup_title"
-                    android:textAlignment="center"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="138dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginBottom="10dp"
-                    android:src="@drawable/cmi1070" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:text="@string/room_popup_text"
-                    android:textAlignment="center"
-                    android:textSize="18dp" />
-
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-
-    </android.support.v7.widget.CardView>
-
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

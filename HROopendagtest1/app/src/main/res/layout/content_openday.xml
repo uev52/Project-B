@@ -13,37 +13,53 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-        android:id="@+id/time_title"
-        android:layout_width="380dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:alpha="0.6"
-        android:background="#cacaca"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/groundfloor"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/HRO_subColor2"
+            android:gravity="center"
+            android:textColor="@color/HRO_white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/time_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="380dp"
-        android:layout_height="254dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:background="#cacaca"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/time_title" />
+        <ImageView
+            android:id="@+id/time_title"
+            android:layout_width="380dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="55dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:alpha="0.6"
+            android:background="#cacaca"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="380dp"
+            android:layout_height="250dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#cacaca"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/time_title" />
 
 
         <ImageView
@@ -120,8 +136,6 @@
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
             android:background="@color/HRO_subColor1"
             android:text="Creative Media and Game technologies"
             android:textColor="@color/HRO_subColor5"
@@ -590,6 +604,35 @@
             app:layout_constraintEnd_toEndOf="@+id/schedule"
             app:layout_constraintStart_toStartOf="@+id/schedule"
             app:layout_constraintTop_toTopOf="@+id/workshop1" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/shareit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:onClick="showshare"
+            app:backgroundTint="@color/HRO_mainColor"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toTopOf="@+id/add_schedule_btn"
+            app:layout_constraintEnd_toEndOf="@+id/time_title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_share_black_24dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="24dp"
+            android:text="Share openday"
+            android:textColor="@color/HRO_white"
+            app:layout_constraintBottom_toTopOf="@+id/add_schedule_btn"
+            app:layout_constraintEnd_toStartOf="@+id/shareit" />
 
     </android.support.constraint.ConstraintLayout>
 
