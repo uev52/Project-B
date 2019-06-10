@@ -1,5 +1,6 @@
 package com.example.hroopendagtest1;
 
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,6 +23,14 @@ public class wijnhaven107 extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        // Checks for dark theme and changes theme
+        SharedPreferences preferences = getSharedPreferences(AppUtil.getPrefsName(), MODE_PRIVATE);
+        boolean useDarkTheme = preferences.getBoolean(AppUtil.getPrefDarkTheme(),  false);
+        if(useDarkTheme) {
+            setTheme(R.style.AppTheme_Dark);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wijnhaven107);
 

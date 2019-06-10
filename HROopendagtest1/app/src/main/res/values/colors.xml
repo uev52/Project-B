@@ -17,8 +17,9 @@
     <color name="HRO_black2">#33343B</color>
 
     <color name="HRO_lightGrey">#FEFEFE</color>
-
     <color name="HRO_grey">#6D6D6D</color>
+    <color name="HRO_darkgrey">#2C2C2C</color>
+
     <color name="selectedBlue">#003152</color>
 
     <color name="colorPrimary">#848cb7</color>
