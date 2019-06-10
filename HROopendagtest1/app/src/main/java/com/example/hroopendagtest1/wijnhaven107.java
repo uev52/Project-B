@@ -4,7 +4,10 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.ViewFlipper;
 
 import com.github.chrisbanes.photoview.PhotoView;
@@ -16,6 +19,7 @@ public class wijnhaven107 extends AppCompatActivity implements View.OnClickListe
     Button previousFloorwh99;
     ViewFlipper viewFlipper;
     ViewFlipper viewFlippertext99;
+    Spinner spinner3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +33,8 @@ public class wijnhaven107 extends AppCompatActivity implements View.OnClickListe
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wijnhaven107);
+
+        spinner3 = findViewById(R.id.spinner3);
 
         PhotoView cmi1070 = findViewById(R.id.cmi1070);
         cmi1070.setImageResource(R.drawable.cmi1070);
@@ -45,6 +51,12 @@ public class wijnhaven107 extends AppCompatActivity implements View.OnClickListe
         PhotoView cmi1076 = findViewById(R.id.cmi1076);
         cmi1076.setImageResource(R.drawable.cmi1076);
 
+        ArrayAdapter<String> spinner2Adapter = new ArrayAdapter(wijnhaven107.this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Floors));
+        spinner2Adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        spinner3.setAdapter(spinner2Adapter);
+
         viewFlipper = findViewById(R.id.viewFlipper);
         viewFlippertext99 = findViewById(R.id.viewFlippertext99);
         nextFloorwh99 = findViewById(R.id.nextFloorwh99);
@@ -58,6 +70,44 @@ public class wijnhaven107 extends AppCompatActivity implements View.OnClickListe
         if (viewFlipper.getDisplayedChild() == 0)
             nextFloorwh99.setVisibility(View.VISIBLE);
             previousFloorwh99.setVisibility(View.INVISIBLE);
+
+        spinner3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
+
+                switch(i){
+                    case 0:
+                        viewFlipper.setDisplayedChild(0);
+                        viewFlippertext99.setDisplayedChild(0);
+                        break;
+                    case 1:
+                        viewFlipper.setDisplayedChild(1);
+                        viewFlippertext99.setDisplayedChild(1);
+                        break;
+                    case 2:
+                        viewFlipper.setDisplayedChild(2);
+                        viewFlippertext99.setDisplayedChild(2);
+                        break;
+                    case 3:
+                        viewFlipper.setDisplayedChild(3);
+                        viewFlippertext99.setDisplayedChild(3);
+                        break;
+                    case 4:
+                        viewFlipper.setDisplayedChild(4);
+                        viewFlippertext99.setDisplayedChild(4);
+                        break;
+                    case 5:
+                        viewFlipper.setDisplayedChild(5);
+                        viewFlippertext99.setDisplayedChild(5);
+                        break;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 //
 //
 //

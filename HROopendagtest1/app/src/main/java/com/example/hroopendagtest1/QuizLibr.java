@@ -11,16 +11,21 @@ public class QuizLibr {
             "How long does this Study Program take?",
             "During which year do you take an internship?",
             "How many hours quals one ECT?",
-            "Hoe heten mijn ouders?"
-
+            "Which of the following is a programming language?",
+            "How many Projects will be done during your first year?",
+            "How many ECT's do you need to get your BSA at the end of your first year?"
     };
 
     public String Infochoices [][] ={
-            {"Sevven", "Rivver", "Winter"},
-            {"19", "20", "21"},
-            {"2", "3", "4"},
-            {"Hans & Lida", "Huub & Gerda", "Henk & Anita"},
+            {"2 years", "5 years", "4 years"},
+            {"2nd year", "3rd year", "5th year"},
+            {"28", "18", "30"},
+            {"C+", "Z-", "C-"},
+            {"1", "2", "4"},
+            {"42", "48", "60"}
     };
+    public String InfoAnswers [] = {"4 years","3rd year","28","C+","2","48"};
+    public String InfoSecondAnswers [] = {"5 years","2nd year","30","C-","1","60"};
 
     public String cmgtQuestions [] = {
             "Wat is mijn broers naam?",
@@ -78,9 +83,6 @@ public class QuizLibr {
             {"2", "3", "4"},
             {"Hans & Lida", "Huub & Gerda", "Henk & Anita"},
     };
-
-    public String InfoAnswers [] = {"4 years","3rd year","28","Python","60"};
-    public String InfoSecondAnswers [] = {"5 years","4th year","24","Python & Java", "48"};
 
     public String cmgtAnswers[] = {"Sevven","20","4","Hans & Lida"};
     public String cmgtSecondAnswers[] = {"Rivver","19","3","Huub & Gerda"};

@@ -57,4 +57,19 @@
 
     <string name="room_popup_title">Classroom information</string>
     <string name="room_popup_text">Here must come more information about the classroom</string>
+
+    <string-array name="Buildings">
+        <item>H-Building</item>
+        <item>WD-Building</item>
+        <item>WN-Building</item>
+    </string-array>
+
+    <string-array name="Floors">
+        <item>Ground Floor</item>
+        <item>First Floor</item>
+        <item>Second Floor</item>
+        <item>Third Floor</item>
+        <item>Fourth Floor</item>
+        <item>Fifth Floor</item>
+    </string-array>
 </resources>

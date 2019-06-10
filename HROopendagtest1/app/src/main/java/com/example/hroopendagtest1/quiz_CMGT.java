@@ -33,7 +33,8 @@ public class quiz_CMGT extends AppCompatActivity
     private Boolean choice2Selected = false;
     private Boolean choice3Selected = false;
     private int addedScore = 0;
-    int [] pointsPerQuestion = new int[quizLibr.InfoQuestions.length+1];
+    int [] pointsPerQuestion = new int[quizLibr.cmgtQuestions.length+1];
+    int[] selectedAnswers = new int[quizLibr.cmgtQuestions.length+1];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,11 +73,14 @@ public class quiz_CMGT extends AppCompatActivity
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (questionNumber!= quizLibr.InfoQuestions.length){
+                if (questionNumber!= quizLibr.cmgtQuestions.length){
                     questionNumber = questionNumber+1;
                     updatePoints();
                     updateQuestion();
-                    System.out.println(quizLibr.InfoQuestions.length);
+                    colorChoices();
+                    activeBtn();
+                    colorBtn();
+                    System.out.println(quizLibr.cmgtQuestions.length);
                     System.out.println(questionNumber);}
                 else{
                     updatePoints();
@@ -90,7 +94,11 @@ public class quiz_CMGT extends AppCompatActivity
                 deductPoints();
                 if (questionNumber != 0){
                     questionNumber= questionNumber-1;
-                    updateQuestion();}
+                    updateQuestion();
+                    colorChoices();
+                    activeBtn();
+                    colorBtn();
+                }
                 quizScore.setText(Integer.toString(score));
             }
         });
@@ -211,7 +219,7 @@ public class quiz_CMGT extends AppCompatActivity
         resetButtons();
         colorPrevBtn();
 
-        if (questionNumber == quizLibr.InfoQuestions.length){
+        if (questionNumber == quizLibr.cmgtQuestions.length){
             buttonChoice1.setVisibility(View.GONE);
             buttonChoice2.setVisibility(View.GONE);
             buttonChoice3.setVisibility(View.GONE);
@@ -291,6 +299,7 @@ public class quiz_CMGT extends AppCompatActivity
     }
     private void updatePoints(){
         if (choice1Selected){
+            selectedAnswers[questionNumber] = 1;
             if (buttonChoice1.getText() == questionBestAnswer){
                 score+=5;
                 addedScore = 5;
@@ -306,6 +315,7 @@ public class quiz_CMGT extends AppCompatActivity
             }
         }
         else if (choice2Selected){
+            selectedAnswers[questionNumber] = 2;
             if (buttonChoice2.getText() == questionBestAnswer){
                 score+=5;
                 addedScore = 5;
@@ -321,6 +331,7 @@ public class quiz_CMGT extends AppCompatActivity
             }
         }
         else{
+            selectedAnswers[questionNumber] = 3;
             if (buttonChoice3.getText() == questionBestAnswer){
                 score+=5;
                 addedScore = 5;
@@ -341,5 +352,42 @@ public class quiz_CMGT extends AppCompatActivity
 
     private void deductPoints(){
         score = score - pointsPerQuestion[questionNumber];
+    }
+
+    private void colorChoices(){
+        setSelected();
+        if (choice1Selected){
+            buttonChoice1.setBackgroundColor(getResources().getColor(R.color.selectedBlue));
+            buttonChoice2.setBackgroundColor(getResources().getColor(R.color.HRO_mainColor));
+            buttonChoice3.setBackgroundColor(getResources().getColor(R.color.HRO_mainColor));
+        }
+        else if (choice2Selected){
+            buttonChoice2.setBackgroundColor(getResources().getColor(R.color.selectedBlue));
+            buttonChoice1.setBackgroundColor(getResources().getColor(R.color.HRO_mainColor));
+            buttonChoice3.setBackgroundColor(getResources().getColor(R.color.HRO_mainColor));
+        }
+        else if (choice3Selected){
+            buttonChoice3.setBackgroundColor(getResources().getColor(R.color.selectedBlue));
+            buttonChoice2.setBackgroundColor(getResources().getColor(R.color.HRO_mainColor));
+            buttonChoice1.setBackgroundColor(getResources().getColor(R.color.HRO_mainColor));
+        }
+    }
+    private void setSelected(){
+        if (questionNumber!= quizLibr.cmgtQuestions.length){
+            if (selectedAnswers[questionNumber+1] ==1){
+                choice1Selected = true;
+                choice2Selected = false;
+                choice3Selected = false;
+            }
+            if (selectedAnswers[questionNumber+1] ==2){
+                choice2Selected = true;
+                choice3Selected = false;
+                choice1Selected = false;
+            }
+            if (selectedAnswers[questionNumber+1] ==3){
+                choice3Selected = true;
+                choice2Selected = false;
+                choice1Selected = false;
+            }}
     }
 }

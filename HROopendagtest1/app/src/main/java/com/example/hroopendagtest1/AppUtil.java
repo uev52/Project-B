@@ -43,6 +43,9 @@ public class AppUtil{
             case R.id.nav_programming1:
                 i = new Intent(context, programming1.class);
                 break;
+            case R.id.nav_quizes:
+                i = new Intent(context, quizActivity.class);
+                break;
 
             default:
                 i = new Intent(context, MainActivity.class);
