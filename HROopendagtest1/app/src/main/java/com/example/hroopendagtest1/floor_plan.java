@@ -15,6 +15,7 @@ import android.widget.Button;
 
 public class floor_plan extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    //YASIN
     Button Wijnhaven99;
     Button Wijnhaven103;
     Button Wijnhaven107;
@@ -23,17 +24,21 @@ public class floor_plan extends AppCompatActivity implements NavigationView.OnNa
     protected void onCreate(Bundle savedInstanceState) {
 
         // Checks for dark theme and changes theme
+        // SOUFYAN DARK MODE
         SharedPreferences preferences = getSharedPreferences(AppUtil.getPrefsName(), MODE_PRIVATE);
         boolean useDarkTheme = preferences.getBoolean(AppUtil.getPrefDarkTheme(),  false);
         if(useDarkTheme) {
             setTheme(R.style.AppTheme_Dark);
         }
 
+
+        //SOUFYAN
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_floor_plan);
         Toolbar toolbar =  findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //YASIN
         Wijnhaven99 = findViewById(R.id.Wijnhaven99);
         Wijnhaven99.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +48,7 @@ public class floor_plan extends AppCompatActivity implements NavigationView.OnNa
             }
         });
 
+        //YASIN
         Wijnhaven103 = findViewById(R.id.Wijnhaven103);
         Wijnhaven103.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +58,7 @@ public class floor_plan extends AppCompatActivity implements NavigationView.OnNa
             }
         });
 
+        //YASIN
         Wijnhaven107 = findViewById(R.id.Wijnhaven107);
         Wijnhaven107.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +69,7 @@ public class floor_plan extends AppCompatActivity implements NavigationView.OnNa
         });
 
 
+        //SOUFYAN MENU DRAWER
         DrawerLayout drawer =  findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -71,6 +79,8 @@ public class floor_plan extends AppCompatActivity implements NavigationView.OnNa
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+
+    //SOUFYAN MENU DRAWER
     @Override
     public void onBackPressed() {
         DrawerLayout drawer =  findViewById(R.id.drawer_layout);
@@ -82,6 +92,7 @@ public class floor_plan extends AppCompatActivity implements NavigationView.OnNa
     }
 
 
+    //SOUFYAN MENU DRAWER
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {

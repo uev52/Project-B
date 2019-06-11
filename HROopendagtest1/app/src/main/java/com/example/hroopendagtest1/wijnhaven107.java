@@ -24,6 +24,7 @@ public class wijnhaven107 extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+        // SOUFYAN DARK MODE
         // Checks for dark theme and changes theme
         SharedPreferences preferences = getSharedPreferences(AppUtil.getPrefsName(), MODE_PRIVATE);
         boolean useDarkTheme = preferences.getBoolean(AppUtil.getPrefDarkTheme(),  false);
@@ -31,11 +32,14 @@ public class wijnhaven107 extends AppCompatActivity implements View.OnClickListe
             setTheme(R.style.AppTheme_Dark);
         }
 
+        //YASIN
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wijnhaven107);
 
+        //SEVVEN
         spinner3 = findViewById(R.id.spinner3);
 
+        //YASIN
         PhotoView cmi1070 = findViewById(R.id.cmi1070);
         cmi1070.setImageResource(R.drawable.cmi1070);
         PhotoView cmi1071 = findViewById(R.id.cmi1071);
@@ -51,26 +55,33 @@ public class wijnhaven107 extends AppCompatActivity implements View.OnClickListe
         PhotoView cmi1076 = findViewById(R.id.cmi1076);
         cmi1076.setImageResource(R.drawable.cmi1076);
 
+        //SEVVEN
         ArrayAdapter<String> spinner2Adapter = new ArrayAdapter(wijnhaven107.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Floors2));
         spinner2Adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
+        //SEVVEN
         spinner3.setAdapter(spinner2Adapter);
 
+        //YASIN
         viewFlipper = findViewById(R.id.viewFlipper);
         viewFlippertext99 = findViewById(R.id.viewFlippertext99);
         nextFloorwh99 = findViewById(R.id.nextFloorwh99);
         previousFloorwh99 = findViewById(R.id.previousFloorwh99);
 
+        //YASIN
         nextFloorwh99.setOnClickListener(this);
         previousFloorwh99.setOnClickListener(this);
 
+        //YASIN
         viewFlipper.getDisplayedChild();
 
+        //YASIN
         if (viewFlipper.getDisplayedChild() == 0)
             nextFloorwh99.setVisibility(View.VISIBLE);
             previousFloorwh99.setVisibility(View.INVISIBLE);
 
+        //SEVVEN
         spinner3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
@@ -137,6 +148,7 @@ public class wijnhaven107 extends AppCompatActivity implements View.OnClickListe
     }
 
 
+    //YASIN
     @Override
     public void onClick(View v) {
 

@@ -23,6 +23,7 @@ public class contact_form extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+        // SOUFYAN DARK MODE
         // Checks for dark theme and changes theme
         SharedPreferences preferences = getSharedPreferences(AppUtil.getPrefsName(), MODE_PRIVATE);
         boolean useDarkTheme = preferences.getBoolean(AppUtil.getPrefDarkTheme(),  false);
@@ -30,20 +31,26 @@ public class contact_form extends AppCompatActivity implements NavigationView.On
             setTheme(R.style.AppTheme_Dark);
         }
 
+        // SOUFYAN
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_form);
         Toolbar toolbar =  findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //SOUFYAN MENU DRAWER
         DrawerLayout drawer =  findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+        //SOUFYAN MENU DRAWER
         NavigationView navigationView =  findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         //----------------
+
+        //YASIN
+
 
         //In the Java programming language, the !final! keyword is used in several contexts to define
         // an entity that can only be assigned once. Once a final variable has been assigned,
@@ -126,6 +133,8 @@ public class contact_form extends AppCompatActivity implements NavigationView.On
 
 
     }
+
+    //YASIN
     private boolean isValidEmail(String email) {
         String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
@@ -135,9 +144,19 @@ public class contact_form extends AppCompatActivity implements NavigationView.On
     }
 
 
+    //SOUFYAN MENU DRAWER
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        startActivity(AppUtil.changeScreen(item.getItemId(), getBaseContext()));
+        DrawerLayout drawer =  findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
 
 
-
+    //SOUFYAN MENU DRAWER
     @Override
     public void onBackPressed() {
         DrawerLayout drawer =  findViewById(R.id.drawer_layout);
@@ -149,17 +168,7 @@ public class contact_form extends AppCompatActivity implements NavigationView.On
     }
 
 
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        startActivity(AppUtil.changeScreen(item.getItemId(), getBaseContext()));
 
-
-        DrawerLayout drawer =  findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }
 }
 
 
