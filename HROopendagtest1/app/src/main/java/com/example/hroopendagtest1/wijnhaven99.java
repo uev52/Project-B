@@ -64,10 +64,6 @@ public class wijnhaven99 extends AppCompatActivity implements View.OnClickListen
 
         viewFlipper.getDisplayedChild();
 
-        ArrayAdapter<String> spinner1Adapter = new ArrayAdapter(wijnhaven99.this,
-                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Buildings));
-        spinner1Adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
         ArrayAdapter<String> spinner2Adapter = new ArrayAdapter(wijnhaven99.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Floors));
         spinner2Adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -82,26 +78,38 @@ public class wijnhaven99 extends AppCompatActivity implements View.OnClickListen
                     case 0:
                         viewFlipper.setDisplayedChild(0);
                         viewFlippertext99.setDisplayedChild(0);
+                        nextFloorwh99.setVisibility(View.VISIBLE);
+                        previousFloorwh99.setVisibility(View.INVISIBLE);
                         break;
                     case 1:
                         viewFlipper.setDisplayedChild(1);
                         viewFlippertext99.setDisplayedChild(1);
+                        nextFloorwh99.setVisibility(View.VISIBLE);
+                        previousFloorwh99.setVisibility(View.VISIBLE);
                         break;
                     case 2:
                         viewFlipper.setDisplayedChild(2);
                         viewFlippertext99.setDisplayedChild(2);
+                        nextFloorwh99.setVisibility(View.VISIBLE);
+                        previousFloorwh99.setVisibility(View.VISIBLE);
                         break;
                     case 3:
                         viewFlipper.setDisplayedChild(3);
                         viewFlippertext99.setDisplayedChild(3);
+                        nextFloorwh99.setVisibility(View.VISIBLE);
+                        previousFloorwh99.setVisibility(View.VISIBLE);
                         break;
                     case 4:
                         viewFlipper.setDisplayedChild(4);
                         viewFlippertext99.setDisplayedChild(4);
+                        nextFloorwh99.setVisibility(View.VISIBLE);
+                        previousFloorwh99.setVisibility(View.VISIBLE);
                         break;
                     case 5:
                         viewFlipper.setDisplayedChild(5);
                         viewFlippertext99.setDisplayedChild(5);
+                        nextFloorwh99.setVisibility(View.INVISIBLE);
+                        previousFloorwh99.setVisibility(View.VISIBLE);
                         break;
                 }
             }
@@ -126,6 +134,7 @@ public class wijnhaven99 extends AppCompatActivity implements View.OnClickListen
         if (v == nextFloorwh99) {
             viewFlipper.showNext();
             viewFlippertext99.showNext();
+            spinner1.setSelection(spinner1.getSelectedItemPosition()+1);
 
 
             if (viewFlipper.getDisplayedChild() == 1)
@@ -153,6 +162,7 @@ public class wijnhaven99 extends AppCompatActivity implements View.OnClickListen
 
              viewFlipper.showPrevious();
              viewFlippertext99.showPrevious();
+             spinner1.setSelection(spinner1.getSelectedItemPosition()-1);
 
              if (viewFlipper.getDisplayedChild() == 0) {
                  nextFloorwh99.setVisibility(View.VISIBLE);
