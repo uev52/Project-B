@@ -73,4 +73,14 @@
         <item>Fourth Floor</item>
         <item>Fifth Floor</item>
     </string-array>
+
+    <string-array name="Floors2">
+        <item>Ground Floor</item>
+        <item>First Floor</item>
+        <item>Second Floor</item>
+        <item>Third Floor</item>
+        <item>Fourth Floor</item>
+        <item>Fifth Floor</item>
+        <item>Sixth Floor</item>
+    </string-array>
 </resources>

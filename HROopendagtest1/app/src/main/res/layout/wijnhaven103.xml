@@ -116,8 +116,8 @@
 
     <ViewFlipper
         android:id="@+id/viewFlipper"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="402dp"
+        android:layout_height="501dp"
         app:layout_constraintBottom_toTopOf="@+id/nextFloorwh99"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"
@@ -167,8 +167,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.6"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.github.chrisbanes.photoview.PhotoView
             android:id="@+id/cmi1073"
@@ -182,8 +181,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.6"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.github.chrisbanes.photoview.PhotoView
             android:id="@+id/cmi1074"
@@ -197,8 +195,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.6"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.github.chrisbanes.photoview.PhotoView
             android:id="@+id/cmi1075"
@@ -212,8 +209,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.6"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.github.chrisbanes.photoview.PhotoView
             android:id="@+id/cmi1076"
@@ -227,8 +223,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.6"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
     </ViewFlipper>
 
     <Button
@@ -277,6 +272,6 @@
         android:layout_marginRight="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/viewFlipper"></Spinner>
+        app:layout_constraintTop_toBottomOf="@+id/viewFlippertext99"></Spinner>
 
 </android.support.constraint.ConstraintLayout>

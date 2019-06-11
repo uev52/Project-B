@@ -48,8 +48,10 @@ public class programming1 extends AppCompatActivity implements NavigationView.On
                @Override
                public void onClick(View v) {
                    String firstinput = input1.getText().toString();
+                   firstinput = firstinput.replace(" ","");
                    String answer1 = "b";
                    String secondinput = input2.getText().toString();
+                   secondinput = secondinput.replace(" ","");
                    String answer2 = "sum";
 
                    if (firstinput.equals(answer1) && secondinput.equals(answer2)){
