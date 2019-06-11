@@ -2,6 +2,7 @@ package com.example.hroopendagtest1;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
+import android.content.ActivityNotFoundException;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Intent;
@@ -408,17 +409,18 @@ public class openday extends AppCompatActivity
             @Override
             public void onClick(View view){
 
-                // here must come the send intent of the twitter application
-                Toast.makeText(openday.this,"an inventation is sending with twitter",Toast.LENGTH_SHORT).show();
-                Intent shareIntent1 = new Intent(Intent.ACTION_SEND);
-                shareIntent1.setType("text/plain");
-                String messageBody1 = "Hi there,\n\nThere is an openday at the Hogeschool Rotterdam on 4th of April.\nThe openday starts at 16:00 until 20:00 and takes places at Wijnhaven 107 in Rotterdam\nI will be there, would you like to join me?";
-                String messageSubject1 = "OPENDAY CMI";
-                // the sharing text/ body is set here
-                shareIntent1.putExtra(Intent.EXTRA_TEXT,messageBody1);
-                shareIntent1.putExtra(Intent.EXTRA_SUBJECT,messageSubject1);
-                shareIntent1.setClassName("com.twitter.android", "com.twitter.android.composer.ComposerActivity");
-                startActivity(shareIntent1);
+                String urlTw="https://twitter.com";
+                try {
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setData(Uri.parse(urlTw));
+                    intent.setPackage("com.twitter.android");
+                    startActivity(intent);
+                }
+                catch (ActivityNotFoundException anfe) {
+                    startActivity(new Intent(Intent.ACTION_VIEW,
+                            Uri.parse(urlTw)));
+                }
+
             }
         });
 
@@ -436,8 +438,9 @@ public class openday extends AppCompatActivity
                 // the sharing text/ body is set here
                 shareIntent1.putExtra(Intent.EXTRA_TEXT,messageBody1);
                 shareIntent1.putExtra(Intent.EXTRA_SUBJECT,messageSubject1);
-                shareIntent1.setClassName("com.google.android.gm", "com.google.android.gm.ComposeActivityGmail");
+
                 startActivity(shareIntent1);
+
             }
         });
 
