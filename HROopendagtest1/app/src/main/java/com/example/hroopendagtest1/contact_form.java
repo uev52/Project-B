@@ -144,7 +144,7 @@ public class contact_form extends AppCompatActivity implements NavigationView.On
     }
 
 
-    //YASIN
+    //SOUFYAN MENU DRAWER
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
