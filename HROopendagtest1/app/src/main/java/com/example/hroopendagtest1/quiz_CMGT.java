@@ -1,19 +1,15 @@
 package com.example.hroopendagtest1;
 
-import android.graphics.Color;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
-import android.support.v4.view.GravityCompat;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.view.MenuItem;
 import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -37,10 +33,19 @@ public class quiz_CMGT extends AppCompatActivity
     private Boolean choice2Selected = false;
     private Boolean choice3Selected = false;
     private int addedScore = 0;
-    int [] pointsPerQuestion = new int[quizLibr.InfoQuestions.length+1];
+    int [] pointsPerQuestion = new int[quizLibr.cmgtQuestions.length+1];
+    int[] selectedAnswers = new int[quizLibr.cmgtQuestions.length+1];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        // Checks for dark theme and changes theme
+        SharedPreferences preferences = getSharedPreferences(AppUtil.getPrefsName(), MODE_PRIVATE);
+        boolean useDarkTheme = preferences.getBoolean(AppUtil.getPrefDarkTheme(),  false);
+        if(useDarkTheme) {
+            setTheme(R.style.AppTheme_Dark);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz__cmgt);
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -68,11 +73,14 @@ public class quiz_CMGT extends AppCompatActivity
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (questionNumber!= quizLibr.InfoQuestions.length){
+                if (questionNumber!= quizLibr.cmgtQuestions.length){
                     questionNumber = questionNumber+1;
                     updatePoints();
                     updateQuestion();
-                    System.out.println(quizLibr.InfoQuestions.length);
+                    colorChoices();
+                    activeBtn();
+                    colorBtn();
+                    System.out.println(quizLibr.cmgtQuestions.length);
                     System.out.println(questionNumber);}
                 else{
                     updatePoints();
@@ -86,7 +94,11 @@ public class quiz_CMGT extends AppCompatActivity
                 deductPoints();
                 if (questionNumber != 0){
                     questionNumber= questionNumber-1;
-                    updateQuestion();}
+                    updateQuestion();
+                    colorChoices();
+                    activeBtn();
+                    colorBtn();
+                }
                 quizScore.setText(Integer.toString(score));
             }
         });
@@ -207,7 +219,7 @@ public class quiz_CMGT extends AppCompatActivity
         resetButtons();
         colorPrevBtn();
 
-        if (questionNumber == quizLibr.InfoQuestions.length){
+        if (questionNumber == quizLibr.cmgtQuestions.length){
             buttonChoice1.setVisibility(View.GONE);
             buttonChoice2.setVisibility(View.GONE);
             buttonChoice3.setVisibility(View.GONE);
@@ -287,6 +299,7 @@ public class quiz_CMGT extends AppCompatActivity
     }
     private void updatePoints(){
         if (choice1Selected){
+            selectedAnswers[questionNumber] = 1;
             if (buttonChoice1.getText() == questionBestAnswer){
                 score+=5;
                 addedScore = 5;
@@ -302,6 +315,7 @@ public class quiz_CMGT extends AppCompatActivity
             }
         }
         else if (choice2Selected){
+            selectedAnswers[questionNumber] = 2;
             if (buttonChoice2.getText() == questionBestAnswer){
                 score+=5;
                 addedScore = 5;
@@ -317,6 +331,7 @@ public class quiz_CMGT extends AppCompatActivity
             }
         }
         else{
+            selectedAnswers[questionNumber] = 3;
             if (buttonChoice3.getText() == questionBestAnswer){
                 score+=5;
                 addedScore = 5;
@@ -337,5 +352,42 @@ public class quiz_CMGT extends AppCompatActivity
 
     private void deductPoints(){
         score = score - pointsPerQuestion[questionNumber];
+    }
+
+    private void colorChoices(){
+        setSelected();
+        if (choice1Selected){
+            buttonChoice1.setBackgroundColor(getResources().getColor(R.color.selectedBlue));
+            buttonChoice2.setBackgroundColor(getResources().getColor(R.color.HRO_mainColor));
+            buttonChoice3.setBackgroundColor(getResources().getColor(R.color.HRO_mainColor));
+        }
+        else if (choice2Selected){
+            buttonChoice2.setBackgroundColor(getResources().getColor(R.color.selectedBlue));
+            buttonChoice1.setBackgroundColor(getResources().getColor(R.color.HRO_mainColor));
+            buttonChoice3.setBackgroundColor(getResources().getColor(R.color.HRO_mainColor));
+        }
+        else if (choice3Selected){
+            buttonChoice3.setBackgroundColor(getResources().getColor(R.color.selectedBlue));
+            buttonChoice2.setBackgroundColor(getResources().getColor(R.color.HRO_mainColor));
+            buttonChoice1.setBackgroundColor(getResources().getColor(R.color.HRO_mainColor));
+        }
+    }
+    private void setSelected(){
+        if (questionNumber!= quizLibr.cmgtQuestions.length){
+            if (selectedAnswers[questionNumber+1] ==1){
+                choice1Selected = true;
+                choice2Selected = false;
+                choice3Selected = false;
+            }
+            if (selectedAnswers[questionNumber+1] ==2){
+                choice2Selected = true;
+                choice3Selected = false;
+                choice1Selected = false;
+            }
+            if (selectedAnswers[questionNumber+1] ==3){
+                choice3Selected = true;
+                choice2Selected = false;
+                choice1Selected = false;
+            }}
     }
 }

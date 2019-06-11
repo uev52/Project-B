@@ -1,5 +1,6 @@
 package com.example.hroopendagtest1;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -33,9 +34,17 @@ public class quiz_Informatica extends AppCompatActivity
     private Boolean choice3Selected = false;
     private int addedScore = 0;
     int [] pointsPerQuestion = new int[quizLibr.InfoQuestions.length+1];
+    int[] selectedAnswers = new int[quizLibr.InfoQuestions.length+1];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // Checks for dark theme and changes theme
+        SharedPreferences preferences = getSharedPreferences(AppUtil.getPrefsName(), MODE_PRIVATE);
+        boolean useDarkTheme = preferences.getBoolean(AppUtil.getPrefDarkTheme(),  false);
+        if(useDarkTheme) {
+            setTheme(R.style.AppTheme_Dark);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz__cmgt);
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -67,6 +76,9 @@ public class quiz_Informatica extends AppCompatActivity
                     questionNumber = questionNumber+1;
                     updatePoints();
                     updateQuestion();
+                    colorChoices();
+                    activeBtn();
+                    colorBtn();
                     System.out.println(quizLibr.InfoQuestions.length);
                     System.out.println(questionNumber);}
                 else{
@@ -81,7 +93,11 @@ public class quiz_Informatica extends AppCompatActivity
                 deductPoints();
                 if (questionNumber != 0){
                     questionNumber= questionNumber-1;
-                    updateQuestion();}
+                    updateQuestion();
+                    colorChoices();
+                    activeBtn();
+                    colorBtn();
+                }
                 quizScore.setText(Integer.toString(score));
             }
         });
@@ -213,7 +229,7 @@ public class quiz_Informatica extends AppCompatActivity
             if (score<=10){
                 questionsView.setText("Maybe you should consider learning more about this study program!");
             }
-            else if (score>10 && score<17){
+            else if (score>10 && score<20){
                 questionsView.setText("Nice! You did pretty good");
             }
             else{
@@ -282,6 +298,7 @@ public class quiz_Informatica extends AppCompatActivity
     }
     private void updatePoints(){
         if (choice1Selected){
+            selectedAnswers[questionNumber] = 1;
             if (buttonChoice1.getText() == questionBestAnswer){
                 score+=5;
                 addedScore = 5;
@@ -297,6 +314,7 @@ public class quiz_Informatica extends AppCompatActivity
             }
         }
         else if (choice2Selected){
+            selectedAnswers[questionNumber] = 2;
             if (buttonChoice2.getText() == questionBestAnswer){
                 score+=5;
                 addedScore = 5;
@@ -312,6 +330,7 @@ public class quiz_Informatica extends AppCompatActivity
             }
         }
         else{
+            selectedAnswers[questionNumber] = 3;
             if (buttonChoice3.getText() == questionBestAnswer){
                 score+=5;
                 addedScore = 5;
@@ -332,5 +351,42 @@ public class quiz_Informatica extends AppCompatActivity
 
     private void deductPoints(){
         score = score - pointsPerQuestion[questionNumber];
+    }
+
+    private void colorChoices(){
+        setSelected();
+        if (choice1Selected){
+            buttonChoice1.setBackgroundColor(getResources().getColor(R.color.selectedBlue));
+            buttonChoice2.setBackgroundColor(getResources().getColor(R.color.HRO_mainColor));
+            buttonChoice3.setBackgroundColor(getResources().getColor(R.color.HRO_mainColor));
+        }
+        else if (choice2Selected){
+            buttonChoice2.setBackgroundColor(getResources().getColor(R.color.selectedBlue));
+            buttonChoice1.setBackgroundColor(getResources().getColor(R.color.HRO_mainColor));
+            buttonChoice3.setBackgroundColor(getResources().getColor(R.color.HRO_mainColor));
+        }
+        else if (choice3Selected){
+            buttonChoice3.setBackgroundColor(getResources().getColor(R.color.selectedBlue));
+            buttonChoice2.setBackgroundColor(getResources().getColor(R.color.HRO_mainColor));
+            buttonChoice1.setBackgroundColor(getResources().getColor(R.color.HRO_mainColor));
+        }
+    }
+    private void setSelected(){
+        if (questionNumber!= quizLibr.InfoQuestions.length){
+            if (selectedAnswers[questionNumber+1] ==1){
+                choice1Selected = true;
+                choice2Selected = false;
+                choice3Selected = false;
+            }
+            if (selectedAnswers[questionNumber+1] ==2){
+                choice2Selected = true;
+                choice3Selected = false;
+                choice1Selected = false;
+            }
+            if (selectedAnswers[questionNumber+1] ==3){
+                choice3Selected = true;
+                choice2Selected = false;
+                choice1Selected = false;
+            }}
     }
 }

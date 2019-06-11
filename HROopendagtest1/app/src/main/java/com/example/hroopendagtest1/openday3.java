@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
+import android.content.SharedPreferences;
+import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.CalendarContract;
@@ -82,6 +84,15 @@ public class openday3 extends AppCompatActivity
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+        // Checks for dark theme and changes theme
+        SharedPreferences preferences = getSharedPreferences(AppUtil.getPrefsName(), MODE_PRIVATE);
+        boolean useDarkTheme = preferences.getBoolean(AppUtil.getPrefDarkTheme(),  false);
+        if(useDarkTheme) {
+            setTheme(R.style.AppTheme_Dark);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_openday3);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

@@ -10,119 +10,158 @@
         android:supportsRtl="true"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity
+            android:name=".quizActivity"
+            android:label="@string/title_activity_quiz"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
             android:name=".programmingwinner"
             android:label="programmingwinner"
+            android:background="?background"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".programming5"
             android:label="programming5"
+            android:background="?background"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".programming4"
             android:label="programming4"
+            android:background="?background"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".programming3"
             android:label="programming3"
+            android:background="?background"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".programming2"
             android:label="programming2"
+            android:background="?background"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".programming1"
             android:label="@string/programming_test"
+            android:background="?background"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-		<activity            
-			android:name=".quiz_CMGT"
+        <activity
+            android:name=".quiz_CMGT"
             android:label="@string/title_activity_quiz__cmgt"
+            android:background="?background"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".quiz_Informatica"
+            android:label="@string/title_activity_quiz__cmgt"
+            android:background="?background"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".quiz_CAMD"
             android:label="@string/title_activity_quiz__cmgt"
+            android:background="?background"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".quiz_Communicatie"
             android:label="@string/title_activity_quiz__cmgt"
+            android:background="?background"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".quiz_TechInformatica"
             android:label="@string/title_activity_quiz__cmgt"
+            android:background="?background"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity
-            android:name=".quiz_Informatica"
-            android:label="@string/title_activity_quiz__cmgt"
-            android:theme="@style/AppTheme.NoActionBar"/>
+
         <activity
             android:name=".wijnhaven107"
+            android:background="?background"
+            android:screenOrientation="portrait"
             android:label="Wijnhaven107"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".wijnhaven103"
+            android:background="?background"
+            android:screenOrientation="portrait"
             android:label="Wijnhaven103"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".wijnhaven99"
+            android:background="?background"
+            android:screenOrientation="portrait"
             android:label="Wijnhaven99"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".openday3"
+            android:background="?background"
             android:label="@string/title_activity_openday3"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".openday2"
+            android:background="?background"
             android:label="@string/title_activity_openday2"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".camd"
+            android:background="?background"
             android:label="@string/title_activity_camd"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".cmgt"
+            android:background="?background"
             android:label="@string/title_activity_cmgt"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".technische_informatica"
+            android:background="?background"
             android:label="@string/title_activity_technische_informatica"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".communicatie"
+            android:background="?background"
             android:label="@string/title_activity_communicatie"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".contact_form"
+            android:background="?background"
             android:label="@string/title_activity_contact_form"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".floor_plan"
+            android:background="?background"
             android:label="@string/floorplans"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".generalInformation"
+            android:background="?background"
             android:label="@string/general_information"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".openday"
+            android:background="?background"
             android:label="@string/title_activity_openday"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".study_program_screen"
+            android:background="?background"
             android:label="@string/title_activity_study_program_screen"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />

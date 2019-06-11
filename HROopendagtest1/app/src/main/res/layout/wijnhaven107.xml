@@ -270,4 +270,20 @@
         app:layout_constraintEnd_toStartOf="@+id/nextFloorwh99"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="276dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewFlipper">
+
+
+    </Spinner>
+
 </android.support.constraint.ConstraintLayout>

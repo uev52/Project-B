@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
@@ -90,6 +91,15 @@ public class openday extends AppCompatActivity
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        // Checks for dark theme and changes theme
+        SharedPreferences preferences = getSharedPreferences(AppUtil.getPrefsName(), MODE_PRIVATE);
+        boolean useDarkTheme = preferences.getBoolean(AppUtil.getPrefDarkTheme(),  false);
+        if(useDarkTheme) {
+            setTheme(R.style.AppTheme_Dark);
+        }
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_openday);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
