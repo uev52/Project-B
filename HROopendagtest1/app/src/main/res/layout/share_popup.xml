@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="280dp"
+    android:layout_height="330dp"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:padding="4dp"
+    android:background="@color/HRO_grey">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/HRO_white"
+            android:textStyle="bold"
+            android:text="Invite your friends"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/HRO_white"
+            android:text="share with"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <ImageButton
+            android:id="@+id/sharefacebook"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="clip_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/facebook"
+            app:srcCompat="@drawable/facebook" />
+
+        <ImageButton
+            android:id="@+id/sharewhatsapp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/whatsapp"
+            app:srcCompat="@drawable/whatsapp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <ImageButton
+            android:id="@+id/sharetwitter"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/twitter"
+            app:srcCompat="@drawable/twitter" />
+
+        <ImageButton
+            android:id="@+id/shareemail"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/email"
+            app:srcCompat="@drawable/email" />
+
+    </LinearLayout>
+
+</LinearLayout>

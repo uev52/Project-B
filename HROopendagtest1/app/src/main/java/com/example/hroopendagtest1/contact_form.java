@@ -112,7 +112,7 @@ public class contact_form extends AppCompatActivity implements NavigationView.On
                     Intent Mailing = new Intent(android.content.Intent.ACTION_SEND);
 
                     //sharingapps that need to be shown:
-                    Mailing.setType("plain/text");
+                    Mailing.setType("message/rfc822");
 
                     //who is the mail being sended to
                     Mailing.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"0946639@hr.nl"});
