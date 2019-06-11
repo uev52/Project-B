@@ -21,6 +21,7 @@ public class wijnhaven99 extends AppCompatActivity implements View.OnClickListen
     Button previousFloorwh99;
     ViewFlipper viewFlipper;
     ViewFlipper viewFlippertext99;
+    //Spinner is from SEVVEN
     Spinner spinner1;
 
 
@@ -28,6 +29,8 @@ public class wijnhaven99 extends AppCompatActivity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
 
 
+
+        // SOUFYAN DARK MODE
         // Checks for dark theme and changes theme
         SharedPreferences preferences = getSharedPreferences(AppUtil.getPrefsName(), MODE_PRIVATE);
         boolean useDarkTheme = preferences.getBoolean(AppUtil.getPrefDarkTheme(),  false);
@@ -39,8 +42,10 @@ public class wijnhaven99 extends AppCompatActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wijnhaven99);
 
+        //SEVVEN:
         spinner1 = findViewById(R.id.spinner1);
 
+        //YASIN
         PhotoView cmi1070 = findViewById(R.id.cmi1070);
         cmi1070.setImageResource(R.drawable.cmi990);
         PhotoView cmi1071 = findViewById(R.id.cmi1071);
@@ -54,22 +59,28 @@ public class wijnhaven99 extends AppCompatActivity implements View.OnClickListen
         PhotoView cmi1075 = findViewById(R.id.cmi1075);
         cmi1075.setImageResource(R.drawable.cmi995);
 
+        //YASIN
         viewFlipper = findViewById(R.id.viewFlipper);
         viewFlippertext99 = findViewById(R.id.viewFlippertext99);
         nextFloorwh99 = findViewById(R.id.nextFloorwh99);
         previousFloorwh99 = findViewById(R.id.previousFloorwh99);
 
+        //YASIN
         nextFloorwh99.setOnClickListener(this);
         previousFloorwh99.setOnClickListener(this);
 
+        //YASIN
         viewFlipper.getDisplayedChild();
 
+        //SEVVEN
         ArrayAdapter<String> spinner2Adapter = new ArrayAdapter(wijnhaven99.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Floors));
         spinner2Adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
+        //SEVVEN
         spinner1.setAdapter(spinner2Adapter);
 
+        //SEVVEN
         spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
@@ -127,13 +138,15 @@ public class wijnhaven99 extends AppCompatActivity implements View.OnClickListen
 //https://www.youtube.com/watch?v=peO5cUczncc
     }
 
-
+//YASIN
     @Override
     public void onClick(View v) {
 
         if (v == nextFloorwh99) {
             viewFlipper.showNext();
             viewFlippertext99.showNext();
+
+            // line 149: SEVVEN
             spinner1.setSelection(spinner1.getSelectedItemPosition()+1);
 
 
@@ -162,6 +175,8 @@ public class wijnhaven99 extends AppCompatActivity implements View.OnClickListen
 
              viewFlipper.showPrevious();
              viewFlippertext99.showPrevious();
+
+             //line 179: SEVVEN
              spinner1.setSelection(spinner1.getSelectedItemPosition()-1);
 
              if (viewFlipper.getDisplayedChild() == 0) {
