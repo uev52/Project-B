@@ -31,7 +31,9 @@ public class contact_form extends AppCompatActivity implements NavigationView.On
             setTheme(R.style.AppTheme_Dark);
         }
 
-        // SOUFYAN MENU DRAWER
+        // SOUFYAN
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_contact_form);
         Toolbar toolbar =  findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -49,8 +51,6 @@ public class contact_form extends AppCompatActivity implements NavigationView.On
 
         //YASIN
 
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contact_form);
 
         //In the Java programming language, the !final! keyword is used in several contexts to define
         // an entity that can only be assigned once. Once a final variable has been assigned,
