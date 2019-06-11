@@ -3,10 +3,16 @@ package com.example.hroopendagtest1;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.ActivityNotFoundException;
+import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.content.pm.Signature;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
@@ -15,6 +21,8 @@ import android.os.Bundle;
 import android.provider.CalendarContract;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.FloatingActionButton;
+import android.util.Base64;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -31,8 +39,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.facebook.CallbackManager;
+import com.facebook.FacebookSdk;
+import com.facebook.share.model.ShareLinkContent;
+import com.facebook.share.widget.ShareDialog;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.List;
 
 public class openday extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -86,8 +104,9 @@ public class openday extends AppCompatActivity
     Dialog pop;
     Dialog sharepop;
 
-    //TextView titleTv,messageTv;
-    //ImageView closePopupRoom;
+    // facebook
+    CallbackManager callbackManager;
+    ShareDialog shareDialog;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -105,8 +124,25 @@ public class openday extends AppCompatActivity
         setContentView(R.layout.activity_openday);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        printKeyHash();
 
-        // create dayschedule items
+//        private void printKeyHash() {
+//            try {
+//                PackageInfo info = getPackageManager().getPackageInfo("com.example.hroopendagtest1",
+//                        PackageManager.GET_SIGNATURES);
+//                for (Signature signature : info.signatures) {
+//                    MessageDigest md = MessageDigest.getInstance("SHA");
+//                    md.update(signature.toByteArray());
+//                    Log.d("KeyHash", Base64.encodeToString(md.digest(), Base64.DEFAULT))
+//                }
+//
+//            } catch (PackageManager.NameNotFoundException e) {
+//                e.printStackTrace();
+//            } catch (NoSuchAlgorithmException e) {
+//                e.printStackTrace();
+//            }
+//        }
+            // create dayschedule items
         title = (TextView) findViewById(R.id.scheduleTitle);
         note = (TextView) findViewById(R.id.note);
         note_text = (TextView) findViewById(R.id.note_text);
@@ -289,18 +325,14 @@ public class openday extends AppCompatActivity
         }
     }
 
-    public void close1(){
-        close = (ImageButton) findViewById(R.id.close);
 
-        close.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-
-        });
-
-    }
+//        close = (ImageButton) findViewById(R.id.close);
+//
+//        close.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                onBackPressed();
+//
 
     // custom function makes items in dayschedule visible or invisible when needed
     public void makeVisible() {
@@ -363,25 +395,28 @@ public class openday extends AppCompatActivity
 
     }
 
-    public void showshare(View v) {
+    public void showshare(final View v) {
         pop.setContentView(R.layout.share_popup);
+        FacebookSdk.sdkInitialize(this.getApplicationContext());
+
+        //Share with facebook link : https://www.youtube.com/watch?v=2ZdzG_XObDM&t=27s
+
+        callbackManager = CallbackManager.Factory.create();
+        shareDialog = new ShareDialog(this);
 
         ImageButton sharefacebook=pop.findViewById(R.id.sharefacebook);
+
+
         sharefacebook.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-
-                // here must come the send intent of the facebook application
-                Toast.makeText(openday.this,"an inventation is sending with facebook",Toast.LENGTH_SHORT).show();
-                Intent shareIntent1 = new Intent(Intent.ACTION_SEND);
-                shareIntent1.setType("text/plain");
                 String messageBody1 = "Hi there,\n\nThere is an openday at the Hogeschool Rotterdam on 4th of April.\nThe openday starts at 16:00 until 20:00 and takes places at Wijnhaven 107 in Rotterdam\nI will be there, would you like to join me?";
-                String messageSubject1 = "OPENDAY CMI";
-                // the sharing text/ body is set here
-                shareIntent1.putExtra(Intent.EXTRA_TEXT,messageBody1);
-                shareIntent1.putExtra(Intent.EXTRA_SUBJECT,messageSubject1);
-                shareIntent1.setPackage("com.facebook.katana");
-                startActivity(shareIntent1);
+                ShareLinkContent linkContent = new ShareLinkContent.Builder().setQuote(messageBody1).setContentUrl(Uri.parse("https://www.hogeschoolrotterdam.nl/voorlichting/hulp-bij-studiekeuze/open-dag/")).build();
+                if(ShareDialog.canShow(ShareLinkContent.class)){
+                    shareDialog.show(linkContent);
+                }
+
+
             }
         });
 
@@ -409,19 +444,49 @@ public class openday extends AppCompatActivity
             @Override
             public void onClick(View view){
 
-                String urlTw="https://twitter.com";
-                try {
-                    Intent intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse(urlTw));
-                    intent.setPackage("com.twitter.android");
-                    startActivity(intent);
-                }
-                catch (ActivityNotFoundException anfe) {
-                    startActivity(new Intent(Intent.ACTION_VIEW,
-                            Uri.parse(urlTw)));
+                String messageBody1 = "Hi there,\n\nThere is an openday at the Hogeschool Rotterdam on 4th of April.\nThe openday starts at 16:00 until 20:00 and takes places at Wijnhaven 107 in Rotterdam\nI will be there, would you like to join me?";
+
+
+               // https://stackoverflow.com/questions/14317512/how-can-i-post-on-twitter-with-intent-action-send
+                Intent tweetIntent = new Intent(Intent.ACTION_SEND);
+                tweetIntent.putExtra(Intent.EXTRA_TEXT, messageBody1);
+                tweetIntent.setType("text/plain");
+
+                PackageManager packManager = getPackageManager();
+                List<ResolveInfo> resolvedInfoList = packManager.queryIntentActivities(tweetIntent, PackageManager.MATCH_DEFAULT_ONLY);
+
+                boolean resolved = false;
+                for (ResolveInfo resolveInfo : resolvedInfoList) {
+                    if (resolveInfo.activityInfo.packageName.startsWith("com.twitter.android")) {
+                        tweetIntent.setClassName(
+                                resolveInfo.activityInfo.packageName,
+                                resolveInfo.activityInfo.name);
+                        resolved = true;
+                        break;
+                    }
                 }
 
+                if (resolved) {
+                    startActivity(tweetIntent);
+                } else {
+                    Intent i = new Intent();
+                    i.putExtra(Intent.EXTRA_TEXT, messageBody1);
+                    i.setAction(Intent.ACTION_VIEW);
+                    i.setData(Uri.parse("https://twitter.com/intent/tweet?text=" + urlEncode(messageBody1)));
+                    startActivity(i);
+                    Toast.makeText(openday.this, "Twitter app isn't found", Toast.LENGTH_LONG).show();
+                }
             }
+            private String urlEncode(String s) {
+                try {
+                    return URLEncoder.encode(s, "UTF-8");
+                } catch (UnsupportedEncodingException e) {
+                    Log.wtf( "UTF-8 should always be supported", e);
+                    return "";
+                }
+            }
+
+
         });
 
         ImageButton shareemail=pop.findViewById(R.id.shareemail);
@@ -430,16 +495,13 @@ public class openday extends AppCompatActivity
             public void onClick(View view){
 
                 // here must come the send intent of the facebook application
-                Toast.makeText(openday.this,"an inventation is sending with email",Toast.LENGTH_SHORT).show();
-                Intent shareIntent1 = new Intent(Intent.ACTION_SEND);
-                shareIntent1.setType("text/plain");
                 String messageBody1 = "Hi there,\n\nThere is an openday at the Hogeschool Rotterdam on 4th of April.\nThe openday starts at 16:00 until 20:00 and takes places at Wijnhaven 107 in Rotterdam\nI will be there, would you like to join me?";
                 String messageSubject1 = "OPENDAY CMI";
-                // the sharing text/ body is set here
-                shareIntent1.putExtra(Intent.EXTRA_TEXT,messageBody1);
-                shareIntent1.putExtra(Intent.EXTRA_SUBJECT,messageSubject1);
+                String data = "mailto:" + "?cc=" + "" + "&subject=" + Uri.encode(messageSubject1) + "&body=" + Uri.encode(messageBody1);
 
-                startActivity(shareIntent1);
+                Intent sharemail = new Intent(Intent.ACTION_SENDTO);
+                sharemail.setData(Uri.parse(data));
+                startActivity(sharemail);
 
             }
         });
@@ -447,6 +509,23 @@ public class openday extends AppCompatActivity
 
         pop.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         pop.show();
+    }
+
+    private void printKeyHash() {
+        try {
+            PackageInfo info = getPackageManager().getPackageInfo("com.example.hroopendagtest1",
+                    PackageManager.GET_SIGNATURES);
+            for (Signature signature : info.signatures) {
+                MessageDigest md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                Log.d("KeyHash", Base64.encodeToString(md.digest(), Base64.DEFAULT));
+            }
+
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
     }
 
     // custom funtion that sets the required day schedule items to the corresponding study program
