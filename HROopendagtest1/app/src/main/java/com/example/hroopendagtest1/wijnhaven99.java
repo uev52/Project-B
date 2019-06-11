@@ -1,15 +1,13 @@
 package com.example.hroopendagtest1;
 
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import com.github.chrisbanes.photoview.PhotoView;
@@ -73,6 +71,13 @@ public class wijnhaven99 extends AppCompatActivity implements View.OnClickListen
         spinner2Adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner1.setAdapter(spinner2Adapter);
+
+
+        Bundle bundle = getIntent().getExtras();
+        int floorNumber = bundle.getInt("floorNumber");
+        viewFlipper.setDisplayedChild(floorNumber);
+        viewFlippertext99.setDisplayedChild(floorNumber);
+
 
         spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

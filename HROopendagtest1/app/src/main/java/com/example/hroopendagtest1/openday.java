@@ -2,35 +2,28 @@ package com.example.hroopendagtest1;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
-import android.content.ContentResolver;
-import android.content.ContentValues;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.CalendarContract;
 import android.support.annotation.RequiresApi;
-import android.support.design.widget.FloatingActionButton;
-import android.view.Menu;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
 
 import java.util.Calendar;
-import java.util.GregorianCalendar;
 
 public class openday extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -141,10 +134,13 @@ public class openday extends AppCompatActivity
         btn_sp1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sp= 1;
-                title.setText("Communicatie");
-                makeSchedule();
-                makeVisible();
+
+                // SOUF
+                Intent i = new Intent(getBaseContext(), wijnhaven99.class);
+                i.putExtra("floorNumber", 3);
+                startActivity(i);
+
+
             }
 
         });
