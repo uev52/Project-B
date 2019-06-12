@@ -52,11 +52,12 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
 
+// subclass openday extrand parentclass AppCompatActivity and implemtent the NavigationView interface that Listener for handling events on navigation items
 public class openday extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     //set to phone calender functionality
-    // in order to communicate using an API
+    // elements out of calendar should only use current API level or higher
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void addToCalender(View view) {
         Intent setcalendar = new Intent(Intent.ACTION_INSERT);
@@ -110,6 +111,7 @@ public class openday extends AppCompatActivity
 
     @SuppressLint("WrongViewCast")
     @Override
+    // this is when activity starts, savedInstanceState Called to retrieve per-instance state from an activity before being killed so that the state can be restored in
     protected void onCreate(Bundle savedInstanceState) {
 
         // Checks for dark theme and changes theme
@@ -119,63 +121,50 @@ public class openday extends AppCompatActivity
             setTheme(R.style.AppTheme_Dark);
         }
 
-
+        //super allow developers to run java complex class code behind the scenes, If super is not called, it is a fresh method
         super.onCreate(savedInstanceState);
+        //set the activity XML
         setContentView(R.layout.activity_openday);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //sett XML toolbar
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        // Set a Toolbar to act as the ActionBar for this Activity window.
         setSupportActionBar(toolbar);
-        printKeyHash();
 
-//        private void printKeyHash() {
-//            try {
-//                PackageInfo info = getPackageManager().getPackageInfo("com.example.hroopendagtest1",
-//                        PackageManager.GET_SIGNATURES);
-//                for (Signature signature : info.signatures) {
-//                    MessageDigest md = MessageDigest.getInstance("SHA");
-//                    md.update(signature.toByteArray());
-//                    Log.d("KeyHash", Base64.encodeToString(md.digest(), Base64.DEFAULT))
-//                }
-//
-//            } catch (PackageManager.NameNotFoundException e) {
-//                e.printStackTrace();
-//            } catch (NoSuchAlgorithmException e) {
-//                e.printStackTrace();
-//            }
-//        }
-            // create dayschedule items
-        title = (TextView) findViewById(R.id.scheduleTitle);
-        note = (TextView) findViewById(R.id.note);
-        note_text = (TextView) findViewById(R.id.note_text);
-        time1 = (TextView) findViewById(R.id.time_course1);
-        time2 = (TextView) findViewById(R.id.time_course2);
-        time3 = (TextView) findViewById(R.id.time_course3);
-        time4 = (TextView) findViewById(R.id.time_course4);
-        time5 = (TextView) findViewById(R.id.time_course5);
-        time6 = (TextView) findViewById(R.id.time_course6);
+        // finds  the UI of the buttons by refering to the XML/ widget
+        // create dayschedule items
+        title =  findViewById(R.id.scheduleTitle);
+        note =  findViewById(R.id.note);
+        note_text =  findViewById(R.id.note_text);
+        time1 =  findViewById(R.id.time_course1);
+        time2 =  findViewById(R.id.time_course2);
+        time3 =  findViewById(R.id.time_course3);
+        time4 =  findViewById(R.id.time_course4);
+        time5 =  findViewById(R.id.time_course5);
+        time6 =  findViewById(R.id.time_course6);
 
-        course1 = (TextView) findViewById(R.id.workshop1);
-        course2 = (TextView) findViewById(R.id.workshop2);
-        course3 = (TextView) findViewById(R.id.workshop3);
-        course4 = (TextView) findViewById(R.id.workshop4);
-        course5 = (TextView) findViewById(R.id.workshop5);
-        course6 = (TextView) findViewById(R.id.workshop6);
+        course1 =  findViewById(R.id.workshop1);
+        course2 =  findViewById(R.id.workshop2);
+        course3 =  findViewById(R.id.workshop3);
+        course4 =  findViewById(R.id.workshop4);
+        course5 =  findViewById(R.id.workshop5);
+        course6 =  findViewById(R.id.workshop6);
 
-        room1 = (TextView) findViewById(R.id.classroom1);
-        room2 = (TextView) findViewById(R.id.classroom2);
-        room3 = (TextView) findViewById(R.id.classroom3);
-        room4 = (TextView) findViewById(R.id.classroom4);
-        room5 = (TextView) findViewById(R.id.classroom5);
-        room6 = (TextView) findViewById(R.id.classroom6);
+        room1 =  findViewById(R.id.classroom1);
+        room2 =  findViewById(R.id.classroom2);
+        room3 =  findViewById(R.id.classroom3);
+        room4 =  findViewById(R.id.classroom4);
+        room5 =  findViewById(R.id.classroom5);
+        room6 =  findViewById(R.id.classroom6);
 
-        schedule = (ImageView) findViewById(R.id.schedule);
-        blur = (ImageView) findViewById(R.id.imageView4);
-        floor0 = (ImageView) findViewById(R.id.cmi1070);
-        floor1 = (ImageView) findViewById(R.id.cmi1071);
-        floor2 = (ImageView) findViewById(R.id.cmi1072);
-        floor3 = (ImageView) findViewById(R.id.cmi1073);
-        floor4 = (ImageView) findViewById(R.id.cmi1074);
-        floor5 = (ImageView) findViewById(R.id.cmi1075);
-
+        schedule =  findViewById(R.id.schedule);
+        blur =  findViewById(R.id.imageView4);
+        floor0 =  findViewById(R.id.cmi1070);
+        floor1 =  findViewById(R.id.cmi1071);
+        floor2 =  findViewById(R.id.cmi1072);
+        floor3 =  findViewById(R.id.cmi1073);
+        floor4 =  findViewById(R.id.cmi1074);
+        floor5 =  findViewById(R.id.cmi1075);
+        // create a dialog, a small window that prompts the user decision and/ or additional information
         pop = new Dialog(this);
 
 
@@ -305,19 +294,21 @@ public class openday extends AppCompatActivity
         });
 
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
+        //Synchronize the state of the drawer
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        //Listener for handling events on navigation items.
         navigationView.setNavigationItemSelectedListener(this);
     }
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -325,14 +316,6 @@ public class openday extends AppCompatActivity
         }
     }
 
-
-//        close = (ImageButton) findViewById(R.id.close);
-//
-//        close.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                onBackPressed();
-//
 
     // custom function makes items in dayschedule visible or invisible when needed
     public void makeVisible() {
@@ -511,22 +494,6 @@ public class openday extends AppCompatActivity
         pop.show();
     }
 
-    private void printKeyHash() {
-        try {
-            PackageInfo info = getPackageManager().getPackageInfo("com.example.hroopendagtest1",
-                    PackageManager.GET_SIGNATURES);
-            for (Signature signature : info.signatures) {
-                MessageDigest md = MessageDigest.getInstance("SHA");
-                md.update(signature.toByteArray());
-                Log.d("KeyHash", Base64.encodeToString(md.digest(), Base64.DEFAULT));
-            }
-
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
-    }
 
     // custom funtion that sets the required day schedule items to the corresponding study program
     public void makeSchedule(){
