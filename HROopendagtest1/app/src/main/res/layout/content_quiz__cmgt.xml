@@ -44,7 +44,7 @@
 
     <Button
         android:id="@+id/answer1"
-        android:layout_width="200dp"
+        android:layout_width="230dp"
         android:layout_height="70dp"
         android:layout_gravity="center"
         android:layout_marginStart="8dp"
@@ -62,7 +62,7 @@
 
     <Button
         android:id="@+id/answer2"
-        android:layout_width="200dp"
+        android:layout_width="230dp"
         android:layout_height="70dp"
         android:layout_gravity="center"
         android:layout_marginStart="8dp"
@@ -80,7 +80,7 @@
 
     <Button
         android:id="@+id/answer3"
-        android:layout_width="200dp"
+        android:layout_width="230dp"
         android:layout_height="70dp"
         android:layout_gravity="center"
         android:layout_marginStart="8dp"
