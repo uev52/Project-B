@@ -238,7 +238,7 @@
             android:layout_marginTop="2dp"
             android:text="Wijnhaven 107, 3011 WN, Rotterdam "
             android:textColor="@color/design_default_color_primary"
-            android:textSize="18sp"
+            android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/place_title"
             app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -628,10 +628,10 @@
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
-            android:layout_height="15dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginRight="4dp"
-            android:layout_marginBottom="24dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
             android:text="Share openday"
             android:textColor="@color/HRO_white"
             app:layout_constraintBottom_toTopOf="@+id/add_schedule_btn"
