@@ -56,6 +56,8 @@ import java.util.List;
 public class openday extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+
+
     //set to phone calender functionality
     // elements out of calendar should only use current API level or higher
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -105,14 +107,24 @@ public class openday extends AppCompatActivity
     Dialog pop;
     Dialog sharepop;
 
-    // facebook
+    // facebook = part of the facebookcode, see youtube ling
     CallbackManager callbackManager;
     ShareDialog shareDialog;
+
+    int knop1;
+    int knop2;
+    int knop3;
+    int knop4;
+    int knop5;
+    int knop6;
 
     @SuppressLint("WrongViewCast")
     @Override
     // this is when activity starts, savedInstanceState Called to retrieve per-instance state from an activity before being killed so that the state can be restored in
     protected void onCreate(Bundle savedInstanceState) {
+
+
+
 
         // Checks for dark theme and changes theme
         SharedPreferences preferences = getSharedPreferences(AppUtil.getPrefsName(), MODE_PRIVATE);
@@ -242,7 +254,7 @@ public class openday extends AppCompatActivity
         room1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                roomPlan();
+                showPopupRoom(knop1);
             }
 
         });
@@ -252,7 +264,8 @@ public class openday extends AppCompatActivity
         room2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                roomPlan();
+
+                showPopupRoom(knop2);
             }
 
         });
@@ -261,7 +274,8 @@ public class openday extends AppCompatActivity
         room3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                roomPlan();
+
+                showPopupRoom(knop3);
             }
 
         });
@@ -270,7 +284,8 @@ public class openday extends AppCompatActivity
         room4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                roomPlan();
+
+                showPopupRoom(knop4);
             }
 
         });
@@ -279,7 +294,8 @@ public class openday extends AppCompatActivity
         room5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                roomPlan();
+
+                showPopupRoom(knop5);
             }
 
         });
@@ -288,7 +304,8 @@ public class openday extends AppCompatActivity
         room6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                roomPlan();
+
+                showPopupRoom(knop6);
             }
 
         });
@@ -346,34 +363,12 @@ public class openday extends AppCompatActivity
     }
 
     // custom function for checking for the current chosen study program an showing popup activity when pressed on classroom
-    public void roomPlan() {
-        if (sp == 1) {
-            showPopupRoom();
 
-        }
-        if (sp == 2) {
-            showPopupRoom();
-
-
-        }
-        if (sp == 3) {
-            showPopupRoom();
-
-        }
-        if (sp == 4) {
-            showPopupRoom();
-
-
-        }
-        if (sp == 5) {
-            showPopupRoom();
-
-        }
-    }
 
     // custom function thes sets the popup class
-    public void showPopupRoom() {
-        Intent i = new Intent(this, wijnhaven99.class);
+    public void showPopupRoom(int x) {
+        Intent i = new Intent(getBaseContext(), wijnhaven107.class);
+        i.putExtra("floorNumber", x);
         startActivity(i);
 
     }
@@ -506,6 +501,8 @@ public class openday extends AppCompatActivity
         time5.setText("18:45 - 19:15");
         time6.setText("19:15 - 20:00");
 
+
+
         if (sp == 1){
             course1.setText("Intro");
             course2.setText("Pauze");
@@ -514,11 +511,17 @@ public class openday extends AppCompatActivity
             course5.setText("Pauze");
             course6.setText("miniproject A");
             room1.setText("H.0.310");
+            knop1 = 0;
             room2.setText("H.0.310");
+            knop2 = 0;
             room3.setText("H.1.308");
+            knop3 = 1;
             room4.setText("H.1.403");
+            knop4 = 1;
             room5.setText("H.0.310");
+            knop5 = 0;
             room6.setText("H.2.111");
+            knop6 = 2;
 
 
         }
@@ -530,11 +533,17 @@ public class openday extends AppCompatActivity
             course5.setText("Pauze");
             course6.setText("Keylogger maken");
             room1.setText("H.0.310");
+            knop1 = 0;
             room2.setText("H.0.310");
+            knop2 = 0;
             room3.setText("H.0.405");
+            knop3 = 0;
             room4.setText("H.5.314");
+            knop4 = 5;
             room5.setText("H.0.310");
+            knop5 = 0;
             room6.setText("H.2.403");
+            knop6 = 2;
         }
         if (sp == 3){
             course1.setText("Intro");
@@ -544,11 +553,17 @@ public class openday extends AppCompatActivity
             course5.setText("Raspberry PI");
             course6.setText("Kluisjes opdracht");
             room1.setText("H.0.310");
+            knop1 = 0;
             room2.setText("H.0.310");
+            knop2 = 0;
             room3.setText("H.4.308");
+            knop3 = 4;
             room4.setText("H.5.314");
+            knop4 = 5;
             room5.setText("H.4.206");
+            knop5 = 4;
             room6.setText("H.4.403");
+            knop6 = 4;
         }
         if (sp == 4){
             course1.setText("Intro");
@@ -558,11 +573,17 @@ public class openday extends AppCompatActivity
             course5.setText("Pauze");
             course6.setText("Game maken");
             room1.setText("H.0.310");
+            knop1 = 0;
             room2.setText("H.0.310");
+            knop2 = 0;
             room3.setText("H.3.312");
+            knop3 = 3;
             room4.setText("H.3.206");
+            knop4 = 3;
             room5.setText("H.1.316");
+            knop5 = 1;
             room6.setText("H.5.314");
+            knop6 = 5;
         }
         if (sp == 5){
             course1.setText("Intro");
@@ -572,11 +593,17 @@ public class openday extends AppCompatActivity
             course5.setText("Pauze");
             course6.setText("Miniproject B");
             room1.setText("H.0.310");
+            knop1 = 0;
             room2.setText("H.0.310");
+            knop2 = 0;
             room3.setText("H.2.111");
+            knop3 = 2;
             room4.setText("H.2.403");
+            knop4 = 2;
             room5.setText("H.1.316");
+            knop5 = 1;
             room6.setText("H.2.204");
+            knop6 = 2;
         }
     }
 

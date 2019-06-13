@@ -44,6 +44,7 @@ public class floor_plan extends AppCompatActivity implements NavigationView.OnNa
             @Override
             public void onClick(View v) {
                 Intent i= new Intent(getApplicationContext(), wijnhaven99.class);
+                i.putExtra("floorNumber", 0);
                 startActivity(i);
             }
         });
@@ -54,6 +55,7 @@ public class floor_plan extends AppCompatActivity implements NavigationView.OnNa
             @Override
             public void onClick(View v) {
                 Intent i= new Intent(getApplicationContext(), wijnhaven103.class);
+                i.putExtra("floorNumber", 0);
                 startActivity(i);
             }
         });
@@ -64,6 +66,7 @@ public class floor_plan extends AppCompatActivity implements NavigationView.OnNa
             @Override
             public void onClick(View v) {
                 Intent i= new Intent(getApplicationContext(), wijnhaven107.class);
+                i.putExtra("floorNumber", 0);
                 startActivity(i);
             }
         });

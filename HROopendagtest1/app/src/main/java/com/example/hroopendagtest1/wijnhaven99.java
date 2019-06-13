@@ -59,6 +59,8 @@ public class wijnhaven99 extends AppCompatActivity implements View.OnClickListen
         PhotoView cmi1075 = findViewById(R.id.cmi1075);
         cmi1075.setImageResource(R.drawable.cmi995);
 
+
+
         //YASIN
         viewFlipper = findViewById(R.id.viewFlipper);
         viewFlippertext99 = findViewById(R.id.viewFlippertext99);
@@ -71,6 +73,7 @@ public class wijnhaven99 extends AppCompatActivity implements View.OnClickListen
 
         //YASIN
         viewFlipper.getDisplayedChild();
+
 
         //SEVVEN
         ArrayAdapter<String> spinner2Adapter = new ArrayAdapter(wijnhaven99.this,
@@ -133,7 +136,19 @@ public class wijnhaven99 extends AppCompatActivity implements View.OnClickListen
 //
 //
 //
+        Bundle bundle = getIntent().getExtras();
+        int floorNumber = bundle.getInt("floorNumber");
 
+        for(int i = 0; i < floorNumber; i++){
+            viewFlipper.showNext();
+            viewFlippertext99.showNext();
+            spinner1.setSelection(spinner1.getSelectedItemPosition()+1);
+        }
+
+        viewFlipper.setDisplayedChild(floorNumber);
+        viewFlippertext99.setDisplayedChild(floorNumber);
+        nextFloorwh99.setVisibility(View.VISIBLE);
+        previousFloorwh99.setVisibility(View.VISIBLE);
 
 //https://www.youtube.com/watch?v=peO5cUczncc
     }
@@ -209,7 +224,10 @@ public class wijnhaven99 extends AppCompatActivity implements View.OnClickListen
              }
 
          }
+
     }
+
+
 
 
 }

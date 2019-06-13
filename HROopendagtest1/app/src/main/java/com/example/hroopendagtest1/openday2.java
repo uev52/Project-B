@@ -52,11 +52,14 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
 
+// subclass openday extrand parentclass AppCompatActivity and implemtent the NavigationView interface that Listener for handling events on navigation items
 public class openday2 extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+
+
     //set to phone calender functionality
-    // in order to communicate using an API
+    // elements out of calendar should only use current API level or higher
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void addToCalender(View view) {
         Intent setcalendar = new Intent(Intent.ACTION_INSERT);
@@ -104,13 +107,24 @@ public class openday2 extends AppCompatActivity
     Dialog pop;
     Dialog sharepop;
 
-    // facebook
+    // facebook = part of the facebookcode, see youtube ling
     CallbackManager callbackManager;
     ShareDialog shareDialog;
 
+    int knop1;
+    int knop2;
+    int knop3;
+    int knop4;
+    int knop5;
+    int knop6;
+
     @SuppressLint("WrongViewCast")
     @Override
+    // this is when activity starts, savedInstanceState Called to retrieve per-instance state from an activity before being killed so that the state can be restored in
     protected void onCreate(Bundle savedInstanceState) {
+
+
+
 
         // Checks for dark theme and changes theme
         SharedPreferences preferences = getSharedPreferences(AppUtil.getPrefsName(), MODE_PRIVATE);
@@ -119,63 +133,50 @@ public class openday2 extends AppCompatActivity
             setTheme(R.style.AppTheme_Dark);
         }
 
-
+        //super allow developers to run java complex class code behind the scenes, If super is not called, it is a fresh method
         super.onCreate(savedInstanceState);
+        //set the activity XML
         setContentView(R.layout.activity_openday2);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //sett XML toolbar
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        // Set a Toolbar to act as the ActionBar for this Activity window.
         setSupportActionBar(toolbar);
-        printKeyHash();
 
-//        private void printKeyHash() {
-//            try {
-//                PackageInfo info = getPackageManager().getPackageInfo("com.example.hroopendagtest1",
-//                        PackageManager.GET_SIGNATURES);
-//                for (Signature signature : info.signatures) {
-//                    MessageDigest md = MessageDigest.getInstance("SHA");
-//                    md.update(signature.toByteArray());
-//                    Log.d("KeyHash", Base64.encodeToString(md.digest(), Base64.DEFAULT))
-//                }
-//
-//            } catch (PackageManager.NameNotFoundException e) {
-//                e.printStackTrace();
-//            } catch (NoSuchAlgorithmException e) {
-//                e.printStackTrace();
-//            }
-//        }
+        // finds  the UI of the buttons by refering to the XML/ widget
         // create dayschedule items
-        title = (TextView) findViewById(R.id.scheduleTitle);
-        note = (TextView) findViewById(R.id.note);
-        note_text = (TextView) findViewById(R.id.note_text);
-        time1 = (TextView) findViewById(R.id.time_course1);
-        time2 = (TextView) findViewById(R.id.time_course2);
-        time3 = (TextView) findViewById(R.id.time_course3);
-        time4 = (TextView) findViewById(R.id.time_course4);
-        time5 = (TextView) findViewById(R.id.time_course5);
-        time6 = (TextView) findViewById(R.id.time_course6);
+        title =  findViewById(R.id.scheduleTitle);
+        note =  findViewById(R.id.note);
+        note_text =  findViewById(R.id.note_text);
+        time1 =  findViewById(R.id.time_course1);
+        time2 =  findViewById(R.id.time_course2);
+        time3 =  findViewById(R.id.time_course3);
+        time4 =  findViewById(R.id.time_course4);
+        time5 =  findViewById(R.id.time_course5);
+        time6 =  findViewById(R.id.time_course6);
 
-        course1 = (TextView) findViewById(R.id.workshop1);
-        course2 = (TextView) findViewById(R.id.workshop2);
-        course3 = (TextView) findViewById(R.id.workshop3);
-        course4 = (TextView) findViewById(R.id.workshop4);
-        course5 = (TextView) findViewById(R.id.workshop5);
-        course6 = (TextView) findViewById(R.id.workshop6);
+        course1 =  findViewById(R.id.workshop1);
+        course2 =  findViewById(R.id.workshop2);
+        course3 =  findViewById(R.id.workshop3);
+        course4 =  findViewById(R.id.workshop4);
+        course5 =  findViewById(R.id.workshop5);
+        course6 =  findViewById(R.id.workshop6);
 
-        room1 = (TextView) findViewById(R.id.classroom1);
-        room2 = (TextView) findViewById(R.id.classroom2);
-        room3 = (TextView) findViewById(R.id.classroom3);
-        room4 = (TextView) findViewById(R.id.classroom4);
-        room5 = (TextView) findViewById(R.id.classroom5);
-        room6 = (TextView) findViewById(R.id.classroom6);
+        room1 =  findViewById(R.id.classroom1);
+        room2 =  findViewById(R.id.classroom2);
+        room3 =  findViewById(R.id.classroom3);
+        room4 =  findViewById(R.id.classroom4);
+        room5 =  findViewById(R.id.classroom5);
+        room6 =  findViewById(R.id.classroom6);
 
-        schedule = (ImageView) findViewById(R.id.schedule);
-        blur = (ImageView) findViewById(R.id.imageView4);
-        floor0 = (ImageView) findViewById(R.id.cmi1070);
-        floor1 = (ImageView) findViewById(R.id.cmi1071);
-        floor2 = (ImageView) findViewById(R.id.cmi1072);
-        floor3 = (ImageView) findViewById(R.id.cmi1073);
-        floor4 = (ImageView) findViewById(R.id.cmi1074);
-        floor5 = (ImageView) findViewById(R.id.cmi1075);
-
+        schedule =  findViewById(R.id.schedule);
+        blur =  findViewById(R.id.imageView4);
+        floor0 =  findViewById(R.id.cmi1070);
+        floor1 =  findViewById(R.id.cmi1071);
+        floor2 =  findViewById(R.id.cmi1072);
+        floor3 =  findViewById(R.id.cmi1073);
+        floor4 =  findViewById(R.id.cmi1074);
+        floor5 =  findViewById(R.id.cmi1075);
+        // create a dialog, a small window that prompts the user decision and/ or additional information
         pop = new Dialog(this);
 
 
@@ -253,7 +254,7 @@ public class openday2 extends AppCompatActivity
         room1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                roomPlan();
+                showPopupRoom(knop1);
             }
 
         });
@@ -263,7 +264,8 @@ public class openday2 extends AppCompatActivity
         room2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                roomPlan();
+
+                showPopupRoom(knop2);
             }
 
         });
@@ -272,7 +274,8 @@ public class openday2 extends AppCompatActivity
         room3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                roomPlan();
+
+                showPopupRoom(knop3);
             }
 
         });
@@ -281,7 +284,8 @@ public class openday2 extends AppCompatActivity
         room4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                roomPlan();
+
+                showPopupRoom(knop4);
             }
 
         });
@@ -290,7 +294,8 @@ public class openday2 extends AppCompatActivity
         room5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                roomPlan();
+
+                showPopupRoom(knop5);
             }
 
         });
@@ -299,25 +304,28 @@ public class openday2 extends AppCompatActivity
         room6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                roomPlan();
+
+                showPopupRoom(knop6);
             }
 
         });
 
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
+        //Synchronize the state of the drawer
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        //Listener for handling events on navigation items.
         navigationView.setNavigationItemSelectedListener(this);
     }
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -325,14 +333,6 @@ public class openday2 extends AppCompatActivity
         }
     }
 
-
-//        close = (ImageButton) findViewById(R.id.close);
-//
-//        close.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                onBackPressed();
-//
 
     // custom function makes items in dayschedule visible or invisible when needed
     public void makeVisible() {
@@ -363,34 +363,12 @@ public class openday2 extends AppCompatActivity
     }
 
     // custom function for checking for the current chosen study program an showing popup activity when pressed on classroom
-    public void roomPlan() {
-        if (sp == 1) {
-            showPopupRoom();
 
-        }
-        if (sp == 2) {
-            showPopupRoom();
-
-
-        }
-        if (sp == 3) {
-            showPopupRoom();
-
-        }
-        if (sp == 4) {
-            showPopupRoom();
-
-
-        }
-        if (sp == 5) {
-            showPopupRoom();
-
-        }
-    }
 
     // custom function thes sets the popup class
-    public void showPopupRoom() {
-        Intent i = new Intent(this, wijnhaven99.class);
+    public void showPopupRoom(int x) {
+        Intent i = new Intent(getBaseContext(), wijnhaven99.class);
+        i.putExtra("floorNumber", x);
         startActivity(i);
 
     }
@@ -410,7 +388,7 @@ public class openday2 extends AppCompatActivity
         sharefacebook.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                String messageBody1 = "Hi there,\n\nThere is an openday at the Hogeschool Rotterdam on 4th of April.\nThe openday starts at 16:00 until 20:00 and takes places at Wijnhaven 107 in Rotterdam\nI will be there, would you like to join me?";
+                String messageBody1 = "Hi there,\n\nThere is an openday at the Hogeschool Rotterdam on 24th of April.\nThe openday starts at 16:00 until 20:00 and takes places at Wijnhaven 107 in Rotterdam\nI will be there, would you like to join me?";
                 ShareLinkContent linkContent = new ShareLinkContent.Builder().setQuote(messageBody1).setContentUrl(Uri.parse("https://www.hogeschoolrotterdam.nl/voorlichting/hulp-bij-studiekeuze/open-dag/")).build();
                 if(ShareDialog.canShow(ShareLinkContent.class)){
                     shareDialog.show(linkContent);
@@ -495,7 +473,8 @@ public class openday2 extends AppCompatActivity
             public void onClick(View view){
 
                 // here must come the send intent of the facebook application
-                String messageBody1 = "Hi there,\n\nThere is an openday at the Hogeschool Rotterdam on 24th of April.\nThe openday starts at 16:00 until 20:00 and takes places at Wijnhaven 107 in Rotterdam\nI will be there, would you like to join me?";
+                String messageBody1 = "Hi there,\n\nThere is an openday at the Hogeschool Rotterdam on 2" +
+                        "24th of April.\nThe openday starts at 16:00 until 20:00 and takes places at Wijnhaven 107 in Rotterdam\nI will be there, would you like to join me?";
                 String messageSubject1 = "OPENDAY CMI";
                 String data = "mailto:" + "?cc=" + "" + "&subject=" + Uri.encode(messageSubject1) + "&body=" + Uri.encode(messageBody1);
 
@@ -511,22 +490,6 @@ public class openday2 extends AppCompatActivity
         pop.show();
     }
 
-    private void printKeyHash() {
-        try {
-            PackageInfo info = getPackageManager().getPackageInfo("com.example.hroopendagtest1",
-                    PackageManager.GET_SIGNATURES);
-            for (Signature signature : info.signatures) {
-                MessageDigest md = MessageDigest.getInstance("SHA");
-                md.update(signature.toByteArray());
-                Log.d("KeyHash", Base64.encodeToString(md.digest(), Base64.DEFAULT));
-            }
-
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
-    }
 
     // custom funtion that sets the required day schedule items to the corresponding study program
     public void makeSchedule(){
@@ -539,6 +502,8 @@ public class openday2 extends AppCompatActivity
         time5.setText("18:45 - 19:15");
         time6.setText("19:15 - 20:00");
 
+
+
         if (sp == 1){
             course1.setText("Intro");
             course2.setText("Pauze");
@@ -547,11 +512,17 @@ public class openday2 extends AppCompatActivity
             course5.setText("Pauze");
             course6.setText("miniproject A");
             room1.setText("H.0.310");
+            knop1 = 0;
             room2.setText("H.0.310");
+            knop2 = 0;
             room3.setText("H.1.308");
+            knop3 = 1;
             room4.setText("H.1.403");
+            knop4 = 1;
             room5.setText("H.0.310");
+            knop5 = 0;
             room6.setText("H.2.111");
+            knop6 = 2;
 
 
         }
@@ -563,11 +534,17 @@ public class openday2 extends AppCompatActivity
             course5.setText("Pauze");
             course6.setText("Keylogger maken");
             room1.setText("H.0.310");
+            knop1 = 0;
             room2.setText("H.0.310");
+            knop2 = 0;
             room3.setText("H.0.405");
+            knop3 = 0;
             room4.setText("H.5.314");
+            knop4 = 5;
             room5.setText("H.0.310");
+            knop5 = 0;
             room6.setText("H.2.403");
+            knop6 = 2;
         }
         if (sp == 3){
             course1.setText("Intro");
@@ -577,11 +554,17 @@ public class openday2 extends AppCompatActivity
             course5.setText("Raspberry PI");
             course6.setText("Kluisjes opdracht");
             room1.setText("H.0.310");
+            knop1 = 0;
             room2.setText("H.0.310");
+            knop2 = 0;
             room3.setText("H.4.308");
+            knop3 = 4;
             room4.setText("H.5.314");
+            knop4 = 5;
             room5.setText("H.4.206");
+            knop5 = 4;
             room6.setText("H.4.403");
+            knop6 = 4;
         }
         if (sp == 4){
             course1.setText("Intro");
@@ -591,11 +574,17 @@ public class openday2 extends AppCompatActivity
             course5.setText("Pauze");
             course6.setText("Game maken");
             room1.setText("H.0.310");
+            knop1 = 0;
             room2.setText("H.0.310");
+            knop2 = 0;
             room3.setText("H.3.312");
+            knop3 = 3;
             room4.setText("H.3.206");
+            knop4 = 3;
             room5.setText("H.1.316");
+            knop5 = 1;
             room6.setText("H.5.314");
+            knop6 = 5;
         }
         if (sp == 5){
             course1.setText("Intro");
@@ -605,11 +594,17 @@ public class openday2 extends AppCompatActivity
             course5.setText("Pauze");
             course6.setText("Miniproject B");
             room1.setText("H.0.310");
+            knop1 = 0;
             room2.setText("H.0.310");
+            knop2 = 0;
             room3.setText("H.2.111");
+            knop3 = 2;
             room4.setText("H.2.403");
+            knop4 = 2;
             room5.setText("H.1.316");
+            knop5 = 1;
             room6.setText("H.2.204");
+            knop6 = 2;
         }
     }
 
