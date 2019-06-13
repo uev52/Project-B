@@ -121,7 +121,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginEnd="71dp"
+                    android:layout_marginEnd="10dp"
                     android:layout_marginRight="71dp"
                     android:layout_marginBottom="29dp"
                     android:text="@string/hro_Home_btn1_txt"
